@@ -1,0 +1,2 @@
+class FootnotesController < ApplicationController
+end
