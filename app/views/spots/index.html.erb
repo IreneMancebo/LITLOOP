@@ -1,7 +1,9 @@
 <h1>Spots#index</h1>
 <p>Find me in app/views/spots/index.html.erb</p>
-<%# 
-<%= link_to "spots#show", spot_path %> %>
+<% @spots.each do |spot| %>
+<p><%= link_to spot.name, spot_path(spot) %></p>
+<% end %>
+
 <%= link_to "spots#new", new_spot_path %>
 <%# <%= link_to "profiles#show", profiles_show_path %> %>
 <%= link_to "pages#dashboard", pages_dashboard_path %>
