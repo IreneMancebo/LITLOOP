@@ -1,18 +1,18 @@
 require "test_helper"
 
-class SpotsControllerTest < ActionDispatch::IntegrationTest
+class nooksControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
-    get spots_index_url
+    get nooks_index_url
     assert_response :success
   end
 
   test "should get show" do
-    get spots_show_url
+    get nooks_show_url
     assert_response :success
   end
 
   test "should get new" do
-    get spots_new_url
+    get nooks_new_url
     assert_response :success
   end
 end

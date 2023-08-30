@@ -1,0 +1,8 @@
+<h1>nooks#show</h1>
+<p>Find me in app/views/nooks/show.html.erb</p>
+<%= image_tag "#{@nook.id}.png" %>
+<h4><%= @nook.name %> - [<%= @nook.coordinates %>]</h4>
+<p><%= @nook.description %></p>
+<h5>User: <%= @nook.user_id %></h5>
+
+<%= link_to "nooks#index", nooks_path %>

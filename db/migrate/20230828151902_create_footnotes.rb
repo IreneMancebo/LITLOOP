@@ -3,7 +3,7 @@ class CreateFootnotes < ActiveRecord::Migration[7.0]
     create_table :footnotes do |t|
       t.string :text
       t.references :user, null: false, foreign_key: true
-      t.references :spot, null: false, foreign_key: true
+      t.references :nook, null: false, foreign_key: true
 
       t.timestamps
     end
