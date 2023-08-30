@@ -1,0 +1,10 @@
+<h1>nooks#index</h1>
+<p>Find me in app/views/nooks/index.html.erb</p>
+<% @nooks.each do |nook| %>
+<p><%= link_to nook.name, nook_path(nook) %></p>
+<% end %>
+
+<%= link_to "nooks#new", new_nook_path %>
+<%# <%= link_to "profiles#show", profiles_show_path %> %>
+<%= link_to "pages#dashboard", pages_dashboard_path %>
+<%= link_to "pages#feed", pages_feed_path %>
