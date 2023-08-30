@@ -1,11 +1,7 @@
 class PagesController < ApplicationController
   skip_before_action :authenticate_user!
 
-  def feed
+  def feed; end
 
-  end
-
-  def dashboard
-
-  end
+  def dashboard; end
 end
