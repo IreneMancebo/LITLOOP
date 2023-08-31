@@ -13,11 +13,8 @@ class NooksController < ApplicationController
 
   def show
     @nook = Nook.find(params[:id])
-    @user = User.find(params[:id])
-    # Need @user to access username in the show page
   end
 
   def new
   end
-
 end

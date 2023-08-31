@@ -6,7 +6,6 @@ sleep(1)
 Nook.destroy_all
 User.destroy_all
 
-
 puts "Creating Users 🙋🏻‍♀️ 🧙🏼‍♂️ 🤷🏻‍♀️ 👩🏻‍🦰"
 sleep(1)
 bretty = User.create!(username: "bretty", email: "brett@litloop.com", password: "password")
