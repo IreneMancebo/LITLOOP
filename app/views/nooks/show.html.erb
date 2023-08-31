@@ -1,50 +1,48 @@
-<h1>nooks#show</h1>
-<p>Find me in app/views/nooks/show.html.erb</p>
-<%= image_tag "#{@nook.id}.png" %>
-<h4><%= @nook.name %> - [<%= @nook.coordinates %>]</h4>
-<p><%= @nook.description %></p>
-<h5>User: <%= @nook.user_id %></h5>
+<%# nooks#show - app/views/nooks/show.html.erb %>
 
-<%= link_to "nooks#index", nooks_path %>
-</br></br></br>
-
-<div class="container">
-  <div class="images-show row">
-    <div class="col-11 justify-content-center align-items-center">
-      Images - Cloudinary - Carousel
-    </div>
-  </div>
+<%# center this somehow %>
+<div class="container-fluid show-headers my-4">
   <div class="title row">
-    <div class="col-10 justify-content-center align-items-center">
-      <h1>Fairytale Fountain Nook</h1>
-      <p><%= @nook.name %></p>
+    <div class="col-10">
+      <h1><%= @nook.name %></h1>
     </div>
   </div>
   <div class="coordinates row">
     <div class="col-9 justify-content-start align-items-center">
-      <h4>Coordinates: [52.527266, 13.434275]</h4>
-      <p><%= @nook.coordinates %></p>
+      <h4>[<%= @nook.coordinates %>]</h4>
     </div>
   </div>
-  <div class="description row">
-    <div class="col-9 justify-content-start align-items-center">
-      <p>Idyllic lakeside knoll with wild birds. Lots of trees for shelter and shade. Good grass. Busy with people walking through, but still peaceful. <%= @nook.description %></p>
-      <h5>User: <%= @nook.user_id %></h5>
+</div>
+
+<%# create a light box shadow (glow) %>
+<div class="container-fluid show-images mb-5" data-controller="swiper">
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><%= image_tag "#{@nook.id}.png", class: 'img-fluid rounded-4' %></div>
+      <div class="swiper-slide"><%= image_tag "#{@nook.id}.png", class: 'img-fluid rounded-4' %></div>
+      <div class="swiper-slide"><%= image_tag "#{@nook.id}.png", class: 'img-fluid rounded-4' %></div>
+    </div>
+    <div class="swiper-scrollbar"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
+
+<%# seed actual details %>
+<div class="container-fluid show-details mb-5">
+  <div class="post-it">
+    <div class="note"><%= @nook.description %>
+    <%# link to user profile through description signature %>
+    <h6>Signed, <%= @user.username %></h6>
     </div>
   </div>
-  <div class="footnotes row">
-    <div class="col-9 justify-content-start align-items-center">
-      Footnotes
-    </div>
+</div>
+
+<div class="container footnotes mb-5">
+  <div class="footnote-inner">
+    This is a note
   </div>
-  <div class="button-back row">
-    <div class="col-12 justify-content-center align-items-center">
-      <%= link_to "nooks#index", nooks_path %>
-    </div>
-  </div>
-  <div class="directory row">
-    <div class="col-12">
-      Directory
-    </div>
-  </div>
+</div>
+
+<div class="container">
+  <div id="from-show-to-index"><%= link_to "nooks#index", nooks_path %></div>
 </div>
