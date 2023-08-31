@@ -3,6 +3,12 @@ class NooksController < ApplicationController
 
   def index
     @nooks = Nook.all
+    @markers = @nooks.map do |nook|
+      {
+        lat: nook.latitude,
+        lng: nook.longitude
+      }
+    end
   end
 
   def show
@@ -11,4 +17,5 @@ class NooksController < ApplicationController
 
   def new
   end
+
 end
