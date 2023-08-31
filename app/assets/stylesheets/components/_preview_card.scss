@@ -1,0 +1,96 @@
+// CONTAINER
+.preview-container {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+  width: 350px;
+  height: 200px;
+  border-radius: 10px;
+}
+
+// CARD
+.preview-card {
+  width: 100%;
+  background: #FAFAFA;
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.4);
+}
+
+.preview-window {
+  display: flex;
+  justify-content: center;
+  height: 85%;
+  background: #FFFFFF;
+  padding: 5px;
+}
+
+// IMAGE
+.preview-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  object-fit: cover;
+}
+
+// CARD INNER CONTENT
+.preview-nook-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 15%;
+}
+
+// NOOK DATA
+.preview-nook-name {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  color: #4C4F59;
+  font-family: Helvetica Neue;
+  font-weight: bold;
+  font-size: 1em;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.preview-nook-stats {
+  display: flex;
+  align-content: center;
+  justify-content: right;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.stats-wrapper {
+  display: flex;
+  align-items: center;
+  order: 1;
+  width: auto;
+  height: 30px;
+  margin-right: 3px;
+}
+
+.footnotes-icon {
+  width: 20px;
+  padding: 2px;
+}
+
+.footnotes-count {
+  font-family: Helvetica Neue;
+  color: #4C4F59;
+}
+
+.favourite-icon {
+  width: 20px;
+  padding: 2px;
+}
+
+.favourite-icon:hover {
+  opacity: 0.5;
+}
+
+.favourite-count {
+  font-family: Helvetica Neue;
+  color: #4C4F59;
+}
