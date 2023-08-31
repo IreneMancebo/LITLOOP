@@ -6,3 +6,45 @@
 <h5>User: <%= @nook.user_id %></h5>
 
 <%= link_to "nooks#index", nooks_path %>
+</br></br></br>
+
+<div class="container">
+  <div class="images-show row">
+    <div class="col-11 justify-content-center align-items-center">
+      Images - Cloudinary - Carousel
+    </div>
+  </div>
+  <div class="title row">
+    <div class="col-10 justify-content-center align-items-center">
+      <h1>Fairytale Fountain Nook</h1>
+      <p><%= @nook.name %></p>
+    </div>
+  </div>
+  <div class="coordinates row">
+    <div class="col-9 justify-content-start align-items-center">
+      <h4>Coordinates: [52.527266, 13.434275]</h4>
+      <p><%= @nook.coordinates %></p>
+    </div>
+  </div>
+  <div class="description row">
+    <div class="col-9 justify-content-start align-items-center">
+      <p>Idyllic lakeside knoll with wild birds. Lots of trees for shelter and shade. Good grass. Busy with people walking through, but still peaceful. <%= @nook.description %></p>
+      <h5>User: <%= @nook.user_id %></h5>
+    </div>
+  </div>
+  <div class="footnotes row">
+    <div class="col-9 justify-content-start align-items-center">
+      Footnotes
+    </div>
+  </div>
+  <div class="button-back row">
+    <div class="col-12 justify-content-center align-items-center">
+      <%= link_to "nooks#index", nooks_path %>
+    </div>
+  </div>
+  <div class="directory row">
+    <div class="col-12">
+      Directory
+    </div>
+  </div>
+</div>
