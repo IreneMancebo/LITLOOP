@@ -1,38 +1,42 @@
-<div class="container">
-  <div class="logo row">
+<div class="container container-user">
+  <div class="logo d-flex flex-column align-items-center">
     <h1> LitLoop </h1>
     <p> Be in the Loop!</p>
   </div>
 
-  <div class="form-inputs">
+  <div class="form-inputs col-12 col-sm-12 col-md-12 col-lg-12">
     <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= f.error_notification %>
         <div class="signup-input row">
           <%= f.input :username,
+                      label: "🪄 invent a magical username",
                       required: true,
                       autofocus: true,
-                      input_html: { autocomplete: "username" }%>
+                      input_html: { autocomplete: "username"}%>
         </div>
         <div class="signup-input row">
           <%= f.input :email,
+                      label: "email",
                       required: true,
                       autofocus: true,
                       input_html: { autocomplete: "email" }%>
         </div>
         <div class="signup-input row">
           <%= f.input :password,
+                      label: "password",
                       required: true,
                       hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                       input_html: { autocomplete: "new-password" } %>
         </div>
         <div class="signup-input row">
           <%= f.input :password_confirmation,
+                      label: "confirm password",
                       required: true,
                       input_html: { autocomplete: "new-password" } %>
         </div>
-        <div class="form-actions row">
+        <div class="form-actions row d-flex flex-column align-items-center">
           <%= f.button :submit, "Sign up", class: "btn-signup" %>
-          <%= render "devise/shared/links" %>
+          <%# <%= render "devise/shared/links" %>
         </div>
     <% end %>
   </div>

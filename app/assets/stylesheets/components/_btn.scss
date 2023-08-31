@@ -4,5 +4,15 @@
 
 .btn-signup {
   // TBD: add colors matching brets pallette
+  display: flex;
   font-family: $logo-font;
+  color: $wheat;
+  background-color: $purple-black;
+  border-radius: 5px;
+  width: 273px;
+  height: 46px;
+  padding: 8px 13px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
