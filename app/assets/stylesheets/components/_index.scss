@@ -1,15 +1,14 @@
 // Import your components CSS files here.
-@import "alert";
+@import "directory";
+@import "logo";
 @import "avatar";
+@import "alert";
 @import "form_legend_clear";
-@import "navbar";
+@import "preview_card";
+@import "btn";
+
+// Primarily Show Page
 @import "swiper";
-@import "button_showpage";
 @import "post_it";
 @import "footnote";
-@import "btn";
-@import "logo";
-@import "preview_card";
-
-// Remove later :)
-@import "directory_emoji";
+@import "button_showpage";

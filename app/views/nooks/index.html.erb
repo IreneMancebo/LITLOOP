@@ -4,12 +4,8 @@
 <p><%= link_to nook.name, nook_path(nook) %></p>
 <% end %>
 
-<%= link_to "nooks#new", new_nook_path %>
-<%# <%= link_to "profiles#show", profiles_show_path %> %>
-<%= link_to "pages#dashboard", pages_dashboard_path %>
-<%= link_to "pages#feed", pages_feed_path %>
-
 <div style="width: 100%; height: 600px;"
   data-controller="map"
   data-map-markers-value="<%= @markers.to_json %>"
-  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+</div>
