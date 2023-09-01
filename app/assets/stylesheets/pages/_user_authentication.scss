@@ -1,18 +1,74 @@
+// .container-user {
+//   background-color: $purple;
+//   height: 200vw;
+// }
+
+// .logo {
+//   color: $wheat;
+// }
+
+// .signup-input {
+//   font-family: $body-font;
+//   color: $wheat;
+//   border-radius: 5%;
+// }
+
+// .form-control {
+//   border-radius: 5px;
+// }
+
+/* Gradient Background */
 .container-user {
-  background-color: $purple;
-  height: 200vw;
+  background: linear-gradient(135deg, #7E57C2, #673AB7); /* Purple color gradient */
+  height: 100vh; /* Adjust the height as needed */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
+
+/* Logo Styles */
 .logo {
-  color: $wheat;
+  color: #fff; /* Text color for the logo */
+  font-size: 2rem; /* Adjust the font size as needed */
+  margin-bottom: 20px;
 }
 
+/* Form Styles */
 .signup-input {
   font-family: $body-font;
-  color: $wheat;
-  border-radius: 5%;
+  color: #fff; /* Text color for form inputs */
+  border-radius: 10px; /* Add border radius */
+  background: rgba(255, 255, 255, 0.2); /* Adjust transparency for form inputs */
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none; /* Remove the default border */
+  outline: none; /* Remove the default outline */
 }
 
+/* Form Control Styles */
 .form-control {
-  border-radius: 5px;
+  border-radius: 10px; /* Add border radius */
+  background: rgba(255, 255, 255, 0.2); /* Adjust transparency for form controls */
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none; /* Remove the default border */
+  outline: none; /* Remove the default outline */
+}
+
+/* Cool Animation for LitLoop Title */
+.logo {
+  animation: fadeInOut 60s ease infinite; /* Adjust the animation duration and easing as needed */
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
 }
