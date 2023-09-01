@@ -1,9 +1,13 @@
-<div class="navbar-lewagon border-top directory-emoji">
-  <div class="directory-button"><a href="<%= pages_dashboard_path %>">ALMANAC</a></div>
-  <div class="directory-image">
-    <%= link_to new_nook_path, class:"directory-button" do %>
+<div class="directory container border-top">
+
+  <div id="almanac"><a href="<%= pages_dashboard_path %>">ALMANAC</a></div>
+
+  <div id="create">
+    <%= link_to new_nook_path do %>
       <%= image_tag 'plus-sign.png' %>
     <% end %>
   </div>
-  <div class="directory-button"><a href="<%= pages_feed_path %>">DISCOVER</a></div>
+
+  <div id="discover"><a href="<%= pages_feed_path %>">DISCOVER</a></div>
+
 </div>
