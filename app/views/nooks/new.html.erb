@@ -4,4 +4,23 @@
 <br>
 here is an example of the basic af preview card I made today
 <%= render "preview_card" %>
-i am very sorry what a waste of a day
+don't be sorry it's very cool!!
+
+<div class="form_container">
+  <h1>Add a NookBook!</h1>
+
+  <div class ="share_form">
+    <%= simple_form_for (@nook) do |f| %>
+      <h6><%= f.input :name %></h6>
+      <h6><%= f.input :description %></h6>
+      <%# Would be nice to require for an emoji %>
+      <div class="share-submit">
+        <%= f.submit "share", class: "share-button", html: { color: "white" } %>
+      </div>
+    <% end %>
+    <div id="cancel-button">
+      <h6><%= link_to "cancel", nooks_path %></h6>
+    </div>
+  </div>
+
+</div>
