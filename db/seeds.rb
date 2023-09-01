@@ -21,7 +21,7 @@ Nook.create!(
   latitude: 52.457690,
   longitude: 13.518904,
   user: bretty,
-  description: "something",
+  description: "What is skateboarding? What does it mean to continue skateboarding after the age of forty, four decades after the kickflip was invented? How does one live authentically as an adult while staying true to a passion cemented in childhood? How does skateboarding shape one's understanding of contemporary American life? Of growing old and getting married?",
   image: "app/assets/images/1.png"
 )
 
@@ -30,7 +30,7 @@ Nook.create!(
   latitude: 52.465878,
   longitude: 13.405435,
   user: nadjalovesyoga,
-  description: "something",
+  description: "We are not alone. On Ganymede, breadbasket of the outer planets, a Martian marine watches as her platoon is slaughtered by a monstrous supersoldier. On Earth, a high-level politician struggles to prevent interplanetary war from reigniting. And on Venus, an alien protomolecule has overrun the planet, wreaking massive, mysterious changes and threatening to spread out into the solar system.",
   image: "app/assets/images/2.png"
 )
 
@@ -39,7 +39,7 @@ Nook.create!(
   latitude: 52.471646,
   longitude: 13.438770,
   user: irenikachan,
-  description: "something",
+  description: "An AI learned to win chess by making moves human grand masters had never conceived. Another AI discovered a new antibiotic by analyzing molecular properties human scientists did not understand. Now, AI-powered jets are defeating experienced human pilots in simulated dogfights. AI is coming online in searching, streaming, medicine, education, and many other fields and, in so doing, transforming how humans are experiencing reality.",
   image: "app/assets/images/3.png"
 )
 
