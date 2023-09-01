@@ -21,7 +21,7 @@
   justify-content: center;
   height: 85%;
   background: #FFFFFF;
-  padding: 5px;
+  object-fit: fill;
 }
 
 // IMAGE
@@ -30,15 +30,19 @@
   align-items: center;
   justify-content: center;
   height: 100%;
+  width: 100%;
   object-fit: cover;
 }
 
-// CARD INNER CONTENT
+// NOOK DATA CONTAINER
 .preview-nook-info {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 15%;
+  background-color: gray;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 // NOOK DATA
@@ -46,8 +50,8 @@
   display: flex;
   align-items: center;
   justify-content: left;
-  color: #4C4F59;
-  font-family: Helvetica Neue;
+  color: white;
+  font-family: $body-font;
   font-weight: bold;
   font-size: 1em;
   margin-top: 3px;
@@ -68,29 +72,31 @@
   order: 1;
   width: auto;
   height: 30px;
-  margin-right: 3px;
+  margin-right: 8px;
 }
 
 .footnotes-icon {
   width: 20px;
   padding: 2px;
+  margin-left: 2px;
+  margin-right: 2px;
 }
 
-.footnotes-count {
-  font-family: Helvetica Neue;
-  color: #4C4F59;
+.stats-count {
+  font-family: $body-font;
+  font-weight: bold;
+  color: white;
+  margin-left: 2px;
+  margin-right: 2px;
 }
 
 .favourite-icon {
   width: 20px;
   padding: 2px;
+  margin-left: 2px;
+  margin-right: 2px;
 }
 
 .favourite-icon:hover {
   opacity: 0.5;
-}
-
-.favourite-count {
-  font-family: Helvetica Neue;
-  color: #4C4F59;
 }
