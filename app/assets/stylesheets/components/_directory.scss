@@ -11,6 +11,10 @@
   padding-left: 20px;
   padding-right: 20px;
   background: $hellgruen;
+  position: fixed;
+  bottom: 0;
+  z-index: 100;
+  border-top: 1px solid white;
 }
 
 .directory a {
