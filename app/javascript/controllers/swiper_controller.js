@@ -5,28 +5,28 @@ import Swiper from "swiper"
 export default class extends Controller {
   connect() {
 
-    const swiper = new Swiper('.swiper', {
-      direction: 'horizontal',
-      slidesPerView: 1,
-      spaceBetween: 30,
-      effect: "fade",
-      loop: true,
+    // const swiper = new Swiper('.swiper', {
+    //   direction: 'horizontal',
+    //   slidesPerView: 1,
+    //   spaceBetween: 30,
+    //   effect: "fade",
+    //   loop: true,
 
-      scrollbar: {
-        el: '.swiper-scrollbar',
-        hide: true,
-      },
+    //   scrollbar: {
+    //     el: '.swiper-scrollbar',
+    //     hide: true,
+    //   },
 
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
+    //   pagination: {
+    //     el: '.swiper-pagination',
+    //     clickable: true,
+    //   },
 
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
+    //   navigation: {
+    //     nextEl: '.swiper-button-next',
+    //     prevEl: '.swiper-button-prev',
+    //   },
+    // });
 
     console.log(swiper);
   };

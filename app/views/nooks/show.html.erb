@@ -1,29 +1,20 @@
 <%# nooks#show - app/views/nooks/show.html.erb %>
 
 <%# center this somehow %>
-<div class="container-fluid show-headers my-4">
-  <div class="title row">
-    <div class="col-10">
-      <h1><%= @nook.name %></h1>
-    </div>
-  </div>
-  <div class="coordinates row">
-    <div class="col-9 justify-content-start align-items-center">
-      <h4>[<%= @nook.coordinates %>]</h4>
-    </div>
+<div class="container my-4">
+  <div class="nook-header">
+    <h1><%= @nook.name %></h1>
+    <h4><span data-controller="typed" data-typed-strings-value="<%= [] %>">[<%= @nook.longitude %>, <%= @nook.latitude %>]</span></h4>
   </div>
 </div>
 
 <%# create a light box shadow (glow) %>
+
+
 <div class="container-fluid show-images mb-5" data-controller="swiper">
   <div class="swiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide"><%= image_tag "#{@nook.id}.png", class: 'img-fluid rounded-4' %></div>
-      <div class="swiper-slide"><%= image_tag "#{@nook.id}.png", class: 'img-fluid rounded-4' %></div>
-      <div class="swiper-slide"><%= image_tag "#{@nook.id}.png", class: 'img-fluid rounded-4' %></div>
-    </div>
-    <div class="swiper-scrollbar"></div>
-    <div class="swiper-pagination"></div>
+    <%= image_tag "#{@nook.id}.png", class: 'img-fluid rounded-4 border' %>
+    <%# <%= cl_image_tag "BOOKABOOK/Morgenstern_Erin_-_The_Night_Circus_ypcbjf", width: 200, crop: :fill, gravity: :face  %>
   </div>
 </div>
 
@@ -37,12 +28,22 @@
   </div>
 </div>
 
-<div class="container footnotes mb-5">
+<div class="container all-footnotes mb-5">
   <div class="footnote-inner">
-    This is a note
+    This is a note This is a note This is a note This is a note This is a note This is a note
+    This is a note This is a note This is a note This is a note This is a note This is a note
+    This is a note This is a note This is a note This is a note This is a note This is a note
   </div>
-</div>
-
-<div class="container">
-  <div id="from-show-to-index"><%= link_to "nooks#index", nooks_path %></div>
+  <div class="footnote-inner">
+    This is a note This is a note This is a note This is a note This is a note This is a note
+    This is a note This is a note This is a note This is a note This is a note This is a note
+  </div>
+    <div class="footnote-inner">
+    This is a note This is a note This is a note This is a note This is a note This is a note
+    This is a note This is a note This is a note This is a note This is a note This is a note
+    This is a note This is a note This is a note This is a note This is a note This is a note
+  </div>
+    <div class="footnote-inner">
+    This is a note This is a note This is a note This is a note This is a note This is a note
+  </div>
 </div>
