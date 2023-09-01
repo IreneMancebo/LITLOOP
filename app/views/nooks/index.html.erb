@@ -20,22 +20,3 @@
     height: 100%;
   }
 </style>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    var mapElement = document.getElementById('map-container');
-    var mapMarkers = JSON.parse(mapElement.getAttribute('data-map-markers-value'));
-    var mapApiKey = mapElement.getAttribute('data-map-api-key-value');
-
-    mapboxgl.accessToken = mapApiKey;
-
-    var map = new mapboxgl.Map({
-      container: 'map-container',
-      style: 'mapbox://styles/mapbox/streets-v11', // Replace with your desired map style URL
-      center: [-74.006, 40.7128], // Adjust the initial center coordinates
-      zoom: 12, // Adjust the initial zoom level
-    });
-
-    // Add your map markers and other customization here
-  });
-</script>

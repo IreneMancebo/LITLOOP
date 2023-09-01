@@ -1,5 +1,6 @@
 class NooksController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index, :show]
+  skip_before_action :authenticate_user!
+  # before_action :set_nook
 
   def index
     @nooks = Nook.all
@@ -7,13 +8,20 @@ class NooksController < ApplicationController
       {
         lat: nook.latitude,
         lng: nook.longitude,
-        preview_card_html: render_to_string(partial: "preview_card", locals: {nook: nook})
+        preview_card_html: render_to_string(partial: "preview_card", locals: {nook: nook}),
+        nook_id: nook.id,
+        nook_image_src: nook.image,
+        nook_name: nook.name
       }
     end
   end
 
   def show
     @nook = Nook.find(params[:id])
+    @marker = [{
+      lat: @nook.latitude,
+      lng: @nook.longitude
+    }]
   end
 
   def new
@@ -39,8 +47,6 @@ def nook_params
   params.require(:nook).permit(:name, :description)
 end
 
-
-
 # def edit
 #   @book = Book.find(params[:id])
 # end
@@ -49,4 +55,8 @@ end
 #   @book = Book.find(params[:id].to_i)
 #   @book.update(book_params)
 #   redirect_to lending_path(@book)
+# end
+
+# def set_nook
+#   @nook = Nook.find(params[:id])
 # end
