@@ -7,7 +7,7 @@ class NooksController < ApplicationController
       {
         lat: nook.latitude,
         lng: nook.longitude,
-        card_preview_html: render_to_string(partial: "card_preview", locals: {nook: nook})
+        preview_card_html: render_to_string(partial: "preview_card", locals: {nook: nook})
       }
     end
   end
