@@ -1,17 +1,1 @@
-<%# nooks#index - app/views/nooks/index.html.erb %>
-<div class="container">
-
-  <div id="map-container" data-controller="map" data-map-markers-value="<%= @markers.to_json %>" data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-
-  <style>
-    #map-container {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-    }
-  </style>
-  
-</div>
+<div id="map-container" data-controller="map" data-map-markers-value="<%= @markers.to_json %>" data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
