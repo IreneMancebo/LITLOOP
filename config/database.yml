@@ -81,6 +81,6 @@ test:
 #
 production:
   <<: *default
-  database: LITLOOP_production
-  username: LITLOOP
-  password: <%= ENV["LITLOOP_DATABASE_PASSWORD"] %>
+  database: litloop_production
+  username: litloop
+  password: <%= ENV["litloop_DATABASE_PASSWORD"] %>
