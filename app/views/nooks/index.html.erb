@@ -1,11 +1,41 @@
 <%# nooks#index - app/views/nooks/index.html.erb %>
 
 <% @nooks.each do |nook| %>
-<p><%= link_to nook.name, nook_path(nook) %></p>
+  <p><%= link_to nook.name, nook_path(nook) %></p>
 <% end %>
 
-<div style="width: 100%; height: 600px;"
-  data-controller="map"
-  data-map-markers-value="<%= @markers.to_json %>"
-  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-</div>
+
+<%= link_to "nooks#new", new_nook_path %>
+<%= link_to "pages#dashboard", pages_dashboard_path %>
+<%= link_to "pages#feed", pages_feed_path %>
+
+<div id="map-container" data-controller="map" data-map-markers-value="<%= @markers.to_json %>" data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+
+<style>
+  #map-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var mapElement = document.getElementById('map-container');
+    var mapMarkers = JSON.parse(mapElement.getAttribute('data-map-markers-value'));
+    var mapApiKey = mapElement.getAttribute('data-map-api-key-value');
+
+    mapboxgl.accessToken = mapApiKey;
+
+    var map = new mapboxgl.Map({
+      container: 'map-container',
+      style: 'mapbox://styles/mapbox/streets-v11', // Replace with your desired map style URL
+      center: [-74.006, 40.7128], // Adjust the initial center coordinates
+      zoom: 12, // Adjust the initial zoom level
+    });
+
+    // Add your map markers and other customization here
+  });
+</script>
