@@ -1,10 +1,9 @@
-<div class="container mt-1 border-top p-1 directory-emoji">
-  <a href="<%= nooks_path %>">🦕</a> <%# <%= link_to "nooks#index", nooks_path %>
-  <a href="<%= new_user_session_path %>">🦦</a> <%# <%= link_to "devise/sessions#new", new_user_session_path %>
-  <a href="<%= destroy_user_session_path %>">🍓</a> <%# <%= link_to "devise/sessions#destroy", destroy_user_session_path %>
-  <a href="<%= new_user_registration_path %>">🍉</a> <%# <%= link_to "devise/registrations#new", new_user_registration_path %>
-  <a href="<%= pages_dashboard_path %>">🚀</a> <%# <%= link_to "pages#dashboard", pages_dashboard_path %>
-  <a href="<%= new_nook_path %>">🍒</a> <%# <%= link_to "nooks#new", new_nook_path %>
-  <a href="<%= new_favorite_path %>">🥝</a> <%# <%= link_to "favorites#new", new_favorite_path %>
-  <a href="<%= pages_feed_path %>">🔮</a> <%# <%= link_to "pages#feed", pages_feed_path %>
+<div class="navbar-lewagon border-top directory-emoji">
+  <div class="directory-button"><a href="<%= pages_dashboard_path %>">ALMANAC</a></div>
+  <div class="directory-image">
+    <%= link_to new_nook_path, class:"directory-button" do %>
+      <%= image_tag 'plus-sign.png' %>
+    <% end %>
+  </div>
+  <div class="directory-button"><a href="<%= pages_feed_path %>">DISCOVER</a></div>
 </div>
