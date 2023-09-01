@@ -47,3 +47,13 @@
     This is a note This is a note This is a note This is a note This is a note This is a note
   </div>
 </div>
+
+<div class="nook-map" style="width: 100vw; height: 200px"
+  data-controller="map"
+  data-map-markers-value="<%= @marker.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+</div>
+
+<div class="container">
+  <div id="from-show-to-index"><%= link_to "nooks#index", nooks_path %></div>
+</div>
