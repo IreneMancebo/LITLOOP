@@ -18,9 +18,14 @@
   <body>
     <%= render "shared/flashes" %>
 
-    <%= yield %>
-
-    <%= render "shared/directory" %>
+    <div class="application-wrapper">
+      <div class="screen-content">
+        <%= yield %>
+      </div>
+      <div class="global-directory">
+        <%= render "shared/directory" %>
+      </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   </body>

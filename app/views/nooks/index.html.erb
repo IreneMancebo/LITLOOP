@@ -1,22 +1,17 @@
 <%# nooks#index - app/views/nooks/index.html.erb %>
+<div class="container">
 
-<% @nooks.each do |nook| %>
-  <p><%= link_to nook.name, nook_path(nook) %></p>
-<% end %>
+  <div id="map-container" data-controller="map" data-map-markers-value="<%= @markers.to_json %>" data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
 
-
-<%= link_to "nooks#new", new_nook_path %>
-<%= link_to "pages#dashboard", pages_dashboard_path %>
-<%= link_to "pages#feed", pages_feed_path %>
-
-<div id="map-container" data-controller="map" data-map-markers-value="<%= @markers.to_json %>" data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-
-<style>
-  #map-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-</style>
+  <style>
+    #map-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+  </style>
+  
+</div>

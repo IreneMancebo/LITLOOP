@@ -1,12 +1,17 @@
+.go-back {
+  display: flex;
+  justify-content: center;
+}
+
 #from-show-to-index {
   margin-top: 10px;
   padding: 5px;
   text-align: center;
   align-content: center;
-  background-color: $white-rose;
-  color: $soil;
+  background-color: $kiwi;
+  color: $blueberry;
+  font-weight: bold;
   border-radius: 50px;
-  box-shadow: white;
   width: 200px;
 }
 
