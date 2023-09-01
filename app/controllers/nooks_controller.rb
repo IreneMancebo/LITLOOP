@@ -6,7 +6,8 @@ class NooksController < ApplicationController
     @markers = @nooks.map do |nook|
       {
         lat: nook.latitude,
-        lng: nook.longitude
+        lng: nook.longitude,
+        card_preview_html: render_to_string(partial: "card_preview", locals: {nook: nook})
       }
     end
   end
