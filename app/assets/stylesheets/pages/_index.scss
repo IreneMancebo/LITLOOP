@@ -12,3 +12,10 @@
   min-height: 100vh;
   grid-template-rows: 1fr auto;
 }
+
+#map-container {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
