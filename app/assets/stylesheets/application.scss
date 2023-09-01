@@ -10,3 +10,16 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+.brett {
+  background-color: red;
+}
+
+.mapboxgl-popup-content {
+  background-color: transparent;
+  width: 350px;
+  height: 200px;
+  position: absolute;
+  bottom: 0;
+
+}
