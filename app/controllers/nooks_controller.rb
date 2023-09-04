@@ -44,29 +44,29 @@ class NooksController < ApplicationController
     @nook = Nook.find(params[:id])
   end
 
-  def update
-    @nook = Nook.find(params[:id].to_i)
-    @nook.update(nook_params)
-    redirect_to lending_path(@nook)
-  end
+def edit
+  @nook = Nook.find(params[:id])
+end
 
-  def destroy
-    @nook = Nook.find(params[:id])
-    @nook.destroy
-    redirect_to lending_path, status: :see_other
-    flash.notice = 'Nook was successfully deleted.'
-  end
+def update
+  @nook = Nook.find(params[:id].to_i)
+  @nook.update(nook_params)
+  redirect_to lending_path(@nook)
+end
 
+def destroy
+  @nook = Nook.find(params[:id])
+  @nook.destroy
+  redirect_to lending_path, status: :see_other
+  flash.notice = 'Nook was successfully deleted.'
 end
 
 private
 
-  def set_nook
-    @nook = Nook.find(params[:id])
-  end
+def set_nook
+  @nook = Nook.find(params[:id])
+end
 
-  def nook_params
-    params.require(:nook).permit(:name, :description)
-  end
-
+def nook_params
+  params.require(:nook).permit(:name, :description, photos: [])
 end
