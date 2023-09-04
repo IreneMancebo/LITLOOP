@@ -21,7 +21,7 @@
   align-items: center;
   justify-content: center;
   background-size: 300% 300%;
-  background-image: linear-gradient(-45deg, yellow 0%, yellow 25%, yellow 51%, #ff357f 100%);
+  background-image: linear-gradient(-45deg, rgba(170,71,72,1) 0%, rgba(230,100,101,1) 30%, rgba(119,126,210,1) 70%, rgba(51,0,122,1) 100%);
   -webkit-animation: AnimateBG 20s ease infinite;
           animation: AnimateBG 20s ease infinite;
 }
@@ -81,14 +81,23 @@
 
 /* Cool Animation for LitLoop Title */
 .logo {
-  animation: fadeInOut 60s ease infinite; /* Adjust the animation duration and easing as needed */
+  animation: fadeIn 15s ease; /* Adjust the animation duration and easing as needed */
 }
 
-@keyframes fadeInOut {
-  0%, 100% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
+
+// .logo {
+//   animation: fadeInOut 60s ease infinite; /* Adjust the animation duration and easing as needed */
+// }
+
+// @keyframes fadeInOut {
+//   0%, 100% {
+//     opacity: 0;
+//   }
+//   50% {
+//     opacity: 1;
+//   }
+// }
