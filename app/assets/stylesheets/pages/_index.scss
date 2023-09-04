@@ -31,53 +31,13 @@
   text-decoration: none;
 }
 
-// .search-container {
-//   position: absolute;
-//   top: 0;
-//   width: 100%;
-//   background: transparent; /* Set the background to transparent */
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   padding: 20px; /* Add padding for spacing */
-//   z-index: 1; /* Ensure the form appears above other content */
-// }
-
-// .search-container form {
-//   background: rgba(255, 255, 255, 0.7); /* Add a transparent white background to the form */
-//   border-radius: 5px;
-//   padding: 10px;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   width: 100%;
-// }
-
-// .search-container form input[type="text"] {
-//   width: 100%;
-//   border: none;
-//   padding: 10px;
-//   margin-bottom: 10px;
-// }
-
-// .search-container form button {
-//   background: #007bff;
-//   color: #fff;
-//   border: none;
-//   padding: 10px 20px;
-//   border-radius: 5px;
-//   cursor: pointer;
-// }
-
 .search-container {
   position: absolute;
   top: 0;
-  left: 50%; /* Center horizontally */
-  transform: translateX(-50%); /* Center the form horizontally */
   width: 100%;
   background: transparent;
   display: flex;
-  justify-content: flex-end; /* Align the form to the right */
+  justify-content: center; /* Align the form to the right */
   align-items: center;
   padding: 10px; /* Smaller padding */
   z-index: 1;
