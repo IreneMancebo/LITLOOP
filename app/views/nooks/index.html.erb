@@ -1,1 +1,9 @@
 <div id="map-container" data-controller="map" data-map-markers-value="<%= @markers.to_json %>" data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+
+<%# <%= link_to "Add a BookNook", new_nook_path, id: "add-nook", class: "btn btn-primary" %>
+
+<%# <%= link_to <i class="fa-solid fa-plus"></i>, new_nook_path, id: "add-nook", class: "btn btn-primary" %> 
+
+<%= link_to new_nook_path, id: "add_nook" do %> 
+<i class="fa-solid fa-plus"></i>
+<% end %>

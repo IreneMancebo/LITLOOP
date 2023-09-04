@@ -10,14 +10,12 @@
 
 <%# create a light box shadow (glow) %>
 
-
 <div class="container-fluid show-images mb-5" data-controller="swiper">
   <div class="swiper">
     <%= image_tag "#{@nook.id}.png", class: 'img-fluid rounded-4 border' %>
     <%# <%= cl_image_tag "BOOKABOOK/Morgenstern_Erin_-_The_Night_Circus_ypcbjf", width: 200, crop: :fill, gravity: :face  %>
   </div>
 </div>
-
 
 <%# Display this nook's footnotes %>
 <div class="container-fluid show-details mb-5">
@@ -28,14 +26,21 @@
   </div>
 </div>
 
+<% if current_user == @nook.user %>
+  <div>
+  <td><%= link_to 'Delete nook', nook_path(@nook), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></td>
+  <%= link_to "Edit nook", edit_nook_path(@nook) %>
+  </div>
+<% end %>
+
 <%# Add Footnote form %>
 <div data-controller="toggle" class="container all-footnotes mb-5">
   <button data-action="click->toggle#fire" class="btn btn-outline-primary">Write a Footnote</button>
     <div data-toggle-target="togglableElement" class="d-none">
       <%= render 'footnotes/footnote', nook: @nook, footnote: @footnote %>
     </div>
-</div>
-
+  </div
+  
 <div class="container all-footnotes mb-5">
     <% @footnotes.each do |footnote| %>
       <div class="footnote-inner">
