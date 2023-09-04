@@ -11,6 +11,27 @@
 @import "components/index";
 @import "pages/index";
 
+// APPLICATION.HTML (SCREEN) SETTINGS:
+// Set Full View Height to a Grid to Keep Directory Fixed
+.application-wrapper {
+  display: grid;
+  min-height: 100vh;
+  max-width: 100vw;
+  grid-template-rows: 1fr auto;
+}
+
+.screen-content {
+  margin-bottom: 50px;
+}
+
+// MAPBOX SETTINGS:
+// The Full Map on nooks#index with Popup Pins
+#map-container {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 
 .mapboxgl-popup {
   display: block !important;
@@ -46,3 +67,15 @@
 .mapboxgl-popup-anchor-top-left .mapboxgl-popup-tip{
     display:none !important;
 }
+
+
+// This one is used in the spot show location description signature
+// h6 {
+
+// }
+
+// This one is used in the spot show location name
+// h1 {}
+
+// This one is used in the spot show location coordinates
+// h4 {}

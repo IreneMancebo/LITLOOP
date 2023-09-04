@@ -5,11 +5,10 @@ Rails.application.routes.draw do
   get '/pages/dashboard', to: 'pages#dashboard'
   get '/pages/feed', to: 'pages#feed'
 
-
   resources :nooks, only: %i[index show new create edit update destroy] do
     resources :footnotes, only: %i[new create]
   end
-  resources :footnotes, only: :destroy
+  # resources :footnotes, only: :create
   resources :favorites, only: %i[new create destroy]
 
 end

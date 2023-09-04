@@ -1,5 +1,5 @@
 class NooksController < ApplicationController
-  skip_before_action :authenticate_user!
+  skip_before_action :authenticate_user!, only: %i[show index]
   # before_action :set_nook
 
   def index
@@ -17,7 +17,9 @@ class NooksController < ApplicationController
   end
 
   def show
+    @footnote = Footnote.new
     @nook = Nook.find(params[:id])
+    @footnotes = @nook.footnotes.order(created_at: :desc)
     @marker = [{
       lat: @nook.latitude,
       lng: @nook.longitude
@@ -47,7 +49,7 @@ class NooksController < ApplicationController
     @nook.update(nook_params)
     redirect_to lending_path(@nook)
   end
-
+  
   def destroy
     @nook = Nook.find(params[:id])
     @nook.destroy
@@ -64,5 +66,5 @@ def set_nook
 end
 
 def nook_params
-  params.require(:nook).permit(:name, :description)
+  params.require(:nook).permit(:name, :description, photos: [])
 end
