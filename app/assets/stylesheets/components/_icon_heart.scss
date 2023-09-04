@@ -2,6 +2,7 @@
     // width: 100px;
     // height: 100px;
     color: black;
+    text-decoration: none;
     // position: relative;
     // transform: rotate(-45deg);
     // animation: colorSwitch 2s infinite alternate;
@@ -9,4 +10,5 @@
 
 .fa-heart.clicked {
   color: red;
+  text-decoration: none;
 }
