@@ -1,10 +1,10 @@
 class FavoritesController < ApplicationController
-  before_action :authenticate_user!
+  skip_before_action :authenticate_user!
 
   def create
     @nook = Nook.find(params[:nook_id])
-    current_user.favorite_nooks << @nook unless current_user.favorite_nooks.include?(@nook)
-    redirect_to @nook, notice: 'Nook added to favorites'
+    @favorite = Favorite.new(user_id: current_user.id, nook_id: @nook.id)
+    @favorite.save!
   end
 
   # def destroy
