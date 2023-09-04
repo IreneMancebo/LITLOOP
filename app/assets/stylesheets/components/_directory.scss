@@ -1,13 +1,8 @@
-.global-directory {
-  position: sticky;
-  bottom: 0;
-  z-index: 10;
-}
-
 .directory {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  width: 100vw;
   padding-left: 20px;
   padding-right: 20px;
   background: $hellgruen;
@@ -18,18 +13,19 @@
 }
 
 .directory a {
+  display: inline-block;
   text-decoration: none;
   font-size: 25px;
   color: $earth;
 }
 
 .directory img {
-  display: flex;
+  display: inline-block;
   height: 50px;
   object-fit: fill;
 }
 
 #almanac, #discover {
-  display: flex;
+  display: inline-block;
   justify-content: center;
 }
