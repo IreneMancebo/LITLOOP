@@ -26,19 +26,6 @@
     </div>
   </div>
 
-  <% if current_user == @nook.user do %>
-    <div>
-    <td><%= link_to 'Delete nook', nook_path(@nook), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></td>
-    <%= link_to "Edit nook", edit_nook_path(@nook) %>
-    </div>
-  <% end %>
-
-
-
-
-
-
-
   <div class="container all-footnotes mb-5">
     <div class="footnote-inner">
       <p>This nook is my go-to. I’m so glad I found it on BookNook. The staff are adept at fostering an atmosphere of cosiness and ease.</p>
@@ -63,3 +50,4 @@
       data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
   </div>
 </div>
+end
