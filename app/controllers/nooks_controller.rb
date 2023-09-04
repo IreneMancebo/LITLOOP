@@ -18,6 +18,7 @@ class NooksController < ApplicationController
 
   def show
     @nook = Nook.find(params[:id])
+    
     @marker = [{
       lat: @nook.latitude,
       lng: @nook.longitude
@@ -44,7 +45,7 @@ end
 private
 
 def nook_params
-  params.require(:nook).permit(:name, :description)
+  params.require(:nook).permit(:name, :description, photos: [])
 end
 
 # def edit

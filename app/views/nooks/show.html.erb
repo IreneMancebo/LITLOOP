@@ -1,52 +1,52 @@
 <%# nooks#show - app/views/nooks/show.html.erb %>
 
-<%# center this somehow %>
-<div class="container my-4">
+<div class="screen-content-wrapper">
+  <%# LOCATION HEADER AND COORDINATES %>
   <div class="nook-header">
-    <h1><%= @nook.name %></h1>
-    <h4 data-controller="typed" data-typed-strings-value="<%= @nook.longitude %>">[<%= @nook.longitude %>, <%= @nook.latitude %>]</h4>
+    <div class="nook-name"><h1><%= @nook.name %></h1></div>
+    <div class="nook-location"><h4 data-controller="typed" data-typed-strings-value="<%= @nook.longitude %>">[<%= @nook.longitude %>, <%= @nook.latitude %>]</h4></div>
   </div>
-</div>
 
-<%# create a light box shadow (glow) %>
-
-
-<div class="container-fluid show-images mb-5" data-controller="swiper">
-  <div class="swiper">
-    <%= image_tag "#{@nook.id}.png", class: 'img-fluid rounded-4 border' %>
-    <%# <%= cl_image_tag "BOOKABOOK/Morgenstern_Erin_-_The_Night_Circus_ypcbjf", width: 200, crop: :fill, gravity: :face  %>
-  </div>
-</div>
-
-<%# seed actual details %>
-<div class="container-fluid show-details mb-5">
-  <div class="post-it">
-    <div class="note"><%= @nook.description %>
-    <%# link to user profile through description signature %>
-    <h6>Signed, <%= @nook.user.username %></h6>
+  <%# IMAGES CAROUSEL VIA SWIPER %>
+  <div class="swiper" data-controller="swiper">
+    <div class="swiper-wrapper">
+      <% @nook.photos.each do |nook| %>
+        <div class="swiper-slide"><%= cl_image_tag nook.key, height: 300, width: 350, crop: :fill, class:"swiper-img" %></div>
+      <% end %>
     </div>
   </div>
-</div>
 
-<div class="container all-footnotes mb-5">
-  <div class="footnote-inner">
-    <p>This nook is my go-to. I’m so glad I found it on BookNook. The staff are adept at fostering an atmosphere of cosiness and ease.</p>
+  <%# POST-IT NOTE WITH LOCATION DESCRIPTION %>
+  <div class="container-fluid show-details mb-5">
+    <div class="post-it">
+      <div class="note"><%= @nook.description %>
+      <%# link to user profile through description signature %>
+      <h6>Signed, <%= @nook.user.username %></h6>
+      </div>
+    </div>
   </div>
-  <div class="footnote-inner">
-    <p>Here is the latest spot I found. I read The Wizard of Oz here. It’s been over 20 years since reading Frank L. Baum’s classic! The large wooden swing set was perfect for the nostalgic trip...</p>
-  </div>
-  <div class="footnote-inner">
-    This is a note This is a note This is a note This is a note This is a note This is a note
-    This is a note This is a note This is a note This is a note This is a note This is a note
-    This is a note This is a note This is a note This is a note This is a note This is a note
-  </div>
-  <div class="footnote-inner">
-      <p>Idyllic lakeside knoll with wild birds. Lots of trees for shelter and shade. Good grass. Busy with people walking through, but still peaceful.</p>
-  </div>
-</div>
 
-<div class="nook-map" style="width: 100vw; height: 200px;"
-  data-controller="map"
-  data-map-markers-value="<%= @marker.to_json %>"
-  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+  <div class="container all-footnotes mb-5">
+    <div class="footnote-inner">
+      <p>This nook is my go-to. I’m so glad I found it on BookNook. The staff are adept at fostering an atmosphere of cosiness and ease.</p>
+    </div>
+    <div class="footnote-inner">
+      <p>Here is the latest spot I found. I read The Wizard of Oz here. It’s been over 20 years since reading Frank L. Baum’s classic! The large wooden swing set was perfect for the nostalgic trip...</p>
+    </div>
+    <div class="footnote-inner">
+      This is a note This is a note This is a note This is a note This is a note This is a note
+      This is a note This is a note This is a note This is a note This is a note This is a note
+      This is a note This is a note This is a note This is a note This is a note This is a note
+    </div>
+    <div class="footnote-inner">
+        <p>Idyllic lakeside knoll with wild birds. Lots of trees for shelter and shade. Good grass. Busy with people walking through, but still peaceful.</p>
+    </div>
+  </div>
+
+  <div class="nook-map-wrapper">
+    <div class="nook-map" style="width: 90vw; height: 200px;"
+      data-controller="map"
+      data-map-markers-value="<%= @marker.to_json %>"
+      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+  </div>
 </div>

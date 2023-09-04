@@ -1,21 +1,11 @@
 // Import page-specific CSS files here.
 @import "home";
+@import "show";
 @import "user_authentication";
 
-// Screen Settings
-// Set Full View Height to a Grid to Keep Directory Fixed
-// Inner div class="screen-content"
-// Inner div class="global-directory"
-
-.application-wrapper {
-  display: grid;
-  min-height: 100vh;
-  grid-template-rows: 1fr auto;
+.screen-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
 }
 
-#map-container {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}

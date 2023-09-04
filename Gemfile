@@ -1,3 +1,5 @@
+gem 'pry-byebug'
+
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -44,6 +46,7 @@ gem "bootsnap", require: false
 
 # Use Sass to process CSS
 gem "sassc-rails"
+
 
 # Use Cloudinary for all image use
 gem "cloudinary"
