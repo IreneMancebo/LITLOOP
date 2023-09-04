@@ -5,6 +5,6 @@ class PagesController < ApplicationController
   end
 
   def dashboard
-
+    @favorite_nooks = current_user.favorite_nooks
   end
 end
