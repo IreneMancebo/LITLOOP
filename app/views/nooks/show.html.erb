@@ -32,8 +32,8 @@
   
 
 <div>
-<td><%= link_to 'Delete nook', nook_path(@nook), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></td>
-<%= link_to "Edit nook", edit_nook_path(@nook) %>
+<%= link_to "Edit nook", edit_nook_path(@nook), class: "crud_button" %>
+<td><%= link_to "Delete nook", nook_path(@nook), class: "crud_button", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></td>
 </div>
 
 <% end %>

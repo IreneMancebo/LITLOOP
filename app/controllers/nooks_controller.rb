@@ -31,7 +31,6 @@ class NooksController < ApplicationController
   def create
     @nook = Nook.new(nook_params)
     @nook.user = current_user
-    raise
     if @nook.save
       redirect_to nook_path(@nook)
     else
@@ -53,7 +52,7 @@ class NooksController < ApplicationController
     @nook = Nook.find(params[:id])
     @nook.destroy
     redirect_to lending_path, status: :see_other
-    flash.notice = 'Nook was successfully deleted.'
+    flash.notice = 'Your NookBook was successfully deleted.'
   end
 
 end
@@ -67,17 +66,3 @@ end
 def nook_params
   params.require(:nook).permit(:name, :description)
 end
-
-# def edit
-#   @book = Book.find(params[:id])
-# end
-
-# def update
-#   @book = Book.find(params[:id].to_i)
-#   @book.update(book_params)
-#   redirect_to lending_path(@book)
-# end
-
-# def set_nook
-#   @nook = Nook.find(params[:id])
-# end
