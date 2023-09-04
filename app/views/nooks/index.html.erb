@@ -1,1 +1,22 @@
 <div id="map-container" data-controller="map" data-map-markers-value="<%= @markers.to_json %>" data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+
+<div class="search-container">
+    <div class="row justify-content-center">
+    <div class="col-sm-8 my-3">
+        <%= form_with url: nooks_path, method: :get, class: "d-flex" do %>
+        <%= text_field_tag :query,
+                params[:query],
+                class: "form-control",
+                placeholder: "I'd like to read on a sunny place..."
+            %>
+             <%= button_tag type: "submit" do %>
+          <i class="fa-solid fa-search"></i> <!-- Search icon -->
+        <% end %>
+        <% end %>
+    </div>
+    </div>
+</div>
+
+<%= link_to new_nook_path, id: "add_nook" do %> 
+<i class="fa fa-plus my-float"></i>
+<% end %>

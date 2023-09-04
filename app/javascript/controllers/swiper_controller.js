@@ -1,32 +1,38 @@
-import { Controller } from "@hotwired/stimulus"
+import { Controller } from "@hotwired/stimulus";
+
 import Swiper from "swiper"
+
+
+// import 'swiper/css';
+
+// import 'swiper/css/bundle';
 
 // Connects to data-controller="swiper"
 export default class extends Controller {
   connect() {
+    const swiper = new Swiper('.swiper', {
 
-    // const swiper = new Swiper('.swiper', {
-    //   direction: 'horizontal',
-    //   slidesPerView: 1,
-    //   spaceBetween: 30,
-    //   effect: "fade",
-    //   loop: true,
+      speed: 400,
+      spaceBetween: 100,
 
-    //   scrollbar: {
-    //     el: '.swiper-scrollbar',
-    //     hide: true,
-    //   },
+      // Optional parameters
+      direction: 'horizontal',
+      loop: true,
 
-    //   pagination: {
-    //     el: '.swiper-pagination',
-    //     clickable: true,
-    //   },
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+      },
 
-    //   navigation: {
-    //     nextEl: '.swiper-button-next',
-    //     prevEl: '.swiper-button-prev',
-    //   },
-    // });
+      // Navigation arrows
+      // navigation: {
+      //   nextEl: '.swiper-button-next',
+      //   prevEl: '.swiper-button-prev',
+      // },
+
+      // And if we need scrollbar
+
+    });
 
     console.log(swiper);
   };

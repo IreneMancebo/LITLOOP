@@ -1,9 +1,13 @@
 class NooksController < ApplicationController
-  skip_before_action :authenticate_user!
+  skip_before_action :authenticate_user!, only: %i[show index]
   # before_action :set_nook
 
   def index
     @nooks = Nook.all
+    if params[:query].present?
+      sql_subquery = "name ILIKE :query OR description ILIKE :query"
+      @nooks = @nooks.where(sql_subquery, query: "%#{params[:query]}%")
+    end
     @markers = @nooks.map do |nook|
       {
         lat: nook.latitude,
@@ -17,7 +21,9 @@ class NooksController < ApplicationController
   end
 
   def show
+    @footnote = Footnote.new
     @nook = Nook.find(params[:id])
+    @footnotes = @nook.footnotes.order(created_at: :desc)
     @marker = [{
       lat: @nook.latitude,
       lng: @nook.longitude
@@ -31,7 +37,6 @@ class NooksController < ApplicationController
   def create
     @nook = Nook.new(nook_params)
     @nook.user = current_user
-    raise
     if @nook.save
       redirect_to nook_path(@nook)
     else
@@ -39,24 +44,31 @@ class NooksController < ApplicationController
     end
   end
 
+  def edit
+    @nook = Nook.find(params[:id])
+  end
+
+  def update
+    @nook = Nook.find(params[:id].to_i)
+    @nook.update(nook_params)
+    redirect_to lending_path(@nook)
+  end
+  
+  def destroy
+    @nook = Nook.find(params[:id])
+    @nook.destroy
+    redirect_to lending_path, status: :see_other
+    flash.notice = 'Your NookBook was successfully deleted.'
+  end
+
 end
 
 private
 
-def nook_params
-  params.require(:nook).permit(:name, :description)
+def set_nook
+  @nook = Nook.find(params[:id])
 end
 
-# def edit
-#   @book = Book.find(params[:id])
-# end
-
-# def update
-#   @book = Book.find(params[:id].to_i)
-#   @book.update(book_params)
-#   redirect_to lending_path(@book)
-# end
-
-# def set_nook
-#   @nook = Nook.find(params[:id])
-# end
+def nook_params
+  params.require(:nook).permit(:name, :description, photos: [])
+end
