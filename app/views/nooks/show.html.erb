@@ -1,5 +1,5 @@
 <%# nooks#show - app/views/nooks/show.html.erb %>
-
+<%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
 <%# center this somehow %>
 <div class="container my-4">
   <div class="nook-header">
@@ -18,32 +18,31 @@
   </div>
 </div>
 
-<%# seed actual details %>
+
+<%# Display this nook's footnotes %>
 <div class="container-fluid show-details mb-5">
   <div class="post-it">
     <div class="note"><%= @nook.description %>
-    <%# link to user profile through description signature %>
     <h6>Signed, <%= @nook.user.username %></h6>
     </div>
   </div>
 </div>
 
-<div class="container all-footnotes mb-5">
-  <div class="footnote-inner">
-    <p>This nook is my go-to. I’m so glad I found it on BookNook. The staff are adept at fostering an atmosphere of cosiness and ease.</p>
-  </div>
-  <div class="footnote-inner">
-    <p>Here is the latest spot I found. I read The Wizard of Oz here. It’s been over 20 years since reading Frank L. Baum’s classic! The large wooden swing set was perfect for the nostalgic trip...</p>
-  </div>
-  <div class="footnote-inner">
-    This is a note This is a note This is a note This is a note This is a note This is a note
-    This is a note This is a note This is a note This is a note This is a note This is a note
-    This is a note This is a note This is a note This is a note This is a note This is a note
-  </div>
-  <div class="footnote-inner">
-      <p>Idyllic lakeside knoll with wild birds. Lots of trees for shelter and shade. Good grass. Busy with people walking through, but still peaceful.</p>
-  </div>
+<%# Add Footnote form %>
+<div data-controller="toggle" class="container all-footnotes mb-5">
+  <button data-action="click->toggle#fire" class="btn btn-outline-primary">Write a Footnote</button>
+    <div data-toggle-target="togglableElement" class="d-none">
+      <%= render 'footnotes/footnote', nook: @nook, footnote: @footnote %>
+    </div>
 </div>
+
+<div class="container all-footnotes mb-5">
+    <% @footnotes.each do |footnote| %>
+      <div class="footnote-inner">
+          <p><%= footnote.text %></p>
+          <%= link_to "#{footnote.user[:username]}" %>
+      </div>
+    <% end %>
 
 <div class="nook-map" style="width: 100vw; height: 200px;"
   data-controller="map"
