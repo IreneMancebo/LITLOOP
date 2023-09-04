@@ -36,8 +36,8 @@
     <div data-toggle-target="togglableElement" class="d-none">
       <%= render 'footnotes/footnote', nook: @nook, footnote: @footnote %>
     </div>
-  </div
-  
+  </div>
+
 <div class="container all-footnotes mb-5">
     <% @footnotes.each do |footnote| %>
       <div class="footnote-inner">
@@ -52,12 +52,12 @@
       data-map-markers-value="<%= @marker.to_json %>"
       data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
   </div>
-  
+
   <% if current_user == @nook.user %>
     <div>
       <td><%= link_to 'Delete nook', nook_path(@nook), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></td>
       <%= link_to "Edit nook", edit_nook_path(@nook) %>
     </div>
   <% end %>
-  
+
 </div>
