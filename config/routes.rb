@@ -10,6 +10,8 @@ Rails.application.routes.draw do
     resources :footnotes, only: %i[new create]
     resources :favorites, only: %i[new create]
   end
+
   resources :footnotes, only: :destroy
-  resources :favorites, only: :destroy
+  resources :favorites, only: %i[new create destroy]
+
 end

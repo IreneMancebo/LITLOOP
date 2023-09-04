@@ -1,6 +1,11 @@
-// .nook-map {
-//   // height: 200px;
-//   // width: 100vw;
-//   margin-top: 10px;
-    // margin-bottom: 500px;
-// }
+.nook-map-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.nook-map {
+  border-radius: 20px;
+  height: 200px;
+  width: 90vw;
+}
