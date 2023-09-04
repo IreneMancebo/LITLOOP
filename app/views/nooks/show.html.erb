@@ -25,18 +25,18 @@
     </div>
   </div>
 
-  <div>
+  <div class="crud_links">
     <%= link_to "Edit nook", edit_nook_path(@nook), class: "crud_button" %>
     <td><%= link_to "Delete nook", nook_path(@nook), class: "crud_button", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></td>
   </div>
 
 <%# Add Footnote form %>
-<div data-controller="toggle" class="container all-footnotes mb-5">
-  <button data-action="click->toggle#fire" class="btn btn-outline-primary">Write a Footnote</button>
-    <div data-toggle-target="togglableElement" class="d-none">
-      <%= render 'footnotes/footnote', nook: @nook, footnote: @footnote %>
+  <div data-controller="toggle" class="container all-footnotes mb-5 justify-content-center">
+    <button data-action="click->toggle#fire" class="btn btn-outline-primary">Write a Footnote</button>
+      <div data-toggle-target="togglableElement" class="d-none">
+        <%= render 'footnotes/footnote', nook: @nook, footnote: @footnote %>
+      </div>
     </div>
-  </div>
 
 <div class="container all-footnotes mb-5">
     <% @footnotes.each do |footnote| %>
