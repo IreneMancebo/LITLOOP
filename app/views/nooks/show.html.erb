@@ -25,22 +25,10 @@
     </div>
   </div>
 
-<!--   <div class="container all-footnotes mb-5">
-    <div class="footnote-inner">
-      <p>This nook is my go-to. I’m so glad I found it on BookNook. The staff are adept at fostering an atmosphere of cosiness and ease.</p>
-    </div>
-    <div class="footnote-inner">
-      <p>Here is the latest spot I found. I read The Wizard of Oz here. It’s been over 20 years since reading Frank L. Baum’s classic! The large wooden swing set was perfect for the nostalgic trip...</p>
-    </div>
-    <div class="footnote-inner">
-      This is a note This is a note This is a note This is a note This is a note This is a note
-      This is a note This is a note This is a note This is a note This is a note This is a note
-      This is a note This is a note This is a note This is a note This is a note This is a note
-    </div>
-    <div class="footnote-inner">
-        <p>Idyllic lakeside knoll with wild birds. Lots of trees for shelter and shade. Good grass. Busy with people walking through, but still peaceful.</p>
-    </div>
-  </div> -->
+  <div>
+    <%= link_to "Edit nook", edit_nook_path(@nook), class: "crud_button" %>
+    <td><%= link_to "Delete nook", nook_path(@nook), class: "crud_button", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></td>
+  </div>
 
 <%# Add Footnote form %>
 <div data-controller="toggle" class="container all-footnotes mb-5">

@@ -20,13 +20,52 @@
   text-decoration: none;
 }
 
-#add_nook {
-  position: absolute;
-  bottom: 60px;
-  color: blue;
-  font-size: 30px;
+// #add_nook {
+//   position: absolute;
+//   bottom: 60px;
+//   color: blue;
+//   font-size: 30px;
+//   position: absolute;
+//   bottom: 60px; /* Adjust the distance from the bottom as needed */
+//   right: 30px; /* Adjust the distance from the right as needed */
+//   width: 60px; /* Set the width and height to create a circle */
+//   height: 60px;
+//   border-radius: 50%; /* Make it a circle */
+//   background: linear-gradient(to top, lavender, green); /* Gradient from lavender to green */
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   font-size: 24px; /* Adjust the font size as needed */
+//   color: white; /* Text color */
+//   text-align: center;
+//   text-decoration: none; /* Remove underlines for the link */
+//   cursor: pointer;
+//   z-index: 1; /* Adjust the z-index if necessary */
+// }
+
+#add_nook{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:60px;
+	right:40px;
+  background: rgba( 213, 100, 240, 0.4 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 1.5px );
+  -webkit-backdrop-filter: blur( 1.5px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+	color:#685b5bea;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+}
+
+.my-float{
+	margin-top:22px;
 }
 
 #add_nook a {
   text-decoration: none;
 }
+
