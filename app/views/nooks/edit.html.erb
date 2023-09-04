@@ -1,0 +1,10 @@
+<h1>Edit your BookNook</h1>
+
+<%= simple_form_for [@nook] do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%# maybe adding an emoji %>
+  <%= f.submit "Edit Nook", class: "btn btn-primary" %>
+<% end %>
+
+<%= link_to "Cancel", nooks_path %>
