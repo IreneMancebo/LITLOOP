@@ -4,6 +4,10 @@ class NooksController < ApplicationController
 
   def index
     @nooks = Nook.all
+    if params[:query].present?
+      sql_subquery = "name ILIKE :query OR description ILIKE :query"
+      @nooks = @nooks.where(sql_subquery, query: "%#{params[:query]}%")
+    end
     @markers = @nooks.map do |nook|
       {
         lat: nook.latitude,

@@ -20,6 +20,46 @@
   text-decoration: none;
 }
 
+.search-container {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: transparent;
+  display: flex;
+  justify-content: center; /* Align the form to the right */
+  align-items: center;
+  padding: 10px; /* Smaller padding */
+  z-index: 1;
+}
+
+.search-container form {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 5px;
+  padding: 5px; /* Smaller padding */
+  display: flex;
+  align-items: center;
+}
+
+.search-container form input[type="text"] {
+  width: auto; /* Auto width for the text input */
+  border: none;
+  padding: 5px; /* Smaller padding */
+  margin: 0 5px; /* Small margin around the text input */
+}
+
+.search-container form button {
+  background: none;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+}
+
+/* Style for the search icon */
+.search-container form button i {
+  font-size: 20px; /* Adjust the icon size as needed */
+  color: #007bff; /* Icon color */
+}
+
 // #add_nook {
 //   position: absolute;
 //   bottom: 60px;
@@ -68,4 +108,3 @@
 #add_nook a {
   text-decoration: none;
 }
-
