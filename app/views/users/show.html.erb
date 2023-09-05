@@ -1,3 +1,26 @@
 <h1>Profiles#show</h1>
 <p>Find me in app/views/profiles/show.html.erb</p>
 <%= link_to "nooks#index", nooks_path %>
+<h1>User Profile: <%= @user.username %></h1>
+
+<h2>Favorite Booknooks</h2>
+<ul>
+  <% @favorite_booknooks.each do |nook| %>
+    <li><%= link_to nook.name, nook %></li>
+  <% end %>
+</ul>
+
+<h2>Created Booknooks</h2>
+<ul>
+  <% @created_booknooks.each do |nook| %>
+    <li><%= link_to nook.name, nook %></li>
+  <% end %>
+</ul>
+
+<h2>Created Footnotes</h2>
+<ul>
+  <% @created_footnotes.each do |footnote| %>
+    <li><%= footnote.text %></li>
+  <% end %>
+</ul>
+
