@@ -1,13 +1,17 @@
-<%= link_to nook do %>
-  <div class="preview-window">
-    <%= image_tag "#{nook.id}.png", class: "preview-image" %>
-  </div>
+<%= link_to nook, data: { nook_id: nook.id }, class: 'favorite-link' do %>
+  <% if nook.photos.any? %>
+    <div class="pre<view-window">
+      <%= cl_image_tag nook.photos.first.key, class: "preview-image" %>
+    </div>
+  <% end %>
 
   <div class="preview-nook-info">
     <div class="preview-nook-name col-sm-8"><span><%= nook.name %></span></div>
-    <div class="preview-nook-stats col-sm-4">
-      <div class="stats-wrapper"><img class="favourite-icon" src="https://cdn3.iconfinder.com/data/icons/minicons-for-web-sites/24/minicons-48-512.png"><span class="stats-count">189</span></div>
-      <div class="stats-wrapper"><img class="footnotes-icon" src="http://www.freeiconspng.com/uploads/comment-png-3.png"><span class="stats-count">13</span></div>
+    <div data-controller="icon-heart" class="preview-nook-stats col-sm-4">
+      <%= link_to nook_favorites_path(nook), class: "text-deco-none", data: { turbo_method: :post } do %>
+        <div data-action="click->icon-heart#favored_nook" class="stats-wrapper"><i class="fa-solid fa-heart" data-icon-heart-target="heart"></i><span class="stats-count">189</span></div>
+      <% end %>
+        <div class="stats-wrapper"><img class="footnotes-icon" src="http://www.freeiconspng.com/uploads/comment-png-3.png"><span class="stats-count">13</span></div>
     </div>
   </div>
 <% end %>

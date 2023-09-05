@@ -1,0 +1,21 @@
+.crud_links {
+  display: flex;
+  justify-content: space-around;
+}
+.crud_button {
+  border: 1px solid $hellgruen;
+  background-color: transparent;
+  color: $marron;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.crud_button a {
+  text-decoration: none;
+  color: $hellgruen;
+}
+
+// move to correct file
+.all-footnotes {
+  margin-top: 25px;
+}
