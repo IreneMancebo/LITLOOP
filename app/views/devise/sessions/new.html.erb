@@ -1,30 +1,33 @@
-<div class="container container-user">
-  <div class="logo d-flex flex-column align-items-center">
-    <h1> LitLoop </h1>
-    <p>Not already in the Loop?</p>
-    <%= render "devise/shared/links" %>
+<div class="user-login">
+  <div class="logo">
+    <h1>litloop</h1>
+    <div class="signup-links">
+      <h5>Not already in the Loop?</h5>
+      <span id="login-links"><%= render "devise/shared/links" %></span>
+    </div>
   </div>
 
-  <div class="form-inputs col-12 col-sm-12 col-md-12 col-lg-12">
+  <div class="login-inputs">
     <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-      <div class="signup-input row">
+      <div class="signup-input">
         <%= f.input :username,
                     required: false,
                     autofocus: true,
                     input_html: { autocomplete: "username" } %>
       </div>
-      <div class="signup-input row">
+      <div class="signup-input">
         <%= f.input :password,
                     required: false,
                     input_html: { autocomplete: "current-password" } %>
       </div>
-      <div class="signup-input row">
+      <div class="signup-input">
         <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
       </div>
-  </div>
-
-      <div class="form-actions row d-flex flex-column align-items-center">
-        <%= f.button :submit, "Log in", class: "btn-signup" %>
+      <div class="form-actions">
+        <%= f.button :submit, "log in", class: "btn-signup" %>
       </div>
     <% end %>
+  </div>
+
+
 </div>

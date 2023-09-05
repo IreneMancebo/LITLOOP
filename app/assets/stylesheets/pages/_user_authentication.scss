@@ -1,34 +1,5 @@
-// .container-user {
-//   background-color: $purple;
-//   height: 200vw;
-// }
-
-// .logo {
-//   color: $wheat;
-// }
-
-// .signup-input {
-//   font-family: $body-font;
-//   color: $wheat;
-//   border-radius: 5%;
-// }
-
-// .form-control {
-//   border-radius: 5px;
-// }
-
-/* Gradient Background */
+// GRADIENT BACKGROUND
 .container-user {
-//   background: linear-gradient(135deg, #7E57C2, #673AB7); /* Purple color gradient */
-//   height: 100vh; /* Adjust the height as needed */
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: center;
-//   padding: 20px;
-//   box-sizing: border-box;
-// }
-
   width: 100%;
   height: 100vh;
   display: flex;
@@ -64,14 +35,14 @@
   }
 }
 
-/* Logo Styles */
+// LOGO STYLES
 .logo {
-  color: #fff; /* Text color for the logo */
-  font-size: 2rem; /* Adjust the font size as needed */
+  color: $header-official;
+  font-size: 2rem;
   margin-bottom: 20px;
 }
 
-/* Form Styles */
+// FORM STYLES
 .signup-input {
   font-family: $body-font;
   color: #fff; /* Text color for form inputs */
@@ -81,6 +52,10 @@
   margin-bottom: 10px;
   border: none; /* Remove the default border */
   outline: none; /* Remove the default outline */
+}
+
+.login-inputs {
+  font-family: $headers-font-secondary;
 }
 
 /* Form Control Styles */
@@ -105,4 +80,31 @@
   50% {
     opacity: 1;
   }
+}
+
+//starting over here
+.user-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-signup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#login-links {
+  text-decoration: none;
+}
+
+.login-inputs {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  width: 100%;
 }

@@ -1,10 +1,13 @@
-<%# nooks#show - app/views/nooks/show.html.erb %>
-<div class="screen-content-wrapper">
+<div class="show-page-wrapper">
   <%# LOCATION HEADER AND COORDINATES %>
-<%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
   <div class="nook-header">
     <div class="nook-name"><h1><%= @nook.name %></h1></div>
-    <div class="nook-location"><h4 data-controller="typed" data-typed-strings-value="<%= @nook.longitude %>">[<%= @nook.longitude %>, <%= @nook.latitude %>]</h4></div>
+    <div class="nook-location">
+      <h4 data-controller="typed"
+        data-typed-strings-value="[<%= @nook.coordinates %>]">
+        [<%= @nook.longitude %>, <%= @nook.latitude %>]
+      </h4>
+    </div>
   </div>
 
   <%# IMAGES CAROUSEL VIA SWIPER %>
@@ -14,36 +17,50 @@
         <div class="swiper-slide"><%= cl_image_tag nook.key, height: 300, width: 350, crop: :fill, class:"swiper-img" %></div>
       <% end %>
     </div>
+    <div class="swiper-pagination"></div>
   </div>
 
   <%# POST-IT NOTE WITH LOCATION DESCRIPTION %>
-  <div class="container-fluid show-details mb-5">
+  <div class="show-details mb-5">
     <div class="post-it">
-      <div class="note"><%= @nook.description %>
-      <h6>Signed, <%= @nook.user.username %></h6>
+      <div class="note">
+      <%= @nook.description %>
+      <%# <h6>Signed, <%= @nook.user.username %>
+      <%# ROUTES TO CRUD EDIT CRUD DELETE %>
+      <div class="crud_links">
+        <div id="edit_nook">
+          <%= link_to edit_nook_path(@nook), class: "crud_button" do %>
+            <span style="font-size: 20px; color: black;">
+              <i class="fa-solid fa-pencil"></i>
+            </span>
+          <% end %>
+        </div>
+        <div id="delete_nook">
+          <td><%= link_to nook_path(@nook), class: "crud_button", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %></td>
+            <span style="font-size: 20px; color: black;">
+              <i class="fa-solid fa-trash"></i>
+            </span>
+          <% end %>
+        </div>
+      </div>
       </div>
     </div>
   </div>
 
-  <div>
-    <%= link_to "Edit nook", edit_nook_path(@nook), class: "crud_button" %>
-    <td><%= link_to "Delete nook", nook_path(@nook), class: "crud_button", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></td>
-  </div>
-
-<%# Add Footnote form %>
-<div data-controller="toggle" class="container all-footnotes mb-5">
-  <button data-action="click->toggle#fire" class="btn btn-outline-primary">Write a Footnote</button>
-    <div data-toggle-target="togglableElement" class="d-none">
+<%# ADD FOOTNOTE FORM %>
+  <div data-controller="toggle" class="all-footnotes">
+    <button data-action="click->toggle#fire" class="btn btn-outline-primary">Add a Footnote</button>
+    <div data-toggle-target="togglableElement" class="d-none dropdown-form">
       <%= render 'footnotes/footnote', nook: @nook, footnote: @footnote %>
     </div>
-  </div
-  
-<div class="container all-footnotes mb-5">
+  </div>
+
+<%# <div class="all-footnotes">
     <% @footnotes.each do |footnote| %>
-      <div class="footnote-inner">
-         <p><%= footnote.text %></p>
-         <%= link_to "#{footnote.user[:username]}" %>
-      </div>
+      <%# <div class="footnote-inner">
+         <p><%= footnote.text </p> %>
+         <%# <%= link_to "#{footnote.user[:username]}" %>
+      <%# </div>
     <% end %>
 
   <div class="nook-map-wrapper">
@@ -52,12 +69,21 @@
       data-map-markers-value="<%= @marker.to_json %>"
       data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
   </div>
-  
+
   <% if current_user == @nook.user %>
     <div>
       <td><%= link_to 'Delete nook', nook_path(@nook), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></td>
       <%= link_to "Edit nook", edit_nook_path(@nook) %>
     </div>
   <% end %>
-  
+
+
+  <div id="logout">
+      <%= link_to destroy_user_session_path, data: {turbo_method: :delete} do %>
+        <span style="font-size: 42px; color: white;">
+          logout <i class="fa-solid fa-arrow-right-from-bracket"></i>
+        </span>
+      <% end %>
+  </div>
+  <%# <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
 </div>
