@@ -1,11 +1,15 @@
 .directory {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  position: relative;
   width: 100vw;
+  height: 60px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   padding-left: 20px;
   padding-right: 20px;
-  background: $hellgruen;
+  background: $the-black;
   position: fixed;
   bottom: 0;
   z-index: 100;
@@ -16,16 +20,26 @@
   display: inline-block;
   text-decoration: none;
   font-size: 25px;
-  color: $earth;
+  color: white;
 }
 
-.directory img {
-  display: inline-block;
-  height: 50px;
-  object-fit: fill;
-}
+// .directory img {
+//   display: inline-block;
+//   height: 50px;
+//   object-fit: fill;
+// }
 
 #almanac, #discover {
   display: inline-block;
   justify-content: center;
+  font-family: 'Victor Mono', monospace;
+}
+
+#almanac { padding-left: 10px }
+#discover { padding-right: 5px }
+
+.directory div:nth-child(2) {
+  position: absolute;
+  left: 50vw;
+  transform: translateX(-50%); /* Center the item relative to its own width */
 }

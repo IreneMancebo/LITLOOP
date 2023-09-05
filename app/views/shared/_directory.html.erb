@@ -1,11 +1,13 @@
-<div class="directory container">
-  <div id="almanac"><a href="<%= pages_dashboard_path %>">ALMANAC</a></div>
+<div class="directory">
+  <div id="almanac"><a href="<%= pages_dashboard_path %>">almanac</a></div>
 
   <div id="create">
     <%= link_to nooks_path do %>
-      <%= image_tag 'plus-sign.png' %>
+      <span style="font-size: 42px; color: white;">
+        <i class="fa-solid fa-globe"></i>
+      </span>
     <% end %>
   </div>
 
-  <div id="discover"><a href="<%= pages_feed_path %>">DISCOVER</a></div>
+  <div id="discover"><a href="<%= pages_feed_path %>">discover</a></div>
 </div>

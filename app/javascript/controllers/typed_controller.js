@@ -1,15 +1,14 @@
 import { Controller } from "@hotwired/stimulus"
-// import Typed from "typed.js"
+import Typed from "typed.js"
 
 // Connects to data-controller="typed"
 export default class extends Controller {
-  static value = { strings: Array }
+  static values = { strings: String }
 
   connect() {
-  //   new Typed(this.element, {
-  //     strings: this.stringsValue,
-  //     typeSpeed: 50
-  //   });
-  // }
+    new Typed(this.element, {
+      strings: [this.stringsValue],
+      typeSpeed: 50
+    });
   }
 }
