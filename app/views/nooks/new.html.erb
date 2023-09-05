@@ -8,12 +8,7 @@
       <h6><%= f.input :name %></h6>
       <h6><%= f.input :description %></h6>
       <%# Would be nice to require for an emoji %>
-
-    <form id="camera-form">
-      <!-- Video element to display the camera feed -->
-      <video id="camera-preview" autoplay></video>
-      <button id="capture-button">Take a pic of your Nook</button>
-    </form>
+      <h6><%= f.input :photos, as: :file %></h6>
 
       <div class="share-submit">
         <%= f.submit "share", class: "share-button", html: { color: "white" } %>
