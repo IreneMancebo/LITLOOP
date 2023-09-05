@@ -9,6 +9,7 @@ class PagesController < ApplicationController
 
 # need to add the images
 
+
   end
 
   def dashboard

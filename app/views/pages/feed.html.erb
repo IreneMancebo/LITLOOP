@@ -1,17 +1,18 @@
 <center><h1>DISCOVER</h1></center>
-
-<h2>Most Recently Added Nooks</h2>
-<ul>
-  <% @recently_added_nooks.each do |nook| %>
-    <li><%= nook.name %></li>
-  <% end %>
+<%# need to add the images %> 
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Nooks</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Footnotes</button>
+  </li>
 </ul>
-
-<h2>Most Recently Added Footnotes</h2>
-<ul>
-  <% @recently_added_footnotes.each do |footnote| %>
-    <li><%= footnote.text %></li>
-  <% end %>
-</ul>
-
-<%# need to add the images %>
+<div class="tab-content" id="pills-tabContent">
+  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+    <%= render "nooks_feed", recently_added_nooks: @recently_added_nooks %>
+  </div>
+  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+    <%= render "footnotes_feed", recently_added_footnotes: @recently_added_footnotes %>
+  </div>
+</div>
