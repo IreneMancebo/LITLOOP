@@ -1,7 +1,9 @@
 <%= link_to nook, data: { nook_id: nook.id }, class: 'favorite-link' do %>
-  <div class="preview-window">
-    <%= image_tag "#{nook.id}.png", class: "preview-image" %>
-  </div>
+  <% if nook.photos.any? %>
+    <div class="pre<view-window">
+      <%= cl_image_tag nook.photos.first.key, class: "preview-image" %>
+    </div>
+  <% end %>
 
   <div class="preview-nook-info">
     <div class="preview-nook-name col-sm-8"><span><%= nook.name %></span></div>
