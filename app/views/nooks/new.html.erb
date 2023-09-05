@@ -12,6 +12,13 @@
         <%= f.submit "share", class: "share-button", html: { color: "white" } %>
       </div>
     <% end %>
+
+    <form id="camera-form">
+      <!-- Video element to display the camera feed -->
+      <video id="camera-preview" autoplay></video>
+      <button id="capture-button">Capture Photo</button>
+    </form>
+
     <div id="cancel-button">
       <h6><%= link_to "cancel", nooks_path %></h6>
     </div>
