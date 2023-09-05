@@ -1,22 +1,37 @@
 class NooksController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[show index]
   # before_action :set_nook
-
   def index
-    @nooks = Nook.all
-    if params[:query].present?
-      sql_subquery = "name ILIKE :query OR description ILIKE :query"
-      @nooks = @nooks.where(sql_subquery, query: "%#{params[:query]}%")
-    end
-    @markers = @nooks.map do |nook|
-      {
-        lat: nook.latitude,
-        lng: nook.longitude,
-        preview_card_html: render_to_string(partial: "preview_card", locals: {nook: nook}),
-        nook_id: nook.id,
-        nook_image_src: nook.image,
-        nook_name: nook.name
-      }
+    if params[:search].present?
+      filters = params[:search].dig(:filter).drop(1)
+      search_hash = {}
+      filters.map { |filter| search_hash[filter] = true }
+      nook_subquery = "name ILIKE :query OR description ILIKE :query"
+      # footnotes_subquery = "text ILIKE :query"
+      @nooks = Nook.where(nook_subquery, query: "%#{params.dig(:search, :query)}%")
+      @nooks = @nooks.where(search_hash)
+        @markers = @nooks.map do |nook|
+          {
+            lat: nook.latitude,
+            lng: nook.longitude,
+            preview_card_html: render_to_string(partial: "preview_card", locals: {nook: nook}),
+            nook_id: nook.id,
+            nook_image_src: nook.image,
+            nook_name: nook.name
+          }
+        end
+    else
+      @nooks = Nook.all
+        @markers = @nooks.map do |nook|
+          {
+            lat: nook.latitude,
+            lng: nook.longitude,
+            preview_card_html: render_to_string(partial: "preview_card", locals: {nook: nook}),
+            nook_id: nook.id,
+            nook_image_src: nook.image,
+            nook_name: nook.name
+          }
+        end
     end
   end
 
@@ -53,7 +68,7 @@ class NooksController < ApplicationController
     @nook.update(nook_params)
     redirect_to lending_path(@nook)
   end
-  
+
   def destroy
     @nook = Nook.find(params[:id])
     @nook.destroy
@@ -61,14 +76,13 @@ class NooksController < ApplicationController
     flash.notice = 'Your NookBook was successfully deleted.'
   end
 
-end
+  # private
 
-private
+  # def set_nook
+  #   @nook = Nook.find(params[:id])
+  # end
 
-def set_nook
-  @nook = Nook.find(params[:id])
-end
-
-def nook_params
-  params.require(:nook).permit(:name, :description, photos: [])
+  # def nook_params
+  #   params.require(:nook).permit(:name, :description, photos: [])
+  # end
 end

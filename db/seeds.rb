@@ -20,7 +20,19 @@ a = Nook.new(
   latitude: 52.457690,
   longitude: 13.518904,
   user: bretty,
-  description: "What is skateboarding? What does it mean to continue skateboarding after the age of forty, four decades after the kickflip was invented? How does one live authentically as an adult while staying true to a passion cemented in childhood? How does skateboarding shape one's understanding of contemporary American life? Of growing old and getting married?"
+  description: "What is skateboarding? What does it mean to continue skateboarding after the age of forty, four decades after the kickflip was invented? How does one live authentically as an adult while staying true to a passion cemented in childhood? How does skateboarding shape one's understanding of contemporary American life? Of growing old and getting married?",
+  coffee: true,
+  wifi: false,
+  water: true,
+  quiet: false,
+  trees: false,
+  power: true,
+  seating: false,
+  shelter: true,
+  animals: false,
+  cost: true,
+  blanket_required: false,
+  view: false
   # image: "app/assets/images/1.png"
 )
 a1 = "https://res.cloudinary.com/dqt6q0bpd/image/upload/v1693814744/LITLOOP/1.%20Buchplatz%20am%20Kaisersteg/Screenshot_2023-09-04_at_10.05.29_es118u.png"
@@ -45,7 +57,19 @@ b = Nook.create!(
   latitude: 52.465878,
   longitude: 13.405435,
   user: nadjalovesyoga,
-  description: "We are not alone. On Ganymede, breadbasket of the outer planets, a Martian marine watches as her platoon is slaughtered by a monstrous supersoldier. On Earth, a high-level politician struggles to prevent interplanetary war from reigniting. And on Venus, an alien protomolecule has overrun the planet, wreaking massive, mysterious changes and threatening to spread out into the solar system."
+  description: "We are not alone. On Ganymede, breadbasket of the outer planets, a Martian marine watches as her platoon is slaughtered by a monstrous supersoldier. On Earth, a high-level politician struggles to prevent interplanetary war from reigniting. And on Venus, an alien protomolecule has overrun the planet, wreaking massive, mysterious changes and threatening to spread out into the solar system.",
+  coffee: false,
+  wifi: true,
+  water: false,
+  quiet: true,
+  trees: false,
+  power: true,
+  seating: false,
+  shelter: true,
+  animals: false,
+  cost: true,
+  blanket_required: false,
+  view: true
   # image: "app/assets/images/2.png"
 )
 b1 = "https://res.cloudinary.com/dqt6q0bpd/image/upload/v1693815005/LITLOOP/2.%20Tempelhofer%20Aussicht/Screenshot_2023-09-04_at_10.10.00_qdiuki.png"
@@ -70,7 +94,19 @@ c = Nook.create!(
   latitude: 52.471646,
   longitude: 13.438770,
   user: irenikachan,
-  description: "An AI learned to win chess by making moves human grand masters had never conceived. Another AI discovered a new antibiotic by analyzing molecular properties human scientists did not understand. Now, AI-powered jets are defeating experienced human pilots in simulated dogfights. AI is coming online in searching, streaming, medicine, education, and many other fields and, in so doing, transforming how humans are experiencing reality."
+  description: "An AI learned to win chess by making moves human grand masters had never conceived. Another AI discovered a new antibiotic by analyzing molecular properties human scientists did not understand. Now, AI-powered jets are defeating experienced human pilots in simulated dogfights. AI is coming online in searching, streaming, medicine, education, and many other fields and, in so doing, transforming how humans are experiencing reality.",
+  coffee: true,
+  wifi: true,
+  water: true,
+  quiet: true,
+  trees: true,
+  power: true,
+  seating: false,
+  shelter: false,
+  animals: false,
+  cost: false,
+  blanket_required: false,
+  view: false
   # image: "app/assets/images/3.png"
 )
 c1 = "https://res.cloudinary.com/dqt6q0bpd/image/upload/v1693815138/LITLOOP/3.%20Koernook%20Park/Screenshot_2023-09-04_at_10.12.05_hjclit.png"
@@ -95,7 +131,19 @@ d = Nook.create!(
   latitude: 52.473001,
   longitude: 13.414583,
   user: nickynicole,
-  description: "This spot at Tempelhofer feld is a very cool BookNook to read (especially when it's summer or the sun is up), if you are lucky and can get one of the elevated seats facing the sunset you will have a great reading moment as I had reading Un beso a Dick by Fernando Molano Vargas."
+  description: "This spot at Tempelhofer feld is a very cool BookNook to read (especially when it's summer or the sun is up), if you are lucky and can get one of the elevated seats facing the sunset you will have a great reading moment as I had reading Un beso a Dick by Fernando Molano Vargas.",
+  coffee: false,
+  wifi: false,
+  water: false,
+  quiet: false,
+  trees: false,
+  power: true,
+  seating: true,
+  shelter: true,
+  animals: true,
+  cost: true,
+  blanket_required: false,
+  view: false
   # image: "app/assets/images/4.png"
 )
 d1 = "https://res.cloudinary.com/dqt6q0bpd/image/upload/v1693815564/LITLOOP/4.%20Dick%27s%20Kiss%20at%20Templehof/Screenshot_2023-09-04_at_10.19.19_srfwbk.png"
@@ -145,7 +193,19 @@ f = Nook.create!(
   latitude: 52.495608,
   longitude: 13.407432,
   user: nadjalovesyoga,
-  description: "In this place (Urbanhafen) I read the last chapters of Bajar es lo peor by Mariana Enriquez, an incredible Argentinean writer. It couldn't be any other way than finishing this book that I enjoyed so much in one of my favorite spots in Berlin! next to the swans and ducks and surrounded by trees."
+  description: "In this place (Urbanhafen) I read the last chapters of Bajar es lo peor by Mariana Enriquez, an incredible Argentinean writer. It couldn't be any other way than finishing this book that I enjoyed so much in one of my favorite spots in Berlin! next to the swans and ducks and surrounded by trees.",
+  coffee: false,
+  wifi: false,
+  water: true,
+  quiet: false,
+  trees: false,
+  power: false,
+  seating: false,
+  shelter: false,
+  animals: true,
+  cost: true,
+  blanket_required: true,
+  view: false
   # image: "app/assets/images/6.png"
 )
 f1 = "https://res.cloudinary.com/dqt6q0bpd/image/upload/v1693816132/LITLOOP/6.%20Reading%20with%20swans%21%21%20:%29/Screenshot_2023-09-04_at_10.28.33_g0dvqc.png"
@@ -170,7 +230,19 @@ g = Nook.create!(
   latitude: 52.527266,
   longitude: 13.434275,
   user: irenikachan,
-  description: "something"
+  description: "something",
+  coffee: true,
+  wifi: true,
+  water: true,
+  quiet: false,
+  trees: false,
+  power: true,
+  seating: true,
+  shelter: false,
+  animals: false,
+  cost: true,
+  blanket_required: false,
+  view: false
   # image: "app/assets/images/7.png"
 )
 g1 = "https://res.cloudinary.com/dqt6q0bpd/image/upload/v1693816485/LITLOOP/7.%20Buchspark%20Friedrichshain/Screenshot_2023-09-04_at_10.34.39_t79rwb.png"

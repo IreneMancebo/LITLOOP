@@ -68,6 +68,22 @@
     display:none !important;
 }
 
+.filter-container {
+  display: grid;
+  column-gap: 2px;
+  row-gap: 2px;
+  position: absolute;
+  top: 10px;
+  width: 100vw;
+  color: black;
+  background-color: white;
+}
+
+.hide-checkbox {
+  position: absolute;
+  transform: scale(0);
+}
+
 
 // This one is used in the spot show location description signature
 // h6 {

@@ -1,22 +1,68 @@
 <div id="map-container" data-controller="map" data-map-markers-value="<%= @markers.to_json %>" data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
 
-<div class="search-container">
-    <div class="row justify-content-center">
-    <div class="col-sm-8 my-3">
-        <%= form_with url: nooks_path, method: :get, class: "d-flex" do %>
-        <%= text_field_tag :query,
-                params[:query],
-                class: "form-control",
-                placeholder: "I'd like to read on a sunny place..."
-            %>
-             <%= button_tag type: "submit" do %>
-          <i class="fa-solid fa-search"></i> <!-- Search icon -->
-        <% end %>
-        <% end %>
-    </div>
-    </div>
-</div>
+<%= simple_form_for :search, url: nooks_path, method: "GET", html: { class: "form index-form" } do |f| %>
+    <div class="filter-container">
+      <%= f.input :query,
+              wrapper: false,
+              input_html: {
+                id: "search-bar",
+                value: params.dig(:search, :query)
+              },
+              label: false %>
+      <%= button_tag type: 'submit', class: "search-button" do %>
+        <i class="fa-solid fa-magnifying-glass"></i>
+      <% end %>
 
-<%= link_to new_nook_path, id: "add_nook" do %> 
+    <div class="buttons-container">
+      <%# <input type="checkbox" class="hide-checkbox" id="coffee" value="coffee">
+      <label for="coffee">
+      </label>
+
+      <input type="checkbox" class="hide-checkbox" id="wifi" value="wifi">
+      <label for="wifi"><i class="fa-solid fa-wifi"></i></label>
+
+      <input type="checkbox" class="hide-checkbox" id="water" value="water">
+      <label for="water"><i class="fa-solid fa-faucet-drip"></i></label>
+
+      <input type="checkbox" class="hide-checkbox" id="quiet" value="quiet">
+      <label for="quiet"><i class="fa-solid fa-volume-xmark"></i></label>
+
+      <input type="checkbox" class="hide-checkbox" id="trees" value="trees">
+      <label for="trees"><i class="fa-solid fa-tree"></i></label>
+
+      <input type="checkbox" class="hide-checkbox" id="power" value="power">
+      <label for="power"><i class="fa-solid fa-plug"></i></label>
+
+      <input type="checkbox" class="hide-checkbox" id="seating" value="seating">
+      <label for="seating"><i class="fa-solid fa-chair"></i></label>
+
+      <input type="checkbox" class="hide-checkbox" id="shelter" value="shelter">
+      <label for="shelter"><i class="fa-solid fa-person-shelter"></i></label>
+
+      <input type="checkbox" class="hide-checkbox" id="animals" value="animals">
+      <label for="animals"><i class="fa-solid fa-paw"></i></label>
+
+      <input type="checkbox" class="hide-checkbox" id="cost" value="cost">
+      <label for="cost"><i class="fa-solid fa-euro-sign"></i></label>
+
+      <input type="checkbox" class="hide-checkbox" id="blanket_required" value="blanket_required">
+      <label for="blanket_required"></label>
+
+      <input type="checkbox" class="hide-checkbox" id="view" value="view">
+      <label for="view"><i class="fa-solid fa-mountain-sun"></i></label> %>
+      <%= f.input :filter,
+            as: :check_boxes,
+            collection_wrapper_tag: 'div',
+            collection_wrapper_class: 'category-wrapper',
+            item_wrapper_class: 'category-item',
+            input_html: {class: 'category-selector', multiple: true},
+            collection: ["wifi", "coffee", "water", "quiet", "trees", "power", "seating", "shelter", "animals", "cost", "blanket_required", "view"], multiple: true %>
+
+      <div class="tag-item"><%= f.submit "Filter", id: "filter-button" %></div>
+    </div>
+  <% end %>
+  </div>
+
+<%= link_to new_nook_path, id: "add_nook" do %>
 <i class="fa fa-plus my-float"></i>
 <% end %>
