@@ -1,4 +1,4 @@
 <%= simple_form_for [nook, footnote], data: {turbo_method: :post} do |f| %>
-  <%= f.input :text %>
+  <%= f.input :text, placeholder: "Share your notes:", id: "footnote_input", label: false %>
   <%= f.button :submit, "Publish" %>
 <% end %>

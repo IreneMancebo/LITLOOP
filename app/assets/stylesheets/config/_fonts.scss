@@ -1,15 +1,21 @@
 // Import Google fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@200&family=Berkshire+Swash&family=Libre+Caslon+Display&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap');
+
+// OPTIONAL DIRECTORY FONTS
+@import url('https://fonts.googleapis.com/css2?family=Victor+Mono:wght@100;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap');
 
 
 // Define fonts for body and headers
-$logo-font: 'Berkshire Swash', "cursive";
-$headers-font: "Bai Jamjuree", "sans-serif";
+$headers-font: 'Libre Caslon Display', serif;
 $headers-font-secondary: "Lobster Two", "cursive";
-$body-font: "Bai Jamjuree", "sans-serif";
+// $body-font: 'Nova Mono', monospace;
+$body-font: 'Victor Mono', monospace;
+
+$logo-font: 'Victor Mono', monospace;
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {

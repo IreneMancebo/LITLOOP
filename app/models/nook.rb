@@ -5,4 +5,8 @@ class Nook < ApplicationRecord
   has_many :favorites
   has_many :favorited_by_users, through: :favorites, source: :user
   has_many :footnotes
+
+  def coordinates
+    "#{longitude}, #{latitude}"
+  end
 end

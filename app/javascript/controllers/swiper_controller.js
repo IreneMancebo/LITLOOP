@@ -11,27 +11,16 @@ import Swiper from "swiper"
 export default class extends Controller {
   connect() {
     const swiper = new Swiper('.swiper', {
-
       speed: 400,
       spaceBetween: 100,
 
-      // Optional parameters
       direction: 'horizontal',
       loop: true,
 
-      // If we need pagination
       pagination: {
         el: '.swiper-pagination',
+        dynamicBullets: true,
       },
-
-      // Navigation arrows
-      // navigation: {
-      //   nextEl: '.swiper-button-next',
-      //   prevEl: '.swiper-button-prev',
-      // },
-
-      // And if we need scrollbar
-
     });
 
     console.log(swiper);

@@ -1,3 +1,4 @@
+// GRADIENT BACKGROUND
 // .logo {
 //   color: $wheat;
 // }
@@ -50,14 +51,14 @@
   }
 }
 
-/* Logo Styles */
+// LOGO STYLES
 .logo {
-  color: #fff; /* Text color for the logo */
-  font-size: 2rem; /* Adjust the font size as needed */
+  color: $header-official;
+  font-size: 2rem;
   margin-bottom: 20px;
 }
 
-/* Form Styles */
+// FORM STYLES
 .signup-input {
   font-family: $body-font;
   color: #fff; /* Text color for form inputs */
@@ -67,6 +68,10 @@
   margin-bottom: 10px;
   border: none; /* Remove the default border */
   outline: none; /* Remove the default outline */
+}
+
+.login-inputs {
+  font-family: $headers-font-secondary;
 }
 
 /* Form Control Styles */
@@ -87,6 +92,33 @@
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
+}
+
+//starting over here
+.user-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-signup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#login-links {
+  text-decoration: none;
+}
+
+.login-inputs {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  width: 100%;
 }
 
 // .logo {
