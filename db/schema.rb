@@ -65,12 +65,24 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_06_081837) do
     t.string "name"
     t.string "coordinates"
     t.string "description"
-    t.string "image"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.float "latitude"
     t.float "longitude"
+    t.string "address"
+    t.boolean "coffee", default: false
+    t.boolean "wifi", default: false
+    t.boolean "water", default: false
+    t.boolean "quiet", default: false
+    t.boolean "trees", default: false
+    t.boolean "power", default: false
+    t.boolean "seating", default: false
+    t.boolean "shelter", default: false
+    t.boolean "animals", default: false
+    t.boolean "cost", default: false
+    t.boolean "blanket_required", default: false
+    t.boolean "view", default: false
     t.string "address"
     t.index ["user_id"], name: "index_nooks_on_user_id"
   end
