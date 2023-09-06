@@ -19,8 +19,9 @@ a = Nook.new(
   name: "Buchplatz am Kaisersteg",
   latitude: 52.457690,
   longitude: 13.518904,
+  address: "Hasselwerderstraße 22, 12439 Berlin",
   user: bretty,
-  description: "coffee wifi water quiet trees power seating shelter animals cost blanket_required view"
+  description: "coffee wifi water quiet trees power seating shelter animals cost blanket_required view",
   coffee: true,
   wifi: false,
   water: true,
@@ -55,8 +56,9 @@ b = Nook.create!(
   name: "Tempelhofer Aussicht",
   latitude: 52.465878,
   longitude: 13.405435,
+  address: "Berliner Innenstadt, 12101 Berlin",
   user: nadjalovesyoga,
-  description: "coffee wifi water quiet trees power seating shelter animals cost blanket_required view"
+  description: "coffee wifi water quiet trees power seating shelter animals cost blanket_required view",
   coffee: false,
   wifi: true,
   water: false,
@@ -89,10 +91,11 @@ end
 
 c = Nook.create!(
   name: "Koernook Park",
-  latitude: 52.471646,
-  longitude: 13.438770,
+  latitude: 52.457690,
+  longitude: 13.518904,
+  address: "Schierker Strasse, 12051 Berlin",
   user: irenikachan,
-  description: "coffee wifi water quiet trees power seating shelter animals cost blanket_required view"
+  description: "coffee wifi water quiet trees power seating shelter animals cost blanket_required view",
   coffee: true,
   wifi: true,
   water: true,
@@ -127,8 +130,9 @@ d = Nook.create!(
   name: "Dick's Kiss at Templehof",
   latitude: 52.473001,
   longitude: 13.414583,
+  address: "Berliner Innenstadt, 12101 Berlin",
   user: nickynicole,
-  description: "coffee wifi water quiet trees power seating shelter animals cost blanket_required view"
+  description: "coffee wifi water quiet trees power seating shelter animals cost blanket_required view",
   coffee: false,
   wifi: false,
   water: false,
@@ -163,8 +167,9 @@ e = Nook.create!(
   name: "Orlando in Tiergarten",
   latitude: 52.513032,
   longitude: 13.356047,
+  address: "Berliner Innenstadt, 10785 Berlin",
   user: bretty,
-  description: "coffee wifi water quiet trees power seating shelter animals cost blanket_required view"
+  description: "coffee wifi water quiet trees power seating shelter animals cost blanket_required view",
   coffee: false,
   wifi: false,
   water: false,
@@ -199,8 +204,9 @@ f = Nook.create!(
   name: "Reading with swans!! :)",
   latitude: 52.495608,
   longitude: 13.407432,
+  address: "Berliner Innenstadt, 10967 Berlin",
   user: nadjalovesyoga,
-  description: "coffee wifi water quiet trees power seating shelter animals cost blanket_required view"
+  description: "coffee wifi water quiet trees power seating shelter animals cost blanket_required view",
   coffee: false,
   wifi: false,
   water: true,
@@ -235,8 +241,9 @@ g = Nook.create!(
   name: "Buchspark Friedrichshain",
   latitude: 52.527266,
   longitude: 13.434275,
+  address: "Berliner Innenstadt, 10249 Berlin",
   user: irenikachan,
-  description: "coffee wifi water quiet trees power seating shelter animals cost blanket_required view"
+  description: "coffee wifi water quiet trees power seating shelter animals cost blanket_required view",
   coffee: true,
   wifi: true,
   water: true,
