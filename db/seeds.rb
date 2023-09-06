@@ -67,8 +67,7 @@ end
 
 c = Nook.create!(
   name: "Koernook Park",
-  latitude: 52.471646,
-  longitude: 13.438770,
+  address: "Schierker Strasse, 12051 Berlin",
   user: irenikachan,
   description: "coffee wifi water quiet trees power seating shelter animals cost blanket_required view"
   # image: "app/assets/images/3.png"
