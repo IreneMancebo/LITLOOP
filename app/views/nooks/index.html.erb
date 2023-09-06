@@ -1,3 +1,4 @@
+<%# ALL FILTERS - LANDING PAGE%>
 
 <div class="atlas-actions">
   <%# BUTTON ON LANDING PAGE TO ADD A NOOK %>
@@ -26,3 +27,31 @@
       data-map-markers-value="<%= @markers.to_json %>"
       data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
+
+<%= simple_form_for :search, url: nooks_path, method: "GET", html: { class: "form index-form" } do |f| %>
+    <div class="filter-container">
+      <%= f.input :query,
+              wrapper: false,
+              input_html: {
+                id: "search-bar",
+                value: params.dig(:search, :query)
+              },
+              label: false %>
+      <%= button_tag type: 'submit', class: "search-button" do %>
+        <i class="fa-solid fa-magnifying-glass"></i>
+      <% end %>
+
+  <div class="category-wrapper">
+  
+        <%= f.input :filter,
+              as: :check_boxes,
+              collection_wrapper_tag: 'div',
+              collection_wrapper_class: 'category-wrapper',
+              item_wrapper_class: 'category-item',
+              input_html: {class: 'category-selector', multiple: true},
+              collection: ["wifi", "coffee", "water", "quiet", "trees", "power", "seating", "shelter", "animals", "cost", "blanket_required", "view"], multiple: true %>
+
+        <div class="tag-item"><%= f.submit "Filter", id: "filter-button" %></div>
+      </div>
+    <% end %>
+  </div>

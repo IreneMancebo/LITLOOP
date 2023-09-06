@@ -65,6 +65,33 @@
   font-size: 15px;
 }
 
+.application-wrapper {
+  display: grid;
+  min-height: 100vh;
+  max-width: 100vw;
+  grid-template-rows: 1fr auto;
+}
+
+/* Style the tabs to take the whole screen length */
+#pills-tab {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-link {
+  flex: 1;
+  text-align: center;
+}
+
+/* Adjust tab content height to take up remaining space */
+.tab-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+}
 
 
 .mapboxgl-popup-anchor-top .mapboxgl-popup-tip,
@@ -77,6 +104,22 @@
 .mapboxgl-popup-anchor-top-right .mapboxgl-popup-tip,
 .mapboxgl-popup-anchor-top-left .mapboxgl-popup-tip{
     display:none !important;
+}
+
+.filter-container {
+  display: grid;
+  column-gap: 2px;
+  row-gap: 2px;
+  position: absolute;
+  top: 10px;
+  width: 100vw;
+  color: black;
+  background-color: white;
+}
+
+.hide-checkbox {
+  position: absolute;
+  transform: scale(0);
 }
 
 
