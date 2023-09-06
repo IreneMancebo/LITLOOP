@@ -19,6 +19,7 @@ a = Nook.new(
   name: "Buchplatz am Kaisersteg",
   latitude: 52.457690,
   longitude: 13.518904,
+  address: "Hasselwerderstraße 22, 12439 Berlin",
   user: bretty,
   description: "What is skateboarding? What does it mean to continue skateboarding after the age of forty, four decades after the kickflip was invented? How does one live authentically as an adult while staying true to a passion cemented in childhood? How does skateboarding shape one's understanding of contemporary American life? Of growing old and getting married?"
   # image: "app/assets/images/1.png"
@@ -44,6 +45,7 @@ b = Nook.create!(
   name: "Tempelhofer Aussicht",
   latitude: 52.465878,
   longitude: 13.405435,
+  address: "Berliner Innenstadt, 12101 Berlin",
   user: nadjalovesyoga,
   description: "coffee wifi water quiet trees power seating shelter animals cost blanket_required view"
   # image: "app/assets/images/2.png"
@@ -93,6 +95,7 @@ d = Nook.create!(
   name: "Dick's Kiss at Templehof",
   latitude: 52.473001,
   longitude: 13.414583,
+  address: "Berliner Innenstadt, 12101 Berlin",
   user: nickynicole,
   description: "coffee wifi water quiet trees power seating shelter animals cost blanket_required view"
   # image: "app/assets/images/4.png"
@@ -118,6 +121,7 @@ e = Nook.create!(
   name: "Orlando in Tiergarten",
   latitude: 52.513032,
   longitude: 13.356047,
+  address: "Berliner Innenstadt, 10785 Berlin",
   user: bretty,
   description: "coffee wifi water quiet trees power seating shelter animals cost blanket_required view"
   # image: "app/assets/images/5.png"
@@ -143,6 +147,7 @@ f = Nook.create!(
   name: "Reading with swans!! :)",
   latitude: 52.495608,
   longitude: 13.407432,
+  address: "Berliner Innenstadt, 10967 Berlin",
   user: nadjalovesyoga,
   description: "coffee wifi water quiet trees power seating shelter animals cost blanket_required view"
   # image: "app/assets/images/6.png"
@@ -168,6 +173,7 @@ g = Nook.create!(
   name: "Buchspark Friedrichshain",
   latitude: 52.527266,
   longitude: 13.434275,
+  address: "Berliner Innenstadt, 10249 Berlin",
   user: irenikachan,
   description: "coffee wifi water quiet trees power seating shelter animals cost blanket_required view"
   # image: "app/assets/images/7.png"
