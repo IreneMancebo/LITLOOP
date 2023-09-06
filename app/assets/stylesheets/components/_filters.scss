@@ -1,12 +1,11 @@
 .filter-container {
-  display: grid;
-  column-gap: 2px;
-  row-gap: 2px;
-  position: absolute;
-  top: 10px;
-  width: 100vw;
-  color: black;
-  background-color: white;
+  justify-content: center;
+  display: flex;
+  width: 90vw;
+  z-index: 1000;
+  // position: absolute;
+  // top: 10px;
+  // color: black;
 }
 
 .filter-div {
@@ -21,6 +20,7 @@
 .col-form-label {
   display: none;
 }
+
 .category-wrapper {
   display: flex;
   justify-content: space-evenly;
@@ -39,6 +39,8 @@
 .category-selector {
   position: absolute;
   transform: scale(0);
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .category-selector + label {
@@ -50,14 +52,15 @@
   border-radius: 4px;
   background-color: lightblue;
   text-align: center;
-  padding-top: 3px;
+// Previous rules from Main:
+//   box-sizing: border-box;
+//   color: white;
 }
 
 .category-selector:checked + label {
   color: white !important;
   background-color: palevioletred;
 }
-
 
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {

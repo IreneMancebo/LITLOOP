@@ -1,0 +1,17 @@
+<div class="container all-footnotes mt-5 mb-5">
+  <div class="footnote-inner card-favorite">
+    <p> YOUR FAVORITE NOOKS </p>
+    <% @favorite_nooks.each do |nook|%>
+      <%= nook.name %>
+      <%# // put nice card (carousel) for each nook :)  %>
+
+    <%# IMAGES CAROUSEL VIA SWIPER %>
+      <div class="swiper" data-controller="swiper">
+        <div class="swiper-wrapper">
+          <% nook.photos.each do |nook| %>
+            <div class="swiper-slide"><%= cl_image_tag nook.key, height: 300, width: 350, crop: :fill, class:"swiper-img" %></div>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>

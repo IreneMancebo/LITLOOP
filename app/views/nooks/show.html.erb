@@ -4,7 +4,7 @@
     <div class="nook-name"><h1><%= @nook.name %></h1></div>
     <div class="nook-location">
       <h4 data-controller="typed"
-        data-typed-strings-value="[<%= @nook.coordinates %>]">
+        data-typed-strings-value="[<%= @nook.typed_location %>]">
         [<%= @nook.longitude %>, <%= @nook.latitude %>]
       </h4>
     </div>
@@ -47,21 +47,30 @@
     </div>
   </div>
 
-<%# ADD FOOTNOTE FORM %>
+  <%# ADD FOOTNOTE FORM %>
   <div data-controller="toggle" class="all-footnotes">
     <button data-action="click->toggle#fire" class="btn btn-outline-primary">Add a Footnote</button>
     <div data-toggle-target="togglableElement" class="d-none dropdown-form">
       <%= render 'footnotes/footnote', nook: @nook, footnote: @footnote %>
     </div>
-  </div>
 
-<div class="all-footnotes">
-  <% @footnotes.each do |footnote| %>
-    <div class="footnote-inner">
-      <p><%= footnote.text %></p>
-      <%= link_to "#{footnote.user[:username]}", user_path(footnote.user) %>
+    <div class="past-footnotes">
+      <% @footnotes.each do |footnote| %>
+        <div class="footnote-inner">
+          <p><%= footnote.text %></p>
+          <%= link_to "#{footnote.user[:username]}", user_path(footnote.user) %>
+        </div>
+      <% end %>
     </div>
-  <% end %>
+  </div>
+  
+  <div class="all-footnotes">
+    <% @footnotes.each do |footnote| %>
+      <div class="footnote-inner">
+        <p><%= footnote.text %></p>
+        <%= link_to "#{footnote.user[:username]}", user_path(footnote.user) %>
+      </div>
+    <% end %>
 
   <div class="nook-map-wrapper">
     <div class="nook-map" style="width: 90vw; height: 200px;"
@@ -70,13 +79,6 @@
       data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
   </div>
 
-  <% if current_user == @nook.user %>
-    <div>
-      <td><%= link_to 'Delete nook', nook_path(@nook), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></td>
-      <%= link_to "Edit nook", edit_nook_path(@nook) %>
-    </div>
-  <% end %>
-
   <div id="logout">
       <%= link_to destroy_user_session_path, data: {turbo_method: :delete} do %>
         <span style="font-size: 42px; color: white;">
@@ -84,5 +86,4 @@
         </span>
       <% end %>
   </div>
-  <%# <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
 </div>

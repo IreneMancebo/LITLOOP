@@ -1,0 +1,8 @@
+
+<div class="container all-footnotes mt-5 mb-5">
+  <div class="footnote-inner card-favorite">
+    <p> LATEST FOOTNOTES </p>
+    <% @my_footnotes.each do |footnote|%>
+      <%= footnote.text %>
+    <% end %>
+  </div>

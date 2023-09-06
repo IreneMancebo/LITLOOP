@@ -1,0 +1,25 @@
+.mapboxgl-ctrl-geocoder {
+  max-width: none;
+  width: 100%;
+  border: 1px solid lightgrey;
+  border-radius: $border-radius;
+  box-shadow: none;
+  background-color: transparent;
+  color: white;
+}
+
+.mapboxgl-ctrl-geocoder--icon {
+  fill: $body-color;
+}
+
+.mapboxgl-ctrl-geocoder--input:focus {
+  color: $body-color;
+}
+
+.mapboxgl-ctrl-geocoder--input {
+  color: $body-color;
+}
+
+.input {
+  color: $body-color;
+}
