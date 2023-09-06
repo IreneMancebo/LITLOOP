@@ -21,10 +21,10 @@
 
 <%# FULL MAP LANDING PAGE %>
 <div  id="map-container"
-      data-controller="map"
-      data-map-target="mapContainer"
-      data-map-markers-value="<%= @markers.to_json %>"
-      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+  data-controller="map"
+  data-map-target="mapContainer"
+  data-map-markers-value="<%= @markers.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
 
 <%# FILTERS AND SEARCH LOGIC %>
@@ -70,7 +70,7 @@
                           [('<i class="fa-solid fa-chair"></i>').html_safe, "seating"],
                           [('<i class="fa-solid fa-person-shelter"></i>').html_safe, "shelter"],
                         ] %>
-                         <%= f.input :filter,
+                        <%= f.input :filter,
             as: :check_boxes,
             collection_wrapper_tag: 'div',
             collection_wrapper_class: 'category-wrapper-3',
@@ -85,7 +85,7 @@
                         ] %>
         </div>
         <div data-checkbox-target="accordion" class="accordion">more filters ... </div>
-        <div class="tag-item"><%= f.submit "apply", class: "btn" %></div>
+        <div class="tag-item"><%= f.submit "apply", class: "btn btn-warning" %></div>
       </div>
       </div>
     <% end %>

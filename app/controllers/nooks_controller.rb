@@ -83,7 +83,3 @@ class NooksController < ApplicationController
     params.require(:nook).permit(:name, :address, :description, photos: [])
   end
 end
-
-end
-
-end
