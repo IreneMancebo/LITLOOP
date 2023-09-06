@@ -1,18 +1,20 @@
 // app/javascript/controllers/map_controller.js
 import { Controller } from "@hotwired/stimulus"
 import mapboxgl from 'mapbox-gl' // Don't forget this!
+import MapboxGeocoder from "@mapbox/mapbox-gl-geocoder"
 
 export default class extends Controller {
   static values = {
     apiKey: String,
     markers: Array
   }
+  static targets = ["address", "addressWrapper", "mapContainer"]
 
   connect() {
     mapboxgl.accessToken = this.apiKeyValue;
 
     this.map = new mapboxgl.Map({
-      container: this.element,
+      container: this.mapContainerTarget,
       style: "mapbox://styles/mapbox/streets-v10"
     })
     if (this.hasMarkersValue) {
@@ -20,6 +22,10 @@ export default class extends Controller {
       this.#fitMapToMarkers()
     }
     this.myLocation()
+
+    if (this.hasAddressTarget) {
+      this.setAutocomplete();
+    }
   }
 
   #addMarkersToMap() {
@@ -36,7 +42,6 @@ export default class extends Controller {
             e.preventDefault()
           })
     })
-
   }
 
   #fitMapToMarkers() {
@@ -59,5 +64,40 @@ export default class extends Controller {
       // Draw an arrow next to the location dot to indicate which direction the device is heading.
       showUserHeading: true
     }))
+  }
+
+  addAutocompleteMarker(coordinates) {
+    const markerHtml = new mapboxgl.Marker()
+      .setLngLat(coordinates)
+      .addTo(this.map)
+    this.map.flyTo({ center: coordinates, zoom: 14 })
+  }
+
+  setAutocomplete() {
+    this.geocoder = new MapboxGeocoder({
+      accessToken: this.apiKeyValue,
+      types: "country,region,place,postcode,locality,neighborhood,address"
+    })
+    this.geocoder.addTo(this.addressWrapperTarget)
+    this.geocoder.on("result", (event) => {
+      const coordinates = event.result.geometry.coordinates;
+      this.addAutocompleteMarker(coordinates);
+      this.#setInputValue(event)
+    })
+    this.geocoder.on("clear", () => this.#clearInputValue())
+  }
+
+  #setInputValue(event) {
+    this.addressTarget.value = event.result["place_name"]
+  }
+
+  #clearInputValue() {
+    this.addressTarget.value = ""
+  }
+
+  disconnect() {
+    if (this.hasAddressTarget) {
+      this.geocoder.onRemove()
+    }
   }
 }

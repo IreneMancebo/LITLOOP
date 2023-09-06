@@ -21,6 +21,10 @@ class FootnotesController < ApplicationController
   end
 end
 
+def show
+  @user_footnotes = Footnote.where(user_id: current_user.id).order(created_at: :desc)
+end
+
 private
 
 def footnote_params
