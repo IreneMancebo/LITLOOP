@@ -18,6 +18,7 @@ class PagesController < ApplicationController
     .order("footnotes.created_at DESC")
     .limit(10)
   end
+
 end
 
 
