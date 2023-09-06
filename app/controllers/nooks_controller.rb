@@ -82,7 +82,7 @@ class NooksController < ApplicationController
   #   @nook = Nook.find(params[:id])
   # end
 
-  # def nook_params
-  #   params.require(:nook).permit(:name, :description, photos: [])
-  # end
+  def nook_params
+    params.require(:nook).permit(:name, :description, photos: [])
+  end
 end
