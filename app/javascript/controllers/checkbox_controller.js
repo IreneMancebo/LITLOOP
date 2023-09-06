@@ -20,7 +20,8 @@ for (i = 0; i < acc.length; i++) {
     this.classList.toggle("active");
 
     /* Toggle between hiding and showing the active panel */
-    var panel = this.nextElementSibling;
+    var panel = this.previousElementSibling;
+    console.log(this)
     if (panel.style.maxHeight) {
       panel.style.maxHeight = null;
     } else {

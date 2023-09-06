@@ -1,13 +1,13 @@
-.filter-container {
-  display: grid;
-  column-gap: 2px;
-  row-gap: 2px;
-  position: absolute;
-  top: 10px;
-  width: 100vw;
-  color: black;
-  background-color: white;
-}
+// .filter-container {
+//   display: grid;
+//   column-gap: 2px;
+//   // row-gap: 2px;
+//   position: absolute;
+//   // top: 10px;
+//   width: 100vw;
+//   color: black;
+//   background-color: white;
+// }
 
 .filter-div {
   display: flex;
@@ -25,8 +25,24 @@
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  padding: 0px;
+  margin: 3px 6px 0px 6px;
+}
+
+.category-wrapper-2 {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 0px;
+  margin: 3px 3px 3px 3px;
+}
+
+.category-wrapper-3 {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
   padding: 1px;
-  margin: 3px;
+  margin: 3px 3px 6px 3px;
 }
 
 .category-item {
@@ -65,7 +81,7 @@
   color: #444;
   cursor: pointer;
   padding: 3px;
-  width: 100%;
+  // width: 100%;
   text-align: left;
   border: none;
   outline: none;
