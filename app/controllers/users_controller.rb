@@ -3,6 +3,6 @@ class UsersController < ApplicationController
         @user = User.find(params[:id])
         @favorite_booknooks = @user.favorite_nooks
         @created_booknooks = @user.nooks
-        @created_footnotes = @user.footnotes
+        @created_footnotes = @user.footnotes.order(created_at: :desc)
     end
 end
