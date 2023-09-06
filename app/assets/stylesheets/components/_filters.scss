@@ -1,40 +1,38 @@
 .filter-container {
-  display: grid;
-  column-gap: 2px;
-  row-gap: 2px;
-  position: absolute;
-  top: 10px;
-  width: 100vw;
-  color: black;
-  background-color: white;
+  justify-content: center;
+  display: flex;
+  width: 90vw;
+  z-index: 1000;
+  // position: absolute;
+  // top: 10px;
+  // color: black;
 }
 
 .category-wrapper {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
-.category-item {
-  flex: 0 0 30%;
-}
+// .category-item {}
 
 .category-selector {
   position: absolute;
   transform: scale(0);
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .category-selector + label {
   display: block;
   cursor: pointer;
   box-sizing: border-box;
-  width: 100%;
-  font-size: 12px;
+  width: 40%;
+  font-size: 18px;
   text-align: left;
   padding: 10px 10px 30px 10px;
-  border: 1px solid #EAEAEA;
   border-radius: 4px;
-  background-color: white;
+  background-color: black;
+  color: white;
 }
 
 .category-selector:checked + label {
