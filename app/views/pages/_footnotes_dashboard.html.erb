@@ -1,5 +1,25 @@
 <h2>New Footnotes on your NookBooks</h2>
 
+
+<div class="container all-footnotes mt-5 mb-5">
+  <div class="footnote-inner card-favorite">
+    <p> LATEST FOOTNOTES </p>
+     <% current_user.nooks.each do |nook| %>
+       <h1 style="color:white;"><%= nook.name %></h1>
+       <% nook.footnotes.each do |footnote| %>
+        <%= footnote.text %>
+        <% end %>
+      <% end %>
+
+  <%# <div class="footnote"> %>
+    <%# <%= link_to footnote.user.username, user_path(footnote.user) %> 
+    <%# on <%= link_to footnote.nook.name, nook_path(footnote.nook) %> 
+    <%# <%= footnote.created_at.strftime('%B %d, %Y') %>
+    <%# <%= footnote.text %>
+  <%# </div>
+  <% end %>
+<%# </div> %>
+<!-- 
 <div class="all-footnotes">
   <% @my_footnotes.each do |footnote| %>
     <div class="footnote">
@@ -10,3 +30,4 @@
     </div>
   <% end %>
 </div>
+ -->
