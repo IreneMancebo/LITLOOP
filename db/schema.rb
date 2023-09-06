@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_05_104523) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_06_081837) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -65,7 +65,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_05_104523) do
     t.string "name"
     t.string "coordinates"
     t.string "description"
-    t.string "image"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -83,6 +82,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_05_104523) do
     t.boolean "cost", default: false
     t.boolean "blanket_required", default: false
     t.boolean "view", default: false
+    t.string "address"
     t.index ["user_id"], name: "index_nooks_on_user_id"
   end
 

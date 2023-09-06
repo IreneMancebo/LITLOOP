@@ -1,10 +1,39 @@
 .swiper {
+  display: block;
+  position: relative;
   height: 300px;
   width: 350px;
-  // cheesy glow effect
-  box-shadow: 0 0 25px 5px white;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  overflow: none;
+  border: 1px solid white;
   border-radius: 20px;
-  margin-top: 1vh;
+
+  list-style: none;
+  padding: 10px;
+
+  /* Fix of Webkit flickering */
+  z-index: 1;
+}
+
+.swiper-img {
+  border-radius: 20px;
+  display: block;
+  width: 95%;
+
+}
+
+.swiper-wrapper {
+  display: flex;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  transition-property: transform;
+  transition-timing-function: var(--swiper-wrapper-transition-timing-function, initial);
+  box-sizing: content-box;
 }
 
 @at-root {
@@ -23,30 +52,9 @@
   margin-right: auto;
   z-index: 1;
 }
-.swiper {
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  overflow: hidden;
-  overflow: clip;
-  list-style: none;
-  padding: 0;
-  /* Fix of Webkit flickering */
-  z-index: 1;
-  display: block;
-}
+
 .swiper-vertical > .swiper-wrapper {
   flex-direction: column;
-}
-.swiper-wrapper {
-  display: flex;
-  position: relative;
-  height: 100%;
-  width: 100%;
-  z-index: 1;
-  transition-property: transform;
-  transition-timing-function: var(--swiper-wrapper-transition-timing-function, initial);
-  box-sizing: content-box;
 }
 .swiper-android .swiper-slide,
 .swiper-ios .swiper-slide,

@@ -1,0 +1,6 @@
+<h2>Favorite Booknooks</h2>
+<ul>
+  <% @favorite_booknooks.each do |nook| %>
+    <li><%= link_to nook.name, nook %></li>
+  <% end %>
+</ul>
