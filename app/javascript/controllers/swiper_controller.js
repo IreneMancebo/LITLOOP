@@ -11,8 +11,8 @@ import Swiper from "swiper"
 export default class extends Controller {
   connect() {
     const swiper = new Swiper('.swiper', {
-      speed: 400,
-      spaceBetween: 100,
+      speed: 40,
+      spaceBetween: 10,
 
       direction: 'horizontal',
       loop: true,

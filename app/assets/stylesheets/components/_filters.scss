@@ -1,0 +1,106 @@
+// .filter-container {
+//   display: grid;
+//   column-gap: 2px;
+//   // row-gap: 2px;
+//   position: absolute;
+//   // top: 10px;
+//   width: 100vw;
+//   color: black;
+//   background-color: white;
+// }
+
+.filter-div {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  align-items: center;
+  padding: 1px;
+  margin: 3px;
+
+}
+.col-form-label {
+  display: none;
+}
+
+.category-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 0px;
+  margin: 3px 6px 0px 6px;
+}
+
+.category-wrapper-2 {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 0px;
+  margin: 3px 3px 3px 3px;
+}
+
+.category-wrapper-3 {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 1px;
+  margin: 3px 3px 6px 3px;
+}
+
+.category-item {
+  width: 85px;
+  display: flex;
+  margin: 0 5px;
+  height: 48px;
+}
+
+.category-selector {
+  position: absolute;
+  transform: scale(0);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.category-selector + label {
+  cursor: pointer;
+  width: 100%;
+  font-size: 24px;
+  margin: 2px;
+  border: 1px solid #EAEAEA;
+  border-radius: 4px;
+  background-color: lightblue;
+  text-align: center;
+// Previous rules from Main:
+//   box-sizing: border-box;
+//   color: white;
+}
+
+.category-selector:checked + label {
+  color: white !important;
+  background-color: palevioletred;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 3px;
+  // width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}

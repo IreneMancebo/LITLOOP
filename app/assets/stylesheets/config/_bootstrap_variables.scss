@@ -4,19 +4,40 @@
 // 2. These variables are defined with default value (see https://robots.thoughtbot.com/sass-default)
 // 3. You can override them below!
 
+$background-official: black;
+$header-official: white;
+$hellgruen: #DEEE6A;
+
+// font-family:  'Bagel Fat One', cursive;
+@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One');
+// font-family: 'Nova Mono', monospace;
+@import url('https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap');
+// font-family: 'Shadows Into Light', cursive;
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+// font-family: 'Victor Mono', monospace;
+@import url('https://fonts.googleapis.com/css2?family=Victor+Mono:wght@100;700&display=swap');
+
+// Define fonts for body and headers
+$headers-font: 'Nova Mono', monospace;
+$headers-font-secondary: 'Bagel Fat One', cursive;
+
+$body-font: 'Shadows Into Light', cursive;
+$logo-font: 'Victor Mono', monospace;
+
 // General style
 $font-family-sans-serif: $body-font;
 $headings-font-family:   $headers-font;
+
 $body-bg:                $background-official;
 $font-size-base:         1rem;
 
 // Colors
-$body-color: $eggplant;
-$primary:    $hellgruen;
-$success:    $pfirsche;
-$info:       $kiwi;
-$danger:     $the-white;
-$warning:    $dunkelgruen;
+$body-color: white;
+$primary:    #DEEE6A;
+$success:    white;
+$info:       white;
+$danger:     white;
+$warning:    white;
 
 // Buttons & inputs' radius
 $border-radius:    2px;
