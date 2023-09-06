@@ -7,6 +7,10 @@ class FavoritesController < ApplicationController
     @favorite.save!
   end
 
+  def show
+    @user_favorites = Favorite.where(user_id: current_user.id).order(created_at: :desc)
+  end
+
   # def destroy
   #   @nook = Nook.find(params[:book_id])
   #   current_user.favorite_nooks.delete(@nook)

@@ -10,42 +10,36 @@ class NooksController < ApplicationController
       # footnotes_subquery = "text ILIKE :query"
       @nooks = Nook.where(nook_subquery, query: "%#{params.dig(:search, :query)}%")
       @nooks = @nooks.where(search_hash)
-        @markers = @nooks.map do |nook|
-          {
-            lat: nook.latitude,
-            lng: nook.longitude,
-            preview_card_html: render_to_string(partial: "preview_card", locals: {nook: nook}),
-            nook_id: nook.id,
-            nook_image_src: nook.image,
-            nook_name: nook.name
-          }
-        end
+      @markers = @nooks.map do |nook|
+        {
+          lat: nook.latitude,
+          lng: nook.longitude,
+          preview_card_html: render_to_string(partial: "preview_card", locals: {nook: nook}),
+          nook_id: nook.id,
+          nook_image_src: nook.photos.first.key,
+          nook_name: nook.name
+        }
+      end
     else
       @nooks = Nook.all
-        @markers = @nooks.map do |nook|
-          {
-            lat: nook.latitude,
-            lng: nook.longitude,
-            preview_card_html: render_to_string(partial: "preview_card", locals: {nook: nook}),
-            nook_id: nook.id,
-            nook_image_src: nook.image,
-            nook_name: nook.name
-          }
-        end
+      @markers = @nooks.map do |nook|
+        {
+          lat: nook.latitude,
+          lng: nook.longitude,
+          preview_card_html: render_to_string(partial: "preview_card", locals: {nook: nook}),
+          nook_id: nook.id,
+          nook_image_src:  nook.photos.first.key,
+          nook_name: nook.name
+        }
+      end
     end
   end
 
   def show
-    @footnote = Footnote.new
     @nook = Nook.find(params[:id])
+    @footnote = Footnote.new
     @footnotes = @nook.footnotes.order(created_at: :desc)
     @marker = [{ lat: @nook.latitude, lng: @nook.longitude }]
-    # @marker = @nook.map do |nook|
-    #   {
-    #   lat: nook.latitude,
-    #   lng: nook.longitude
-    #   }
-    # end
   end
 
   def new
@@ -85,6 +79,7 @@ class NooksController < ApplicationController
   #   @nook = Nook.find(params[:id])
   # end
 
-def nook_params
-  params.require(:nook).permit(:name, :address, :description, photos: [])
+  def nook_params
+    params.require(:nook).permit(:name, :address, :description, photos: [])
+  end
 end

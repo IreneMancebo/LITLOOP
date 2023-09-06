@@ -1,6 +1,4 @@
 // Graphical variables
-@import "config/fonts";
-@import "config/colors";
 @import "config/bootstrap_variables";
 
 // External libraries
@@ -122,14 +120,10 @@
   transform: scale(0);
 }
 
+h1 { // page and location names
+  color: white;
+}
 
-// This one is used in the spot show location description signature
-// h6 {
-
-// }
-
-// This one is used in the spot show location name
-// h1 {}
-
-// This one is used in the spot show location coordinates
-// h4 {}
+h4 { // coordinates on show page
+  color: white;
+}

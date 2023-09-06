@@ -11,6 +11,58 @@
   width: 90vw;
 }
 
+// MAPBOX SETTINGS:
+// The Full Map on nooks#index with Popup Pins
+#map-container {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.mapboxgl-popup {
+  display: block !important;
+  transform: none !important;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  top: 69%;
+  .anchor-left {
+    transform: none !important;
+  }
+}
+
+.mapboxgl-popup-content {
+  position: relative;
+  pointer-events: auto;
+  width: 90vw;
+  height: 200px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  padding: 3px;
+  backdrop-filter: blur( 1px );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  font-family: 'Victor Mono', monospace;
+}
+
+.mapboxgl-popup-content a {
+  text-decoration: none;
+  color: white;
+  font-weight:lighter;
+  font-size: 15px;
+}
+
+.mapboxgl-popup-anchor-top .mapboxgl-popup-tip,
+.mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip,
+.mapboxgl-popup-anchor-center .mapboxgl-popup-tip,
+.mapboxgl-popup-anchor-left .mapboxgl-popup-tip,
+.mapboxgl-popup-anchor-right .mapboxgl-popup-tip,
+.mapboxgl-popup-anchor-bottom-right .mapboxgl-popup-tip,
+.mapboxgl-popup-anchor-bottom-left .mapboxgl-popup-tip,
+.mapboxgl-popup-anchor-top-right .mapboxgl-popup-tip,
+.mapboxgl-popup-anchor-top-left .mapboxgl-popup-tip{
+    display:none !important;
+
 #map-nook-new {
   border-radius: 20px;
   height: 200px;
