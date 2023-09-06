@@ -24,10 +24,13 @@ class NooksController < ApplicationController
     @footnote = Footnote.new
     @nook = Nook.find(params[:id])
     @footnotes = @nook.footnotes.order(created_at: :desc)
-    @marker = [{
-      lat: @nook.latitude,
-      lng: @nook.longitude
-    }]
+    @marker = [{ lat: @nook.latitude, lng: @nook.longitude }]
+    # @marker = @nook.map do |nook|
+    #   {
+    #   lat: nook.latitude,
+    #   lng: nook.longitude
+    #   }
+    # end
   end
 
   def new
@@ -53,7 +56,7 @@ class NooksController < ApplicationController
     @nook.update(nook_params)
     redirect_to lending_path(@nook)
   end
-  
+
   def destroy
     @nook = Nook.find(params[:id])
     @nook.destroy
@@ -70,5 +73,5 @@ def set_nook
 end
 
 def nook_params
-  params.require(:nook).permit(:name, :description, photos: [])
+  params.require(:nook).permit(:name, :address, :description, photos: [])
 end
