@@ -3,4 +3,40 @@
   flex-direction: column;
   justify-content: center;
   margin: 30px;
+  color: white;
+  text-align: center;
+
+  h1 {
+    font-weight: bolder;
+    font-size: 5vh;
+    font-family: $logo-font;
+  }
+
+  h4 {
+    font-family: $logo-font;
+  }
+}
+
+#logout {
+  text-align: center;
+  margin-bottom: 10vh;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.crud_links {
+  display: flex;
+  justify-content:space-evenly;
+  text-align: center;
+  bottom: 0;
+
+  a {
+    text-decoration: none;
+  }
+
+  a:hover {
+    font-style: italic;
+  }
 }

@@ -13,5 +13,5 @@ Rails.application.routes.draw do
 
   resources :footnotes, only: :destroy
   resources :favorites, only: %i[new create destroy]
-
+  resources :users, only: [:show]
 end

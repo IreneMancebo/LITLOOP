@@ -1,0 +1,13 @@
+<h2>Most Recently Added Nooks</h2>
+<ul>
+    <% recently_added_nooks.each do |nook| %>
+    <div class="swiper" data-controller="swiper">
+        <div class="swiper-wrapper">
+        <%= nook.name %>
+            <% nook.photos.each do |photo| %>
+            <div class="swiper-slide"><%= cl_image_tag photo.key, height: 300, width: 350, crop: :fill, class:"swiper-img" %></div>
+        <% end %>
+        </div>
+    </div>
+    <% end %>
+</ul>

@@ -4,6 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  has_many :nooks
   has_many :favorites
+  has_many :footnotes
   has_many :favorite_nooks, through: :favorites, source: :nook
 end

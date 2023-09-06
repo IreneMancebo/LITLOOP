@@ -1,11 +1,14 @@
-<div class="container-user">
+<div class="user-login">
   <div class="logo">
-    <h1> LitLoop </h1>
-    <p>Not already in the Loop?</p>
-    <%= render "devise/shared/links" %>
+    <h1>litloop</h1>
+    <div class="signup-links">
+      <h5>Not already in the Loop?</h5>
+      <span id="login-links"><%= render "devise/shared/links" %></span>
+    </div>
   </div>
 
-  <div class="form-inputs">
+  <div class="login-inputs">
+
     <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="signup-input">
         <%= f.input :username,
@@ -21,9 +24,11 @@
       <div class="signup-input">
         <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
       </div>
-
       <div class="form-actions">
-        <%= f.button :submit, "Log in", class: "btn-signup" %>
+        <%= f.button :submit, "log in", class: "btn-signup" %>
       </div>
     <% end %>
+  </div>
+
+
 </div>
