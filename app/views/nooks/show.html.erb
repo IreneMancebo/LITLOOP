@@ -55,11 +55,11 @@
     </div>
   </div>
 
-<div class="all-footnotes">
+  <div class="all-footnotes">
     <% @footnotes.each do |footnote| %>
       <div class="footnote-inner">
-         <p><%= footnote.text %></p>
-         <%= link_to "#{footnote.user[:username]}", user_path(footnote.user) %>
+        <p><%= footnote.text %></p>
+        <%= link_to "#{footnote.user[:username]}", user_path(footnote.user) %>
       </div>
     <% end %>
 
