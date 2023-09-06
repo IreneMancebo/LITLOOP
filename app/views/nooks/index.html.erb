@@ -41,11 +41,10 @@
                 value: params.dig(:search, :query)
               },
               label: false %>
-      <%= button_tag type: 'submit', class: "search-button" do %>
-        <i class="fa-solid fa-magnifying-glass"></i>
-      <% end %>
+      <%# <%= button_tag type: 'submit', class: "search-button" do %>
+        <%# <i class="fa-solid fa-magnifying-glass"></i> %>
+      <%# <% end %>
 
-      <div class="filter-div" data-controller="checkbox">
       <%= f.input :filter,
             as: :check_boxes,
             collection_wrapper_tag: 'div',
@@ -58,8 +57,21 @@
                           [('<i class="fa-solid fa-mug-hot"></i>').html_safe, "coffee"],
                           [('<i class="fa-solid fa-faucet-drip"></i>').html_safe, "water"],
                           [('<i class="fa-solid fa-volume-xmark"></i>').html_safe, "quiet"],
-                          [('<i class="fa-solid fa-tree"></i>').html_safe, "trees"],
+                        ] %>
+
+      <div class="filter-div" data-controller="checkbox">
+      <div data-checkbox-target="accordion" class="accordion">more filters ... </div>
+        <div class="panel">
+      <%= f.input :filter,
+            as: :check_boxes,
+            collection_wrapper_tag: 'div',
+            collection_wrapper_class: 'category-wrapper',
+            item_wrapper_class: 'category-item',
+            multiple: true,
+            input_html: {class: 'category-selector', multiple: true},
+            collection:  [
                           [('<i class="fa-solid fa-plug"></i>').html_safe, "power"],
+                          [('<i class="fa-solid fa-tree"></i>').html_safe, "tree"],
                           [('<i class="fa-solid fa-chair"></i>').html_safe, "seating"],
                           [('<i class="fa-solid fa-person-shelter"></i>').html_safe, "shelter"],
                           [('<i class="fa-solid fa-paw"></i>').html_safe, "animals"],
@@ -67,7 +79,8 @@
                           [('<i class="fa-solid fa-rug"></i>').html_safe, "blanket_requried"],
                           [('<i class="fa-solid fa-mountain-sun"></i>').html_safe, "view"],
                         ] %>
-        <div class="tag-item"><%= f.submit "Filter", id: "filter-button" %></div>
+        </div>
+        <div class="tag-item"><%= f.submit "apply", class: "btn btn-primary" %></div>
       </div>
       </div>
     <% end %>
