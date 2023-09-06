@@ -2,7 +2,7 @@
 
 <div class="container all-footnotes mt-5 mb-5">
   <div class="footnote-inner card-favorite">
-    <p> YOUR FAVORITE NOOKS </p>
+    <h4> YOUR FAVORITE NOOKS </h4>
     <% @favorite_nooks.each do |nook|%>
       <%= nook.name %>
       <%# // put nice card (carousel) for each nook :)  %>
@@ -20,8 +20,10 @@
 
 <div class="container all-footnotes mt-5 mb-5">
   <div class="footnote-inner card-favorite">
-    <p> LATEST FOOTNOTES </p>
+    <h4> LATEST FOOTNOTES </h4>
     <% @my_footnotes.each do |footnote|%>
       <%= footnote.text %>
     <% end %>
+
+    <%= @user_footnotes %>
   </div>

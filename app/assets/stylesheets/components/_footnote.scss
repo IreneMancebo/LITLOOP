@@ -1,9 +1,8 @@
 .all-footnotes {
-  color: $the-white;
+  color: white;
   justify-content: center;
   align-content: center;
   text-align: center;
-  margin: 5%;
 
   button {
     font-size: 25px;
@@ -23,22 +22,3 @@
 #footnote_input {
   color: white;
 }
-
-// .footnote-inner {
-//   background-color: $the-white;
-//   border-radius: 20px;
-//   padding: 25px;
-//   margin-left: 20px;
-//   margin-right: 20px;
-//   margin-bottom: 10px;
-
-//   border: 1px solid rgba(255, 255, 255, 0.25);
-//   border-radius: 20px;
-//   background-color: rgba(255, 255, 255, 0.60);
-//   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
-//   backdrop-filter: blur(15px);
-// }
-
-// .footnote-inner:hover {
-//   background-color: rgba(255, 255, 255, 0.75);
-// }
