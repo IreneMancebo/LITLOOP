@@ -8,13 +8,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Victor+Mono:wght@100;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+// font-family: 'Shadows Into Light', cursive;
+
+
 
 // Define fonts for body and headers
-$headers-font: 'Libre Caslon Display', serif;
+$headers-font: 'Nova Mono', monospace;
 $headers-font-secondary: "Lobster Two", "cursive";
-// $body-font: 'Nova Mono', monospace;
-$body-font: 'Victor Mono', monospace;
-
+$body-font: 'Shadows Into Light', cursive;
 $logo-font: 'Victor Mono', monospace;
 
 // To use a font file (.woff) uncomment following lines

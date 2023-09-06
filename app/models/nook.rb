@@ -6,7 +6,7 @@ class Nook < ApplicationRecord
   has_many :favorited_by_users, through: :favorites, source: :user
   has_many :footnotes
 
-  def coordinates
+  def typed_location
     "#{longitude}, #{latitude}"
   end
 end
