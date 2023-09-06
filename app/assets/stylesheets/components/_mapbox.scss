@@ -62,4 +62,9 @@
 .mapboxgl-popup-anchor-top-right .mapboxgl-popup-tip,
 .mapboxgl-popup-anchor-top-left .mapboxgl-popup-tip{
     display:none !important;
+
+#map-nook-new {
+  border-radius: 20px;
+  height: 200px;
+  width: 90vw;
 }

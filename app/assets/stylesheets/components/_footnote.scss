@@ -3,11 +3,76 @@
   justify-content: center;
   align-content: center;
   text-align: center;
+}
 
-  button {
-    font-size: 25px;
-    width: auto;
-  }
+//   button {
+//     font-size: 25px;
+//     width: auto;
+//   }
+// }
+
+// .dropdown-form {
+//   display: flex;
+//   justify-content: center;
+//   align-content: center;
+//   text-align: center;
+//   margin-top: 25px;
+//   transition: 3s ease;
+// }
+
+// #footnote_input {
+//   color: white;
+// }
+
+// .footnote-inner {
+//   background-color: $the-white;
+//   border-radius: 20px;
+//   padding: 25px;
+//   margin-left: 20px;
+//   margin-right: 20px;
+//   margin-bottom: 10px;
+
+//   border: 1px solid rgba(255, 255, 255, 0.25);
+//   border-radius: 20px;
+//   background-color: rgba(255, 255, 255, 0.60);
+//   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+//   backdrop-filter: blur(15px);
+// }
+
+// .footnote-inner:hover {
+//   background-color: rgba(255, 255, 255, 0.75);
+// }
+
+/* Define a reusable style for footnote cards */
+
+/* Define a reusable style for individual footnotes */
+.footnote {
+  background-color: rgba(255, 255, 255, 0.1); /* Transparent light white background */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+  word-wrap: break-word; /* Ensure long text wraps within the container */
+  white-space: normal; /* Allow text to wrap normally */
+}
+
+/* Style the links within footnotes */
+.footnote a {
+  color: #DEEE6A;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Style the strong tags for labels */
+.footnote strong {
+  font-weight: bold;
+}
+
+/* Apply the footnote style to the specific section you want */
+.all-footnotes {
+  color: $the-white;
+  text-align: left; /* Align text to the left like Reddit threads */
+  margin: 5%;
 }
 
 .dropdown-form {
@@ -21,4 +86,15 @@
 
 #footnote_input {
   color: white;
+}
+
+/* Media query for iPhone 12 or similar devices */
+@media screen and (max-width: 375px) {
+  .all-footnotes {
+    margin: 3%; /* Adjust margin for smaller screens */
+  }
+
+  .footnote {
+    padding: 8px; /* Adjust padding for smaller screens */
+  }
 }

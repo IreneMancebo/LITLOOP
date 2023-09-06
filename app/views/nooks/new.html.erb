@@ -7,9 +7,15 @@
     <%= simple_form_for (@nook) do |f| %>
       <h6><%= f.input :name %></h6>
       <h6><%= f.input :description %></h6>
+      <h6><%= f.input :address,
+        input_html: {data: {address_autocomplete_target: "address"}},
+        wrapper_html: {data: {controller: "address-autocomplete",
+        address_autocomplete_api_key_value: ENV["MAPBOX_API_KEY"]}}
+      %></h6>
+      <small>Type an address above or select your location from the map below</small>
+      <div id="map-nook-new" data-controller="map" data-map-api-key-value="<%= ENV["MAPBOX_API_KEY"] %>"></div>
       <%# Would be nice to require for an emoji %>
       <h6><%= f.input :photos, as: :file %></h6>
-
       <div class="share-submit">
         <%= f.submit "share", class: "share-button", html: { color: "white" } %>
       </div>

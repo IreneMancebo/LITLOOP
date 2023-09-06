@@ -27,27 +27,13 @@
           collection_wrapper_class: 'category-wrapper',
           item_wrapper_class: 'category-item',
           input_html: {class: 'category-selector', multiple: true},
-          collection: [
-            '<i class="fa-solid fa-wifi"></i>'.html_safe,
-            '<i class="fa-solid fa-mug-hot"></i>'.html_safe,
-            '<i class="fa-solid fa-faucet-drip"></i>'.html_safe,
-            '<i class="fa-solid fa-volume-xmark"></i>'.html_safe,
-            '<i class="fa-solid fa-tree"></i>'.html_safe,
-            '<i class="fa-solid fa-plug"></i>'.html_safe,
-            '<i class="fa-solid fa-chair"></i>'.html_safe,
-            '<i class="fa-solid fa-person-shelter"></i>'.html_safe,
-            '<i class="fa-solid fa-paw"></i>'.html_safe,
-            '<i class="fa-solid fa-euro-sign"></i>'.html_safe,
-            '<i class="fa-solid fa-rug"></i>'.html_safe,
-            '<i class="fa-solid fa-mountain-sun"></i>'.html_safe
-          ],
+          collection: ["wifi", "coffee", "water", "quiet", "trees", "power", "seating", "shelter", "animals", "cost", "blanket_required", "view"],
           multiple: true %>
 
         <div class="tag-item"><%= f.submit "Filter", id: "filter-button" %></div>
       </div>
     <% end %>
   </div>
-
 
   <%# SEARCHBAR LANDING PAGE%>
   <div class="search-container">
