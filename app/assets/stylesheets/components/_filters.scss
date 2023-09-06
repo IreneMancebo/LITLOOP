@@ -8,12 +8,33 @@
   // color: black;
 }
 
+.filter-div {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  align-items: center;
+  padding: 1px;
+  margin: 3px;
+
+}
+.col-form-label {
+  display: none;
+}
+
 .category-wrapper {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 1px;
+  margin: 3px;
 }
 
-// .category-item {}
+.category-item {
+  width: 85px;
+  display: flex;
+  margin: 0 5px;
+  height: 48px;
+}
 
 .category-selector {
   position: absolute;
@@ -23,48 +44,44 @@
 }
 
 .category-selector + label {
-  display: block;
   cursor: pointer;
-  box-sizing: border-box;
-  width: 40%;
-  font-size: 18px;
-  text-align: left;
-  padding: 10px 10px 30px 10px;
+  width: 100%;
+  font-size: 24px;
+  margin: 2px;
+  border: 1px solid #EAEAEA;
   border-radius: 4px;
-  background-color: black;
-  color: white;
+  background-color: lightblue;
+  text-align: center;
+// Previous rules from Main:
+//   box-sizing: border-box;
+//   color: white;
 }
 
 .category-selector:checked + label {
   color: white !important;
+  background-color: palevioletred;
 }
 
-
-#snippet_category_ruby + label {
-  color: #FD1015;
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 3px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
 }
 
-#snippet_category_ruby:checked + label {
-  background-color: #FD1015;
-  border-color: #FD1015;
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: #ccc;
 }
 
-
-#snippet_category_javascript + label {
-  color: #FFC65A;
-}
-
-#snippet_category_javascript:checked + label {
-  background-color: #FFC65A;
-  border-color: #FFC65A;
-}
-
-
-#snippet_category_css + label {
-  color: #62DDF5;
-}
-
-#snippet_category_css:checked + label {
-  background-color: #62DDF5;
-  border-color: #62DDF5;
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  background-color: white;
+  display: none;
 }
