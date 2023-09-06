@@ -1,8 +1,14 @@
 .all-footnotes {
+  display: flex;
+  flex-direction: column;
   color: white;
   justify-content: center;
   align-content: center;
   text-align: center;
+}
+
+.btn-outline-primary {
+  width: 50vw;
 }
 
 //   button {

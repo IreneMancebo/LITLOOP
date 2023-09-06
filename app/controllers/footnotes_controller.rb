@@ -14,18 +14,19 @@ class FootnotesController < ApplicationController
       render 'nooks/index', status: :unprocessable_entity
     end
   end
-end
 
-def show
-  @user_footnotes = Footnote.where(user_id: current_user.id).order(created_at: :desc)
-end
+  def show
+    @nook = Nook.find(params[:id])
+    @footnotes = @nook.footnotes.joins(:nook).where(nooks: { user_id: current_user.id }).order(created_at: :desc)
+  end
 
-private
+  private
 
-def footnote_params
-  params.require(:footnote).permit(:text)
-end
+  def footnote_params
+    params.require(:footnote).permit(:text)
+  end
 
-def set_nook
-  @nook = params[:nook_id]
+  def set_nook
+    @nook = params[:nook_id]
+  end
 end

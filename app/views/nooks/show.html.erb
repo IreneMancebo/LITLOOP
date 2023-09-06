@@ -24,8 +24,45 @@
   <div class="show-details mb-5">
     <div class="post-it">
       <div class="note">
-      <%= @nook.description %>
-      <%# <h6>Signed, <%= @nook.user.username %>
+        <h6>
+          <% if @nook.coffee %>
+            <i class="fa-solid fa-mug-hot"></i>
+          <% end %>
+          <% if @nook.wifi %>
+            <i class="fa-solid fa-wifi"></i>
+          <% end %>
+          <% if @nook.water %>
+            <i class="fa-solid fa-faucet-drip"></i>
+          <% end %>
+          <% if @nook.quiet %>
+            <i class="fa-solid fa-volume-xmark"></i>
+          <% end %>
+          <% if @nook.trees %>
+            <i class="fa-solid fa-trees"></i>
+          <% end %>
+          <% if @nook.power %>
+            <i class="fa-solid fa-plug"></i>
+          <% end %>
+          <% if @nook.seating %>
+            <i class="fa-solid fa-table-picnic"></i>
+          <% end %>
+          <% if @nook.shelter %>
+            <i class="fa-solid fa-table-picnic"></i>
+          <% end %>
+          <% if @nook.animals %>
+            <i class="fa-solid fa-dog-leashed"></i>
+          <% end %>
+          <% if @nook.cost %>
+            <i class="fa-solid fa-circle-euro"></i>
+          <% end %>
+          <% if @nook.blanket_required %>
+            <i class="fa-solid fa-rug"></i>
+          <% end %>
+          <% if @nook.view %>
+            <i class="fa-solid fa-mountain-sun"></i>
+          <% end %>
+        </h6>
+
       <%# ROUTES TO CRUD EDIT CRUD DELETE %>
       <div class="crud_links">
         <div id="edit_nook">
