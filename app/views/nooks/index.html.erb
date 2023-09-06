@@ -6,35 +6,6 @@
     <% end %>
   </div>
 
-<%# ALL FILTERS - LANDING PAGE%>
-<%= simple_form_for :search, url: nooks_path, method: "GET", html: { class: "form index-form" } do |f| %>
-    <div class="filter-container">
-      <%= f.input :query,
-              wrapper: false,
-              input_html: {
-                id: "search-bar",
-                value: params.dig(:search, :query)
-              },
-              label: false %>
-      <%# <%= button_tag type: 'submit', class: "search-button" do %>
-        <%# <i class="fa-solid fa-magnifying-glass"></i>
-      <% end %>
-
-      <div class="category-wrapper">
-        <%= f.input :filter,
-          as: :check_boxes,
-          collection_wrapper_tag: 'div',
-          collection_wrapper_class: 'category-wrapper',
-          item_wrapper_class: 'category-item',
-          input_html: {class: 'category-selector', multiple: true},
-          collection: ["wifi", "coffee", "water", "quiet", "trees", "power", "seating", "shelter", "animals", "cost", "blanket_required", "view"],
-          multiple: true %>
-
-        <div class="tag-item"><%= f.submit "Filter", id: "filter-button" %></div>
-      </div>
-    <% end %>
-  </div>
-
   <%# SEARCHBAR LANDING PAGE%>
   <div class="search-container">
       <div class="search-toggle" data-controller="searchbar">
@@ -51,6 +22,71 @@
 <%# FULL MAP LANDING PAGE %>
 <div  id="map-container"
       data-controller="map"
+      data-map-target="mapContainer"
       data-map-markers-value="<%= @markers.to_json %>"
       data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
+
+<%# FILTERS AND SEARCH LOGIC %>
+<%= simple_form_for :search, url: nooks_path, method: "GET", html: { class: "form index-form" } do |f| %>
+    <div class="filter-container">
+      <%= f.input :query,
+              wrapper: false,
+              input_html: {
+                id: "search-bar",
+                value: params.dig(:search, :query)
+              },
+              label: false %>
+      <%# <%= button_tag type: 'submit', class: "search-button" do %>
+        <%# <i class="fa-solid fa-magnifying-glass"></i> %>
+      <%# <% end %>
+
+      <%= f.input :filter,
+            as: :check_boxes,
+            collection_wrapper_tag: 'div',
+            collection_wrapper_class: 'category-wrapper',
+            item_wrapper_class: 'category-item',
+            multiple: true,
+            input_html: {class: 'category-selector', multiple: true},
+            collection:  [
+                          [('<i class="fa-solid fa-wifi"></i>').html_safe, "wifi"],
+                          [('<i class="fa-solid fa-mug-hot"></i>').html_safe, "coffee"],
+                          [('<i class="fa-solid fa-faucet-drip"></i>').html_safe, "water"],
+                          [('<i class="fa-solid fa-volume-xmark"></i>').html_safe, "quiet"],
+                        ] %>
+
+      <div class="filter-div" data-controller="checkbox">
+        <div class="panel">
+      <%= f.input :filter,
+            as: :check_boxes,
+            collection_wrapper_tag: 'div',
+            collection_wrapper_class: 'category-wrapper-2',
+            item_wrapper_class: 'category-item',
+            multiple: true,
+            input_html: {class: 'category-selector', multiple: true},
+            collection:  [
+              [('<i class="fa-solid fa-plug"></i>').html_safe, "power"],
+                          [('<i class="fa-solid fa-tree"></i>').html_safe, "tree"],
+                          [('<i class="fa-solid fa-chair"></i>').html_safe, "seating"],
+                          [('<i class="fa-solid fa-person-shelter"></i>').html_safe, "shelter"],
+                        ] %>
+                         <%= f.input :filter,
+            as: :check_boxes,
+            collection_wrapper_tag: 'div',
+            collection_wrapper_class: 'category-wrapper-3',
+            item_wrapper_class: 'category-item',
+            multiple: true,
+            input_html: {class: 'category-selector', multiple: true},
+            collection:  [
+                          [('<i class="fa-solid fa-paw"></i>').html_safe, "animals"],
+                          [('<i class="fa-solid fa-euro-sign"></i>').html_safe, "cost"],
+                          [('<i class="fa-solid fa-rug"></i>').html_safe, "blanket_requried"],
+                          [('<i class="fa-solid fa-mountain-sun"></i>').html_safe, "view"],
+                        ] %>
+        </div>
+        <div data-checkbox-target="accordion" class="accordion">more filters ... </div>
+        <div class="tag-item"><%= f.submit "apply", class: "btn" %></div>
+      </div>
+      </div>
+    <% end %>
+  </div>

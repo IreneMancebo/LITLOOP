@@ -1,6 +1,11 @@
 class FootnotesController < ApplicationController
   before_action :set_nook
 
+  def show
+    @nook = Nook.find(params[:id])
+    @footnotes = @nook.footnotes.joins(:nook).where(nooks: { user: current_user }).order(created_at: :desc)
+  end
+
   def new
   end
 

@@ -1,0 +1,11 @@
+<h2>Created Footnotes</h2>
+<div class="all-footnotes">
+  <% @created_footnotes.each do |footnote| %>
+    <div class="footnote">
+      <%= link_to footnote.user.username, user_path(footnote.user) %>
+      on <%= link_to footnote.nook.name, nook_path(footnote.nook) %></p>
+      <%= footnote.created_at.strftime('%B %d, %Y') %></p>
+      <%= footnote.text %></p>
+    </div>
+  <% end %>
+</div>

@@ -3,7 +3,7 @@ class NooksController < ApplicationController
   # before_action :set_nook
   def index
     if params[:search].present?
-      filters = params[:search].dig(:filter).drop(1)
+      filters = params[:search][:filter].reject(&:empty?)
       search_hash = {}
       filters.map { |filter| search_hash[filter] = true }
       nook_subquery = "name ILIKE :query OR description ILIKE :query"
@@ -82,4 +82,8 @@ class NooksController < ApplicationController
   def nook_params
     params.require(:nook).permit(:name, :address, :description, photos: [])
   end
+end
+
+end
+
 end
