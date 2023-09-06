@@ -20,7 +20,7 @@ a = Nook.new(
   latitude: 52.457690,
   longitude: 13.518904,
   user: bretty,
-  description: "coffee wifi water quiet trees power seating shelter animals cost blanket_required view"
+  description: "coffee wifi water quiet trees power seating shelter animals cost blanket_required view",
   coffee: true,
   wifi: false,
   water: true,
@@ -56,7 +56,7 @@ b = Nook.create!(
   latitude: 52.465878,
   longitude: 13.405435,
   user: nadjalovesyoga,
-  description: "coffee wifi water quiet trees power seating shelter animals cost blanket_required view"
+  description: "coffee wifi water quiet trees power seating shelter animals cost blanket_required view",
   coffee: false,
   wifi: true,
   water: false,
@@ -92,7 +92,7 @@ c = Nook.create!(
   latitude: 52.471646,
   longitude: 13.438770,
   user: irenikachan,
-  description: "coffee wifi water quiet trees power seating shelter animals cost blanket_required view"
+  description: "coffee wifi water quiet trees power seating shelter animals cost blanket_required view",
   coffee: true,
   wifi: true,
   water: true,
@@ -128,7 +128,7 @@ d = Nook.create!(
   latitude: 52.473001,
   longitude: 13.414583,
   user: nickynicole,
-  description: "coffee wifi water quiet trees power seating shelter animals cost blanket_required view"
+  description: "coffee wifi water quiet trees power seating shelter animals cost blanket_required view",
   coffee: false,
   wifi: false,
   water: false,
@@ -164,7 +164,7 @@ e = Nook.create!(
   latitude: 52.513032,
   longitude: 13.356047,
   user: bretty,
-  description: "coffee wifi water quiet trees power seating shelter animals cost blanket_required view"
+  description: "coffee wifi water quiet trees power seating shelter animals cost blanket_required view",
   coffee: false,
   wifi: false,
   water: false,
@@ -200,7 +200,7 @@ f = Nook.create!(
   latitude: 52.495608,
   longitude: 13.407432,
   user: nadjalovesyoga,
-  description: "coffee wifi water quiet trees power seating shelter animals cost blanket_required view"
+  description: "coffee wifi water quiet trees power seating shelter animals cost blanket_required view",
   coffee: false,
   wifi: false,
   water: true,
@@ -236,7 +236,7 @@ g = Nook.create!(
   latitude: 52.527266,
   longitude: 13.434275,
   user: irenikachan,
-  description: "coffee wifi water quiet trees power seating shelter animals cost blanket_required view"
+  description: "coffee wifi water quiet trees power seating shelter animals cost blanket_required view",
   coffee: true,
   wifi: true,
   water: true,
