@@ -1,0 +1,36 @@
+.form-check .form-check-label {
+  font-family: $buttons-font;
+  font-size: 20px;
+  color: $success;
+}
+
+#nook-name input {
+  background-color: $success;
+
+  input:hover {
+    background-color: $info;
+    color: $primary;
+    border: 1px solid $primary;
+  }
+}
+
+#nook-description input {
+  background-color: $success;
+
+  input:hover {
+    background-color: $info;
+    color: $primary;
+    border: 1px solid $primary;
+  }
+}
+form:hover input, form:valid input {
+  background-color: $success;
+  color: $danger;
+  border: 1px solid $info;
+}
+
+form:hover input:focus, form:valid input:focus {
+  background-color: $info;
+  color: $danger;
+  border: 1px solid $primary;
+}
