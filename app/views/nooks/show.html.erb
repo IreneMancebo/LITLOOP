@@ -1,3 +1,4 @@
+<%= @nook.user %>
 <div class="show-page-wrapper">
   <%# LOCATION HEADER AND COORDINATES %>
   <div class="nook-header">
@@ -102,7 +103,7 @@
       <% end %>
     </div>
   </div>
-
+  
   <div class="all-footnotes">
     <% @footnotes.each do |footnote| %>
       <div class="footnote-inner">
@@ -114,6 +115,7 @@
   <div class="nook-map-wrapper">
     <div class="nook-map" style="width: 90vw; height: 200px;"
       data-controller="map"
+      data-map-target="mapContainer"
       data-map-markers-value="<%= @marker.to_json %>"
       data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
   </div>
