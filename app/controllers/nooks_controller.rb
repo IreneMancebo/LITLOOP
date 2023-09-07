@@ -80,6 +80,6 @@ class NooksController < ApplicationController
   # end
 
   def nook_params
-    params.require(:nook).permit(:name, :address, :description, photos: [])
+    params.require(:nook).permit(:name, :address, :description, :coffee, :wifi, :water, :quiet, :trees, :power, :seating, :shelter, :animals, :cost, :bathroom, :view, photos: [])
   end
 end

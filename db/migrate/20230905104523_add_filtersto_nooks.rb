@@ -10,7 +10,7 @@ class AddFilterstoNooks < ActiveRecord::Migration[7.0]
     add_column :nooks, :shelter, :boolean, default: false
     add_column :nooks, :animals, :boolean, default: false
     add_column :nooks, :cost, :boolean, default: false
-    add_column :nooks, :blanket_required, :boolean, default: false
+    add_column :nooks, :bathroom, :boolean, default: false
     add_column :nooks, :view, :boolean, default: false
   end
 end
