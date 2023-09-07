@@ -1,14 +1,25 @@
-// .filter-container {
-//   display: grid;
-//   column-gap: 2px;
-//   // row-gap: 2px;
-//   position: absolute;
-//   // top: 10px;
-//   width: 100vw;
-//   color: black;
-//   background-color: white;
-// }
+// SEARCH BAR AND SEARCH BUTTON
+.searchbar {
+  display: flex;
+  width: 88vw;
+  align-items: center;
+  justify-content: center;
+}
 
+.search-button {
+  width: 46px;
+  height: 44px;
+  border: 2px solid;
+  border-radius: 8px;
+  color: #AFACF9;
+  background-color: black;
+}
+
+#search-bar {
+  margin: 0px 0px 0px 8px;
+}
+
+// FILTER BUTTONS
 .filter-div {
   display: flex;
   flex-wrap: wrap;

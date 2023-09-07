@@ -19,9 +19,10 @@
 .preview-window {
   display: flex;
   justify-content: center;
-  height: 85%;
+  height: 88%;
   background: #FFFFFF;
   object-fit: fill;
+  border-radius: 7px;
 }
 
 // IMAGE
@@ -32,6 +33,8 @@
   height: 100%;
   width: 100%;
   object-fit: cover;
+  border-radius: 7px;
+  padding: 2px;
 }
 
 // NOOK DATA CONTAINER
@@ -39,7 +42,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 20%;
+  height: 14%;
   // background-color: rgba(0, 0, 0, 0.4);
   padding-left: 8px;
   padding-right: 8px;
