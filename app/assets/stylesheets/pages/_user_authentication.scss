@@ -57,6 +57,10 @@
 
 .login-inputs {
   font-family: $header-font;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 /* Form Control Styles */
@@ -97,24 +101,3 @@
 #login-links {
   text-decoration: none;
 }
-
-.login-inputs {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-  width: 100%;
-}
-
-// .logo {
-//   animation: fadeInOut 60s ease infinite; /* Adjust the animation duration and easing as needed */
-// }
-
-// @keyframes fadeInOut {
-//   0%, 100% {
-//     opacity: 0;
-//   }
-//   50% {
-//     opacity: 1;
-//   }
-// }
