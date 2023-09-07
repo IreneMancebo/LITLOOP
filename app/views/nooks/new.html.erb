@@ -9,6 +9,8 @@
     <%= simple_form_for (@nook) do |f| %>
       <h6><%= f.input :name %></h6>
       <h6><%= f.input :description %></h6>
+      <div class="filter-div" data-controller="checkbox">
+        <div class="panel">
       <h6><%= f.input :coffee, as: :boolean, label: "<i class='fa-solid fa-mug-hot'></i> - Coffee can be purchased nearby".html_safe %></h6>
       <h6><%= f.input :wifi, as: :boolean, label: "<i class='fa-solid fa-wifi'></i> - WLAN available for use".html_safe %></h6>
       <h6><%= f.input :water, as: :boolean, label: "<i class='fa-solid fa-faucet-drip'></i> - Drinking water available".html_safe %></h6>
@@ -21,6 +23,9 @@
       <h6><%= f.input :cost, as: :boolean, label: "<i class='fa-solid fa-euro-sign'></i> - Money expected to be spent to use facilities here".html_safe %></h6>
       <h6><%= f.input :bathroom, as: :boolean, label: "<i class='fa-solid fa-toilet'></i> - Bathrooms available".html_safe %></h6>
       <h6><%= f.input :view, as: :boolean, label: "<i class='fa-solid fa-mountain-sun'></i> - Pleasant views".html_safe %></h6>
+      </div>
+      <div data-checkbox-target="accordion" class="accordion">Select additional features of the Nook: </div>
+      </div>
       <h6><%= f.input :address,
         class: "d-none",
         input_html: {data: {map_target: "address"}, class: "d-none"},
