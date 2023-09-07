@@ -11,7 +11,7 @@ class NooksController < ApplicationController
       # nook_subquery = "name ILIKE :query OR description ILIKE :query"
       # footnotes_subquery = "text ILIKE :query"
       # @nooks = Nook.where(nook_subquery, query: "%#{params.dig(:search, :query)}%")
-      
+
       @nooks = Nook.global_search(params.dig(:search, :query))
       @nooks = @nooks.where(search_hash)
       @markers = @nooks.map do |nook|
@@ -84,6 +84,7 @@ class NooksController < ApplicationController
   # end
 
   def nook_params
-    params.require(:nook).permit(:name, :address, :description, :coffee, :wifi, :water, :quiet, :trees, :power, :seating, :shelter, :animals, :cost, :bathroom, :view, photos: [])
+    params.require(:nook).permit(:name, :address, :description, :coffee, :wifi, :water, :quiet, :trees, :power, :seating, :shelter,
+                                :animals, :cost, :bathroom, :view, photos: [])
   end
 end

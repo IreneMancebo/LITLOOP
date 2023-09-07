@@ -7,16 +7,16 @@
   </div>
 
   <%# SEARCHBAR LANDING PAGE%>
-  <div class="search-container">
-      <div class="search-toggle" data-controller="searchbar">
-          <%= form_with url: nooks_path, method: :get, class: "d-flex" do %>
-            <%= text_field_tag :query, params[:query], class: "form-control", id: "search-bar", placeholder: "sunshine" %>
-            <%= button_tag type: "submit" do %>
-              <i class="fa-solid fa-search"></i> <!-- Search icon -->
-            <% end %>
-          <% end %>
-      </div>
-  </div>
+  <%# <div class="search-container"> %>
+      <%# <div class="search-toggle" data-controller="searchbar"> %>
+          <%# <%= form_with url: nooks_path, method: :get, class: "d-flex" do %>
+            <%# <%= text_field_tag :query, params[:query], class: "form-control", id: "search-bar", placeholder: "sunshine" %>
+            <%# <%= button_tag type: "submit" do %>
+              <%# <i class="fa-solid fa-search"></i> <!-- Search icon --> %>
+            <%# <% end %>
+          <%# <% end %>
+      <%# </div> %>
+  <%# </div> %>
 </div>
 
 <%# FULL MAP LANDING PAGE %>
@@ -85,7 +85,7 @@
                         ] %>
         </div>
         <div data-checkbox-target="accordion" class="accordion">more filters ... </div>
-        <div class="tag-item"><%= f.submit "apply", class: "btn btn-warning" %></div>
+        <div class="tag-item"><%= f.submit "SEARCH", class: "btn btn-warning" %></div>
       </div>
       </div>
     <% end %>
