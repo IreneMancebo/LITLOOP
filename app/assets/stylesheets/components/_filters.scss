@@ -53,10 +53,17 @@
 }
 
 .category-item {
-  width: 85px;
-  display: flex;
-  margin: 0 5px;
-  height: 48px;
+  border-radius: 50%;
+  width:60px;
+  padding: 10px;
+  margin-bottom: auto;
+  color: $info;
+  background-color: aliceblue;
+  border: 2px solid;
+  // width: 85px;
+  // display: flex;
+  // margin: 0 5px;
+  // height: 48px;
 }
 
 .category-selector {
@@ -67,17 +74,23 @@
 }
 
 .category-selector + label {
+  border-radius: 50%;
+  width:60px;
+  padding: 10px;
+  margin-bottom: auto;
+  color: $info;
+  background-color: aliceblue;
+  border: 2px solid;
+
+  
   cursor: pointer;
-  width: 100%;
+  // width: 100%;
   font-size: 24px;
   margin: 2px;
   border: 1px solid #EAEAEA;
   border-radius: 4px;
   background-color: lightblue;
   text-align: center;
-// Previous rules from Main:
-//   box-sizing: border-box;
-//   color: white;
 }
 
 .category-selector:checked + label {
