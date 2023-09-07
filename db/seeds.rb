@@ -21,9 +21,9 @@ a = Nook.new(
   longitude: 13.518904,
   address: "Hasselwerderstraße 22, 12439 Berlin",
   user: bretty,
-  description: "coffee wifi water quiet trees power seating shelter animals cost blanket_required view",
+  description: "coffee wifi water quiet trees power seating shelter animals cost bathroom view",
   coffee: true,
-  wifi: false,
+  wifi: true,
   water: true,
   quiet: false,
   trees: false,
@@ -32,7 +32,7 @@ a = Nook.new(
   shelter: true,
   animals: false,
   cost: true,
-  blanket_required: false,
+  bathroom: false,
   view: false
 )
 a1 = "https://res.cloudinary.com/dqt6q0bpd/image/upload/v1693814744/LITLOOP/1.%20Buchplatz%20am%20Kaisersteg/Screenshot_2023-09-04_at_10.05.29_es118u.png"
@@ -58,7 +58,7 @@ b = Nook.create!(
   longitude: 13.405435,
   address: "Berliner Innenstadt, 12101 Berlin",
   user: nadjalovesyoga,
-  description: "coffee wifi water quiet trees power seating shelter animals cost blanket_required view",
+  description: "coffee wifi water quiet trees power seating shelter animals cost bathroom view",
   coffee: false,
   wifi: true,
   water: false,
@@ -69,7 +69,7 @@ b = Nook.create!(
   shelter: true,
   animals: false,
   cost: true,
-  blanket_required: false,
+  bathroom: false,
   view: true
 )
 b1 = "https://res.cloudinary.com/dqt6q0bpd/image/upload/v1693815005/LITLOOP/2.%20Tempelhofer%20Aussicht/Screenshot_2023-09-04_at_10.10.00_qdiuki.png"
@@ -95,7 +95,7 @@ c = Nook.create!(
   longitude: 13.518904,
   address: "Schierker Strasse, 12051 Berlin",
   user: irenikachan,
-  description: "coffee wifi water quiet trees power seating shelter animals cost blanket_required view",
+  description: "coffee wifi water quiet trees power seating shelter animals cost bathroom view",
   coffee: true,
   wifi: true,
   water: true,
@@ -106,7 +106,7 @@ c = Nook.create!(
   shelter: false,
   animals: false,
   cost: false,
-  blanket_required: false,
+  bathroom: false,
   view: false
 )
 c1 = "https://res.cloudinary.com/dqt6q0bpd/image/upload/v1693815138/LITLOOP/3.%20Koernook%20Park/Screenshot_2023-09-04_at_10.12.05_hjclit.png"
@@ -132,7 +132,7 @@ d = Nook.create!(
   longitude: 13.414583,
   address: "Berliner Innenstadt, 12101 Berlin",
   user: nickynicole,
-  description: "coffee wifi water quiet trees power seating shelter animals cost blanket_required view",
+  description: "coffee wifi water quiet trees power seating shelter animals cost bathroom view",
   coffee: false,
   wifi: false,
   water: false,
@@ -143,7 +143,7 @@ d = Nook.create!(
   shelter: true,
   animals: true,
   cost: true,
-  blanket_required: false,
+  bathroom: false,
   view: false
 )
 d1 = "https://res.cloudinary.com/dqt6q0bpd/image/upload/v1693815564/LITLOOP/4.%20Dick%27s%20Kiss%20at%20Templehof/Screenshot_2023-09-04_at_10.19.19_srfwbk.png"
@@ -169,7 +169,7 @@ e = Nook.create!(
   longitude: 13.356047,
   address: "Berliner Innenstadt, 10785 Berlin",
   user: bretty,
-  description: "coffee wifi water quiet trees power seating shelter animals cost blanket_required view",
+  description: "coffee wifi water quiet trees power seating shelter animals cost bathroom view",
   coffee: false,
   wifi: false,
   water: false,
@@ -180,7 +180,7 @@ e = Nook.create!(
   shelter: true,
   animals: true,
   cost: true,
-  blanket_required: false,
+  bathroom: false,
   view: false
 )
 e1 = "https://res.cloudinary.com/dqt6q0bpd/image/upload/v1693815941/LITLOOP/5.%20Orlando%20in%20Tiergarten/Screenshot_2023-09-04_at_10.25.16_kkxhyq.png"
@@ -206,7 +206,7 @@ f = Nook.create!(
   longitude: 13.407432,
   address: "Berliner Innenstadt, 10967 Berlin",
   user: nadjalovesyoga,
-  description: "coffee wifi water quiet trees power seating shelter animals cost blanket_required view",
+  description: "coffee wifi water quiet trees power seating shelter animals cost bathroom view",
   coffee: false,
   wifi: false,
   water: true,
@@ -217,7 +217,7 @@ f = Nook.create!(
   shelter: false,
   animals: true,
   cost: true,
-  blanket_required: true,
+  bathroom: true,
   view: false
 )
 f1 = "https://res.cloudinary.com/dqt6q0bpd/image/upload/v1693816132/LITLOOP/6.%20Reading%20with%20swans%21%21%20:%29/Screenshot_2023-09-04_at_10.28.33_g0dvqc.png"
@@ -243,7 +243,7 @@ g = Nook.create!(
   longitude: 13.434275,
   address: "Berliner Innenstadt, 10249 Berlin",
   user: irenikachan,
-  description: "coffee wifi water quiet trees power seating shelter animals cost blanket_required view",
+  description: "coffee wifi water quiet trees power seating shelter animals cost bathroom view",
   coffee: true,
   wifi: true,
   water: true,
@@ -254,7 +254,7 @@ g = Nook.create!(
   shelter: false,
   animals: false,
   cost: true,
-  blanket_required: false,
+  bathroom: false,
   view: false
 )
 g1 = "https://res.cloudinary.com/dqt6q0bpd/image/upload/v1693816485/LITLOOP/7.%20Buchspark%20Friedrichshain/Screenshot_2023-09-04_at_10.34.39_t79rwb.png"
