@@ -10,76 +10,78 @@
     </div>
   </div>
 
-  <%# IMAGES CAROUSEL VIA SWIPER %>
-  <div class="swiper" data-controller="swiper">
-    <div class="swiper-wrapper">
-      <% @nook.photos.each do |nook| %>
-        <div class="swiper-slide"><%= cl_image_tag nook.key, height: 300, width: 350, crop: :fill, class:"swiper-img" %></div>
-      <% end %>
-    </div>
-    <div class="swiper-pagination"></div>
-  </div>
-
-  <%# POST-IT NOTE WITH LOCATION DESCRIPTION %>
-  <div class="show-details mb-5">
-    <div class="post-it">
-      <div class="note">
-        <h6>
-          <% if @nook.coffee %>
-            <i class="fa-solid fa-mug-hot"></i>
-          <% end %>
-          <% if @nook.wifi %>
-            <i class="fa-solid fa-wifi"></i>
-          <% end %>
-          <% if @nook.water %>
-            <i class="fa-solid fa-faucet-drip"></i>
-          <% end %>
-          <% if @nook.quiet %>
-            <i class="fa-solid fa-volume-xmark"></i>
-          <% end %>
-          <% if @nook.trees %>
-            <i class="fa-solid fa-trees"></i>
-          <% end %>
-          <% if @nook.power %>
-            <i class="fa-solid fa-plug"></i>
-          <% end %>
-          <% if @nook.seating %>
-            <i class="fa-solid fa-table-picnic"></i>
-          <% end %>
-          <% if @nook.shelter %>
-            <i class="fa-solid fa-table-picnic"></i>
-          <% end %>
-          <% if @nook.animals %>
-            <i class="fa-solid fa-dog-leashed"></i>
-          <% end %>
-          <% if @nook.cost %>
-            <i class="fa-solid fa-circle-euro"></i>
-          <% end %>
-          <% if @nook.blanket_required %>
-            <i class="fa-solid fa-rug"></i>
-          <% end %>
-          <% if @nook.view %>
-            <i class="fa-solid fa-mountain-sun"></i>
-          <% end %>
-        </h6>
-
-      <%# ROUTES TO CRUD EDIT CRUD DELETE %>
-      <div class="crud_links">
-        <div id="edit_nook">
-          <%= link_to edit_nook_path(@nook), class: "crud_button" do %>
-            <span style="font-size: 20px; color: black;">
-              <i class="fa-solid fa-pencil"></i>
-            </span>
-          <% end %>
-        </div>
-        <div id="delete_nook">
-          <td><%= link_to nook_path(@nook), class: "crud_button", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %></td>
-            <span style="font-size: 20px; color: black;">
-              <i class="fa-solid fa-trash"></i>
-            </span>
-          <% end %>
-        </div>
+  <div class="nook_notes">
+    <%# IMAGES CAROUSEL VIA SWIPER %>
+    <div class="swiper" data-controller="swiper">
+      <div class="swiper-wrapper">
+        <% @nook.photos.each do |nook| %>
+          <div class="swiper-slide"><%= cl_image_tag nook.key, height: 300, width: 350, crop: :fill, class:"swiper-img" %></div>
+        <% end %>
       </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <%# POST-IT NOTE WITH LOCATION DESCRIPTION %>
+    <div class="show-details mb-5">
+      <div class="post-it">
+        <div class="note">
+          <p>
+            <% if @nook.coffee %>
+              <i class="fa-solid fa-mug-hot"></i> - coffee </br>
+            <% end %>
+            <% if @nook.wifi %>
+              <i class="fa-solid fa-wifi"></i> - wifi </br>
+            <% end %>
+            <% if @nook.water %>
+              <i class="fa-solid fa-faucet-drip"></i> - water </br>
+            <% end %>
+            <% if @nook.quiet %>
+              <i class="fa-solid fa-volume-xmark"></i> - quiet </br>
+            <% end %>
+            <% if @nook.trees %>
+              <i class="fa-solid fa-tree"></i> - trees </br>
+            <% end %>
+            <% if @nook.power %>
+              <i class="fa-solid fa-plug"></i> - power </br>
+            <% end %>
+            <% if @nook.seating %>
+              <i class="fa-solid fa-table-picnic"></i> - seating </br>
+            <% end %>
+            <% if @nook.shelter %>
+              <i class="fa-solid fa-table-picnic"></i> - shelter </br>
+            <% end %>
+            <% if @nook.animals %>
+              <i class="fa-solid fa-dog-leashed"></i> - animals </br>
+            <% end %>
+            <% if @nook.cost %>
+              <i class="fa-solid fa-circle-euro"></i> - cost </br>
+            <% end %>
+            <% if @nook.blanket_required %>
+              <i class="fa-solid fa-rug"></i> - byo </br>
+            <% end %>
+            <% if @nook.view %>
+              <i class="fa-solid fa-mountain-sun"></i> - views </br>
+            <% end %>
+          </p>
+
+        <%# ROUTES TO CRUD EDIT CRUD DELETE %>
+        <div class="crud_links d-flex justify-content-end">
+          <div id="edit_nook">
+            <%= link_to edit_nook_path(@nook), class: "crud_button" do %>
+              <span style="font-size: 20px;">
+                <i class="fa-solid fa-pencil"></i>
+              </span>
+            <% end %>
+          </div>
+          <div id="delete_nook">
+            <td><%= link_to nook_path(@nook), class: "crud_button", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %></td>
+              <span style="font-size: 20px;">
+                <i class="fa-solid fa-trash"></i>
+              </span>
+            <% end %>
+          </div>
+        </div>
+        </div>
       </div>
     </div>
   </div>

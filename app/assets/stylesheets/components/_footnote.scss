@@ -1,14 +1,8 @@
 .all-footnotes {
-  display: flex;
-  flex-direction: column;
   color: white;
   justify-content: center;
   align-content: center;
   text-align: center;
-}
-
-.btn-outline-primary {
-  width: 50vw;
 }
 
 //   button {
@@ -76,7 +70,7 @@
 
 /* Apply the footnote style to the specific section you want */
 .all-footnotes {
-  color: white;
+  color: $the-white;
   text-align: left; /* Align text to the left like Reddit threads */
   margin: 5%;
 }
