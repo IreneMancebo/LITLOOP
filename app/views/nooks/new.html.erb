@@ -35,7 +35,8 @@
       %></h6>
       <small>Type an address above or select your location from the map below</small>
       <div id="map-nook-new" data-map-target="mapContainer"></div>
-      <h6><%= f.input :photos, as: :file %></h6>
+      <%# Would be nice to require for an emoji %>
+      <h6><%= f.input :photos, as: :file, input_html: { multiple: true } %></h6>
       <div class="share-submit">
         <%= f.submit "share", class: "share-button", html: { color: "white" } %>
       </div>
