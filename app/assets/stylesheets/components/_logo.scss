@@ -36,3 +36,16 @@
 #remember-me {
   background-color: transparent;
 }
+
+.delay-1 {
+  animation: fadeIn 2s ease;
+}
+
+.delay-2 {
+  animation: fadeIn 5s ease;
+}
+
+.delay-3 {
+  animation: fadeIn 10s ease;
+
+}

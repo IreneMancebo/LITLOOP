@@ -73,10 +73,6 @@
   outline: none; /* Remove the default outline */
 }
 
-/* Cool Animation for LitLoop Title */
-.logo {
-  animation: fadeIn 15s ease; /* Adjust the animation duration and easing as needed */
-}
 
 @keyframes fadeIn {
   0% { opacity: 0; }
