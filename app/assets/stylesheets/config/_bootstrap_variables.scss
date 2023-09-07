@@ -1,24 +1,19 @@
-$background-official: black;
-$header-official: white;
-$hellgruen: #DEEE6A;
+// OUR FONTS - IMPORT AND DEFINE //
 
-// font-family: 'Berkshire Swash', cursive;
 @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
-// font-family: 'Shadows Into Light', cursive;
-@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
-// font-family: 'Victor Mono', monospace;
-@import url('https://fonts.googleapis.com/css2?family=Victor+Mono:wght@100;700&display=swap');
-
-// OUR FONTS //
+// font-family: 'Berkshire Swash', cursive;
 $logo-font: 'Berkshire Swash', cursive;
-$buttons-font: ;
-$header-font: ;
-$text-font: ;
 
-// General style
-$font-family-sans-serif: $body-font;
-$headings-font-family:   $headers-font;
+@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+// font-family: 'Dosis', sans-serif;
+$buttons-font: 'Dosis', sans-serif;
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@200;700;&display=swap');
+// font-family: 'Montserrat Alternates', sans-serif;
+$header-font: 'Montserrat Alternates', sans-serif;;
+$text-font: 'Montserrat Alternates', sans-serif;
+
+// GENERAL //
 $body-bg:                $background-official;
 $font-size-base:         1rem;
 
@@ -36,3 +31,13 @@ $border-radius-lg: 2px;
 $border-radius-sm: 2px;
 
 // Override other variables below!
+$background-official: black;
+$header-official: white;
+$hellgruen: #DEEE6A;
+
+
+Primary Background - #440056 grape
+Gradient colours:
+#A4EED3
+#E7B8D8
+#AFACF9
