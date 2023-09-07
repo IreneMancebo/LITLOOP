@@ -1,13 +1,27 @@
 <h2>Most Recently Added Nooks</h2>
-<ul>
-    <% recently_added_nooks.each do |nook| %>
-    <div class="swiper" data-controller="swiper">
+<div class="nooks-container">
+  <% recently_added_nooks.each do |nook| %>
+    <div class="nook-card">
+      <div class="swiper" data-controller="swiper">
         <div class="swiper-wrapper">
-        <%= nook.name %>
-            <% nook.photos.each do |photo| %>
-            <div class="swiper-slide"><%= cl_image_tag photo.key, height: 300, width: 350, crop: :fill, class:"swiper-img" %></div>
-        <% end %>
+          <% nook.photos.each do |photo| %>
+            <div class="swiper-slide"><%= cl_image_tag photo.key, height: 150, width: 150, crop: :fill, class:"swiper-img" %></div>
+          <% end %>
         </div>
+      </div>
+      <div class="nook-details">
+        <h3><%= nook.name %></h3>
+        <div class="user-profile">
+          <%= link_to "#{nook.user[:username]}", user_path(nook.user) %>
+        </div>
+        <p><%= nook.description %></p>
+        <div data-controller="icon-heart" class="preview-nook-stats col-sm-4">
+          <%= link_to nook_favorites_path(nook), class: "text-deco-none", data: { turbo_method: :post } do %>
+            <div data-action="click->icon-heart#favored_nook" class="stats-wrapper"><i class="fa-solid fa-heart" data-icon-heart-target="heart"></i><span class="stats-count">189</span></div>
+          <% end %>
+          <div class="stats-wrapper"><img class="footnotes-icon" src="http://www.freeiconspng.com/uploads/comment-png-3.png"><span class="stats-count">13</span></div>
+        </div>
+      </div>
     </div>
-    <% end %>
-</ul>
+  <% end %>
+</div>

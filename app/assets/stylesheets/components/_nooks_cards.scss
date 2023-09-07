@@ -1,0 +1,59 @@
+.nook-card {
+    background-color: rgba(255, 255, 255, 0.9); /* Transparent with a light white color */
+    border: 1px solid #ccc;
+    border-radius: 20px; /* Rounded borders resembling bubbles */
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+    font-size: 16px;
+    color: black; /* Font color is black */
+  }
+  
+  /* Media query for iPhone 12 or similar screen size */
+  @media (max-width: 375px) {
+    .nook-card {
+      padding: 10px;
+      font-size: 14px;
+    }
+  }  
+
+  .nook-card .swiper {
+    width: 150px; /* Adjust the width of the picture square as needed */
+    height: 150px; /* Square shape */
+    margin-right: 20px;
+  }
+
+  .nook-card .nook-details {
+    flex-grow: 1;
+  }
+
+  .nook-card h3 {
+    color: #333; /* Black color for the nook name */
+  }
+
+  .nook-card .user-profile a {
+    color: pink; /* Pink color for the username link */
+    text-decoration: none;
+  }
+
+  .nook-card p {
+    margin-top: 10px;
+  }
+
+  .nook-card .preview-nook-stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .nook-card .stats-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .nook-card .footnotes-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+  }

@@ -9,6 +9,8 @@
     <%= simple_form_for (@nook) do |f| %>
       <h6><%= f.input :name %></h6>
       <h6><%= f.input :description %></h6>
+      <%= f.input :latitude, as: :hidden, input_html: {data: {map_target: "latitudeInput"}} %>
+      <%= f.input :longitude, as: :hidden, input_html: {data: {map_target: "longitudeInput"}} %>
       <div class="filter-div" data-controller="checkbox">
         <div class="panel">
       <h6><%= f.input :coffee, as: :boolean, label: "<i class='fa-solid fa-mug-hot'></i> - Coffee can be purchased nearby".html_safe %></h6>
@@ -28,7 +30,7 @@
       </div>
       <h6><%= f.input :address,
         class: "d-none",
-        input_html: {data: {map_target: "address"}, class: "d-none"},
+        input_html: {data: {map_target: "address coordinates"}, class: "d-none"},
         wrapper_html: {data: {map_target: "addressWrapper" }}
       %></h6>
       <small>Type an address above or select your location from the map below</small>

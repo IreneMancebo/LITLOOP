@@ -8,7 +8,7 @@ export default class extends Controller {
     apiKey: String,
     markers: Array
   }
-  static targets = ["address", "addressWrapper", "mapContainer"]
+  static targets = ["address", "addressWrapper", "mapContainer", "coordinates", "latitudeInput", "longitudeInput"]
 
   connect() {
     mapboxgl.accessToken = this.apiKeyValue;
@@ -22,6 +22,9 @@ export default class extends Controller {
       this.#fitMapToMarkers()
     }
     this.myLocation()
+
+    // if (UserLocation === true) {
+    // }
 
     if (this.hasAddressTarget) {
       this.setAutocomplete();
@@ -51,7 +54,6 @@ export default class extends Controller {
   }
 
   // Add users current location as the location of a new nook
-
   myLocation() {
   // Add geolocate control to the map.
   this.map.addControl(new mapboxgl.GeolocateControl({
@@ -67,10 +69,13 @@ export default class extends Controller {
   }
 
   addAutocompleteMarker(coordinates) {
-    const markerHtml = new mapboxgl.Marker()
+    this.autocompleteMarker = new mapboxgl.Marker({draggable: true})
       .setLngLat(coordinates)
       .addTo(this.map)
     this.map.flyTo({ center: coordinates, zoom: 14 })
+    this.autocompleteMarker.on("dragend", () => {
+      this.onDragEnd();
+    });
   }
 
   setAutocomplete() {
@@ -85,6 +90,12 @@ export default class extends Controller {
       this.#setInputValue(event)
     })
     this.geocoder.on("clear", () => this.#clearInputValue())
+  }
+
+  onDragEnd() {
+    const lngLat = this.autocompleteMarker.getLngLat();
+    this.longitudeInputTarget.value = lngLat.lng
+    this.latitudeInputTarget.value = lngLat.lat
   }
 
   #setInputValue(event) {
