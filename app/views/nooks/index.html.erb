@@ -1,9 +1,13 @@
 <div class="atlas-actions">
   <%# BUTTON ON LANDING PAGE TO ADD A NOOK %>
   <div class="atlas-add">
-    <%= link_to new_nook_path, id: "add_nook" do %>
+    <%# <%= link_to new_nook_path, id: "add_nook" do %>
+      <%# <i class="fa fa-plus my-float"></i> %>
+    <%# end %>
+
+    <a href="<%= new_nook_path %>" class="btn btn-primary" id="add_nook">
       <i class="fa fa-plus my-float"></i>
-    <% end %>
+    </a>
   </div>
 
   <%# SEARCHBAR LANDING PAGE%>

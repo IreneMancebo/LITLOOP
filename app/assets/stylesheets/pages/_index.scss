@@ -8,3 +8,20 @@
   flex-direction: column;
   width: 100vw;
 }
+
+#search-bar {
+  width: 72%;
+  position: relative;
+  margin-left: 13%;
+  margin-top: 5px;
+  border: 1px solid $primary;
+  background-color: $danger;
+}
+
+.fa-plus {
+  margin-top: -2px;
+}
+
+#search-bar:focus {
+  color: $primary;
+}
