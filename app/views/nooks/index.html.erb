@@ -53,6 +53,9 @@
                           [('<i class="fa-solid fa-mug-hot"></i>').html_safe, "coffee"],
                           [('<i class="fa-solid fa-faucet-drip"></i>').html_safe, "water"],
                           [('<i class="fa-solid fa-toilet"></i>').html_safe, "bathroom"],
+                          [('<i class="fa-solid fa-volume-xmark"></i>').html_safe, "quiet"],
+                          [('<i class="fa-solid fa-plug"></i>').html_safe, "power"],
+                          [('<i class="fa-solid fa-euro-sign"></i>').html_safe, "cost"],
                         ] %>
 
       <div class="filter-div" data-controller="checkbox">
@@ -64,28 +67,29 @@
             item_wrapper_class: 'category-item',
             multiple: true,
             input_html: {class: 'category-selector', multiple: true},
-            collection:  [
-                          [('<i class="fa-solid fa-volume-xmark"></i>').html_safe, "quiet"],
-                          [('<i class="fa-solid fa-plug"></i>').html_safe, "power"],
-                          [('<i class="fa-solid fa-euro-sign"></i>').html_safe, "cost"],
+            collection: [
                           [('<i class="fa-solid fa-tree"></i>').html_safe, "trees"],
+                          [('<i class="fa-solid fa-chair"></i>').html_safe, "seating"],
+                          [('<i class="fa-solid fa-person-shelter"></i>').html_safe, "shelter"],
+                          [('<i class="fa-solid fa-paw"></i>').html_safe, "animals"],
+                          [('<i class="fa-solid fa-mountain-sun"></i>').html_safe, "view"],
                         ] %>
-                        <%= f.input :filter,
+
+      <%# THIRD ROW FOR FUTURE FILTERS
+      <%= f.input :filter,
             as: :check_boxes,
             collection_wrapper_tag: 'div',
             collection_wrapper_class: 'category-wrapper-3',
             item_wrapper_class: 'category-item',
             multiple: true,
             input_html: {class: 'category-selector', multiple: true},
-            collection:  [
-                          [('<i class="fa-solid fa-chair"></i>').html_safe, "seating"],
-                          [('<i class="fa-solid fa-person-shelter"></i>').html_safe, "shelter"],
-                          [('<i class="fa-solid fa-paw"></i>').html_safe, "animals"],
-                          [('<i class="fa-solid fa-mountain-sun"></i>').html_safe, "view"],
-                        ] %>
+            collection:  [] %>
+
         </div>
-        <div data-checkbox-target="accordion" class="accordion">more filters ... </div>
-        <div class="tag-item"><%= f.submit "SEARCH", class: "btn btn-warning" %></div>
+        <div data-checkbox-target="accordion" class="accordion" id="more-filters">
+          <i class="fa-solid fa-angles-down" ></i>
+        </div>
+        <%# <div class="tag-item"><%= f.submit "SEARCH", class: "btn btn-warning" </div> %>
       </div>
       </div>
     <% end %>

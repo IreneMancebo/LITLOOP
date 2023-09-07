@@ -22,40 +22,22 @@
   display: none;
 }
 
-.category-wrapper {
+.category-wrapper, .category-wrapper-2, .category-wrapper-3 {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: start;
+  align-content: flex-end;
   flex-wrap: wrap;
-  padding: 0px;
-  margin: 3px 6px 0px 6px;
+  padding: 5px 5px 5px 5px;
+  // margin: 5px;
   background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(2px);
-}
-
-.category-wrapper-2 {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  padding: 0px;
-  margin: 3px 3px 3px 3px;
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(2px);
-}
-
-.category-wrapper-3 {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  padding: 1px;
-  margin: 3px 3px 6px 3px;
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(2px);
+  border-radius: 25px;
 }
 
 .category-item {
-  width: 85px;
+  width: 50px;
   display: flex;
-  margin: 0 5px;
+  margin: 0 1px;
   height: 48px;
 }
 
@@ -67,22 +49,25 @@
 }
 
 .category-selector + label {
-  cursor: pointer;
-  width: 100%;
-  font-size: 24px;
-  margin: 2px;
-  border: 1px solid #EAEAEA;
-  border-radius: 4px;
-  background-color: lightblue;
+  background-color: aliceblue;
+  color: pink;
+
+  width: 36px;
+  font-size: 18px;
   text-align: center;
-// Previous rules from Main:
-//   box-sizing: border-box;
-//   color: white;
+
+  border: 2px solid;
+  border-radius: 50%;
+
+  margin-bottom: auto;
+  padding: 2px;
+
+  cursor: pointer;
 }
 
 .category-selector:checked + label {
-  color: white !important;
-  background-color: palevioletred;
+  color: aliceblue !important;
+  background-color: pink;
 }
 
 /* Style the buttons that are used to open and close the accordion panel */
@@ -110,4 +95,29 @@
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
+}
+
+#more-filters {
+  background-color: aliceblue;
+  color: pink;
+
+  width: 36px;
+  font-size: 18px;
+  text-align: center;
+
+  border: 2px solid;
+  border-radius: 50%;
+
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: 57px;
+  padding: 2px;
+
+  position: inherit;
+  cursor: pointer;
+}
+
+#more-filters:checked {
+  transform: rotate(180deg);
+  filter: invert(1);
 }
