@@ -7,10 +7,10 @@ User.destroy_all
 
 puts "Creating Users 🙋🏻‍♀️ 🧙🏼‍♂️ 🤷🏻‍♀️ 👩🏻‍🦰"
 sleep(1)
-bretty = User.create!(username: "bretty", email: "brett@litloop.com", password: "password")
-nadjalovesyoga = User.create!(username: "nadjalovesyoga", email: "nadja@litloop.com", password: "password")
-irenikachan = User.create!(username: "irenikachan", email: "irene@litloop.com", password: "password")
-nickynicole = User.create!(username: "nickynicole", email: "nicole@litloop.com", password: "password")
+bretty = User.create!(username: "bretty", email: "brett@litloop.net", password: "password")
+nadjalovesyoga = User.create!(username: "nadjalovesyoga", email: "nadja@litloop.net", password: "password")
+irenikachan = User.create!(username: "irenikachan", email: "irene@litloop.net", password: "password")
+nickynicole = User.create!(username: "nickynicole", email: "nicole@litloop.net", password: "password")
 
 puts "Creating Nooks 📖 📚 📇"
 sleep(1)
