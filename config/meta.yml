@@ -1,0 +1,5 @@
+meta_product_name: "LitLoop"
+meta_title: "LitLoop - Social Media for Book Lovers"
+meta_description: "A social networking app where people share the best reading spots in their area, what they're reading, and rate books and locations!"
+meta_image: "favicon.png" # should exist in `app/assets/images/`
+twitter_account: ""   # required for Twitter Cards

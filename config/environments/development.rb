@@ -68,4 +68,8 @@ Rails.application.configure do
 
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
+
+  # How can you test the A2HS feature in development?
+  # Allow requests by adding the following to your environment configuration:
+  config.hosts.clear
 end
