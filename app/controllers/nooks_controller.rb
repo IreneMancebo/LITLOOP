@@ -73,7 +73,7 @@ class NooksController < ApplicationController
   def destroy
     @nook = Nook.find(params[:id])
     @nook.destroy
-    redirect_to lending_path, status: :see_other
+    redirect_to nooks_path, status: :see_other
     flash.notice = 'Your NookBook was successfully deleted.'
   end
 
