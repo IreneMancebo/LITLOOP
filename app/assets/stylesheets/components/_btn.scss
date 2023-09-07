@@ -1,13 +1,25 @@
-// .btn {
-//  // TBD: add shape/color/.. that will apply to all btn
-// }
+.btn {
+  background-color: transparent;
+  color: $primary;
+  border: 1px solid $primary;
+  border-radius: $border-radius;
+
+}
+
+.btn:hover {
+  background-color: $primary;
+  color: $danger;
+  border: 1px solid $primary;
+  border-radius: $border-radius;
+
+}
 
 .btn-signup {
   display: flex;
   font-family: $logo-font;
   color: $black;
   background-color: $body-bg;
-  border-radius: 5px;
+  border-radius: $border-radius;
   width: 273px;
   height: 46px;
   padding: 8px 13px;
