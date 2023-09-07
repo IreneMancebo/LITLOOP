@@ -1,29 +1,19 @@
-// This is where you override default Bootstrap variables
-// 1. Find all Bootstrap variables that you can override at the end of each component's documentation under the `Sass variables` anchor
-// e.g. here are the ones you can override for the navbar https://getbootstrap.com/docs/5.2/components/navbar/#sass-variables
-// 2. These variables are defined with default value (see https://robots.thoughtbot.com/sass-default)
-// 3. You can override them below!
-
 $background-official: black;
 $header-official: white;
 $hellgruen: #DEEE6A;
 
-// font-family:  'Bagel Fat One', cursive;
-@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One');
-// font-family: 'Nova Mono', monospace;
-@import url('https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap');
+// font-family: 'Berkshire Swash', cursive;
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
 // font-family: 'Shadows Into Light', cursive;
 @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
 // font-family: 'Victor Mono', monospace;
 @import url('https://fonts.googleapis.com/css2?family=Victor+Mono:wght@100;700&display=swap');
 
-// Define fonts for body and headers
-$headers-font: 'Bagel Fat One', cursive;
-$headers-font-secondary: 'Bagel Fat One', cursive;
-
-$description-font: 'Shadows Into Light', cursive;
-$body-font: 'Victor Mono', monospace;
-$logo-font: 'Victor Mono', monospace;
+// OUR FONTS //
+$logo-font: 'Berkshire Swash', cursive;
+$buttons-font: ;
+$header-font: ;
+$text-font: ;
 
 // General style
 $font-family-sans-serif: $body-font;
