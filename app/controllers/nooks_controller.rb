@@ -6,9 +6,13 @@ class NooksController < ApplicationController
       filters = params[:search][:filter].reject(&:empty?)
       search_hash = {}
       filters.map { |filter| search_hash[filter] = true }
-      nook_subquery = "name ILIKE :query OR description ILIKE :query"
+
+      # OLD SEARCH QUERY - not needed but I'm scared to delete it anyway?
+      # nook_subquery = "name ILIKE :query OR description ILIKE :query"
       # footnotes_subquery = "text ILIKE :query"
-      @nooks = Nook.where(nook_subquery, query: "%#{params.dig(:search, :query)}%")
+      # @nooks = Nook.where(nook_subquery, query: "%#{params.dig(:search, :query)}%")
+      
+      @nooks = Nook.global_search(params.dig(:search, :query))
       @nooks = @nooks.where(search_hash)
       @markers = @nooks.map do |nook|
         {
@@ -16,7 +20,7 @@ class NooksController < ApplicationController
           lng: nook.longitude,
           preview_card_html: render_to_string(partial: "preview_card", locals: {nook: nook}),
           nook_id: nook.id,
-          nook_image_src: nook.photos.first.key,
+          nook_image_src: nook.photos.first&.key,
           nook_name: nook.name
         }
       end
@@ -28,7 +32,7 @@ class NooksController < ApplicationController
           lng: nook.longitude,
           preview_card_html: render_to_string(partial: "preview_card", locals: {nook: nook}),
           nook_id: nook.id,
-          nook_image_src:  nook.photos.first.key,
+          nook_image_src:  nook.photos.first&.key,
           nook_name: nook.name
         }
       end
@@ -80,6 +84,6 @@ class NooksController < ApplicationController
   # end
 
   def nook_params
-    params.require(:nook).permit(:name, :address, :description, :latitude, :longitude, photos: [])
+    params.require(:nook).permit(:name, :address, :description, :coffee, :wifi, :water, :quiet, :trees, :power, :seating, :shelter, :animals, :cost, :bathroom, :view, :latitude, :longitude, photos: [])
   end
 end

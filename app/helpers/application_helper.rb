@@ -11,7 +11,7 @@ module ApplicationHelper
       "shelter" => "fa-solid fa-person-shelter",
       "animals" => "fa-solid fa-paw",
       "cost" => "fa-solid fa-euro-sign",
-      "blanket_required" => "fa-solid fa-rug",
+      "bathroom" => "fa-solid fa-toilet",
       "view" => "fa-solid fa-mountain-sun"
     }
     icons[category]

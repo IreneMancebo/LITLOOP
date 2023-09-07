@@ -8,6 +8,16 @@ class Nook < ApplicationRecord
   has_many :favorited_by_users, through: :favorites, source: :user
   has_many :footnotes
 
+  include PgSearch::Model
+  pg_search_scope :global_search,
+  against: [:name, :description],
+  associated_against: {
+    footnotes: [:text]
+  },
+  using: {
+    tsearch: { prefix: true }
+  }
+
   def typed_location
     "#{longitude}, #{latitude}"
   end

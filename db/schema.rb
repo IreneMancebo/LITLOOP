@@ -80,7 +80,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_06_130044) do
     t.boolean "shelter", default: false
     t.boolean "animals", default: false
     t.boolean "cost", default: false
-    t.boolean "blanket_required", default: false
+    t.boolean "bathroom", default: false
     t.boolean "view", default: false
     t.string "address"
     t.index ["user_id"], name: "index_nooks_on_user_id"
