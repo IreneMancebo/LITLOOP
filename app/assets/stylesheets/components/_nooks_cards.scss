@@ -1,3 +1,7 @@
+.nooks-container {
+  background-color: $primary-background;
+}
+
 .nook-card {
     background-color: rgba(255, 255, 255, 0.9); /* Transparent with a light white color */
     border: 1px solid #ccc;
@@ -8,14 +12,14 @@
     font-size: 16px;
     color: black; /* Font color is black */
   }
-  
+
   /* Media query for iPhone 12 or similar screen size */
   @media (max-width: 375px) {
     .nook-card {
       padding: 10px;
       font-size: 14px;
     }
-  }  
+  }
 
   .nook-card .swiper {
     width: 150px; /* Adjust the width of the picture square as needed */
