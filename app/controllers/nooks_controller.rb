@@ -16,7 +16,7 @@ class NooksController < ApplicationController
           lng: nook.longitude,
           preview_card_html: render_to_string(partial: "preview_card", locals: {nook: nook}),
           nook_id: nook.id,
-          nook_image_src: nook.photos.first.key,
+          nook_image_src: nook.photos.first&.key,
           nook_name: nook.name
         }
       end
@@ -28,7 +28,7 @@ class NooksController < ApplicationController
           lng: nook.longitude,
           preview_card_html: render_to_string(partial: "preview_card", locals: {nook: nook}),
           nook_id: nook.id,
-          nook_image_src:  nook.photos.first.key,
+          nook_image_src:  nook.photos.first&.key,
           nook_name: nook.name
         }
       end
