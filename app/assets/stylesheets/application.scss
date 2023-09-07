@@ -107,11 +107,11 @@
 .filter-container {
   display: grid;
   column-gap: 2px;
-  // row-gap: 2px;
   position: absolute;
   top: 10px;
   width: 100vw;
   color: black;
+  margin-left: 13px;
 
   fieldset {
     margin-bottom: 0px !important;

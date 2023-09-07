@@ -49,12 +49,14 @@
 }
 
 .category-selector + label {
-  background-color: aliceblue;
+  background-color: $danger;
   color: pink;
 
-  width: 36px;
-  font-size: 18px;
+  width: 40px;
+  height: 40px;
+  font-size: 19px;
   text-align: center;
+  align-items: center;
 
   border: 2px solid;
   border-radius: 50%;
