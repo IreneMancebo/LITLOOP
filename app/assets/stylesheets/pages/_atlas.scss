@@ -75,20 +75,23 @@
 
 // ADD A NOOK
 #add_nook {
-  width: 30px;
-  height: 30px;
+  width: 36px;
+  height: 36px;
 
-  margin-top: 21px;
+  margin-top: 19px;
   margin-left: -4px;
-  border-radius: 50px;
+  padding-top: -6px;
   font-size: larger;
-}
 
+  border: 2px solid $danger;
+  border-radius: 50%;
+
+  background-color: $primary;
+}
 
 .fa-plus {
   position: absolute;
   margin-left: -8px;
-  margin-top: -1px;
   color: $danger;
 }
 

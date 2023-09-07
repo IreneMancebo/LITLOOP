@@ -91,7 +91,6 @@
   padding: 10px;
 }
 
-
 .mapboxgl-popup-anchor-top .mapboxgl-popup-tip,
 .mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip,
 .mapboxgl-popup-anchor-center .mapboxgl-popup-tip,
@@ -121,17 +120,4 @@
 .hide-checkbox {
   position: absolute;
   transform: scale(0);
-}
-
-h1 { // page and location names
-  color: white;
-}
-
-h4 { // coordinates on show page
-  color: white;
-}
-
-h6 {
-  font-size: 30px;
-  color: black;
 }

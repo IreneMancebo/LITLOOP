@@ -3,7 +3,6 @@
   color: $primary;
   border: 1px solid $primary;
   border-radius: $border-radius;
-
 }
 
 .btn:hover {
@@ -16,7 +15,7 @@
 
 .btn-signup {
   display: flex;
-  align-text: center;
+  align-content: center;
 
   width: 160px;
   height: 46px;
