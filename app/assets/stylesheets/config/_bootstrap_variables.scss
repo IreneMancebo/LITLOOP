@@ -1,3 +1,9 @@
+// OUR LOVELY LITLOOP NEON PASTEL IRIDESCENT COLOR COLORWAY //
+$primary-background: #440056; // grape
+$neon-pastel-green: #A4EED3; // fairy
+$neon-pastel-pink: #E7B8D8; //rose
+$neon-pastel-purple: #AFACF9; // lavender
+
 // OUR FONTS - IMPORT AND DEFINE //
 
 @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
@@ -13,31 +19,19 @@ $buttons-font: 'Dosis', sans-serif;
 $header-font: 'Montserrat Alternates', sans-serif;;
 $text-font: 'Montserrat Alternates', sans-serif;
 
-// GENERAL //
+// GLOBAL VARIABLES//
 $body-bg:                $background-official;
+$body-color:             $primary-background;
 $font-size-base:         1rem;
 
-// Colors
-$body-color: white;
-$primary:    #DEEE6A;
-$success:    white;
-$info:       white;
-$danger:     white;
-$warning:    white;
+// OUR BUTTON COLORS //
+$primary:   $neon-pastel-pink;
+$success:   $neon-pastel-purple;
+$info:      $neon-pastel-pink;
+$danger:    $neon-pastel-green;
+$warning:   $neon-pastel-green;
 
-// Buttons & inputs' radius
+// BORDER RADII (BUTTONS AND INPUTS) //
 $border-radius:    2px;
 $border-radius-lg: 2px;
 $border-radius-sm: 2px;
-
-// Override other variables below!
-$background-official: black;
-$header-official: white;
-$hellgruen: #DEEE6A;
-
-
-Primary Background - #440056 grape
-Gradient colours:
-#A4EED3
-#E7B8D8
-#AFACF9
