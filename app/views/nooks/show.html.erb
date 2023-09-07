@@ -94,16 +94,6 @@
       <%= render 'footnotes/footnote', nook: @nook, footnote: @footnote %>
     </div>
 
-    <div class="past-footnotes">
-      <% @footnotes.each do |footnote| %>
-        <div class="footnote-inner">
-          <p><%= footnote.text %></p>
-          <%= link_to "#{footnote.user[:username]}", user_path(footnote.user) %>
-        </div>
-      <% end %>
-    </div>
-  </div>
-  
   <div class="all-footnotes">
     <% @footnotes.each do |footnote| %>
       <div class="footnote-inner">

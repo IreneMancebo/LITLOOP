@@ -1,5 +1,6 @@
 <h2>New Footnotes on your NookBooks</h2>
 
+<!-- Which one of these is meant to stay? Sorry, can't tell first from last, so kept them all:
 
 <div class="container all-footnotes mt-5 mb-5">
   <div class="footnote-inner card-favorite">
@@ -11,23 +12,27 @@
         <% end %>
       <% end %>
 
-  <%# <div class="footnote"> %>
-    <%# <%= link_to footnote.user.username, user_path(footnote.user) %>
-    <%# on <%= link_to footnote.nook.name, nook_path(footnote.nook) %>
-    <%# <%= footnote.created_at.strftime('%B %d, %Y') %>
-    <%# <%= footnote.text %>
-  <%# </div>
-  <% end %>
+<%# <div class="footnote"> %>
+  <%# <%= link_to footnote.user.username, user_path(footnote.user) %>
+  <%# on <%= link_to footnote.nook.name, nook_path(footnote.nook) %>
+  <%# <%= footnote.created_at.strftime('%B %d, %Y') %>
+  <%# <%= footnote.text %>
+<%# </div>
+<% end %>
 <%# </div> %>
-<!--
+
 <div class="all-footnotes">
-  <% @my_footnotes.each do |footnote| %>
+  <% current_user.nooks.each do |nook| %>
+    <% nook.footnotes.each do |footnote| %>
     <div class="footnote">
-      <%= link_to footnote.user.username, user_path(footnote.user) %>
-      on <%= link_to footnote.nook.name, nook_path(footnote.nook) %></p>
+     <%= link_to footnote.user.username, user_path(footnote.user) %>
+     on <%= link_to footnote.nook.name, nook_path(footnote.nook) %></p>
       <%= footnote.created_at.strftime('%B %d, %Y') %></p>
       <%= footnote.text %></p>
-    </div>
+    <% end %>
   <% end %>
-</div>
- -->
+    </div>
+</div> -->
+      
+
+
