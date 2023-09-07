@@ -3,11 +3,10 @@
 // }
 
 .btn-signup {
-  // TBD: add colors matching brets pallette
   display: flex;
   font-family: $logo-font;
   color: $black;
-  background-color: $hellgruen;
+  background-color: $body-bg;
   border-radius: 5px;
   width: 273px;
   height: 46px;

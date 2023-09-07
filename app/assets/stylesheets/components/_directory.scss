@@ -1,45 +1,43 @@
 .directory {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
+  background: $primary-background;
+  border-top: 1px solid $success;
+  padding: 10px 20px 10px 20px;
   width: 100vw;
   height: 60px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  background: black;
+
   position: fixed;
+  z-index: 1111;
   bottom: 0;
-  z-index: 100;
-  border-top: 1px solid white;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.fa-globe {
+  color: $primary;
+}
+
+.directory div:nth-child(2) {
+  position: absolute;
+  left: 50vw;
+  transform: translateX(-50%);
+  /* Center the item relative to its own width */
 }
 
 .directory a {
   display: inline-block;
   text-decoration: none;
   font-size: 25px;
-  color: white;
-}
-
-// .directory img {
-//   display: inline-block;
-//   height: 50px;
-//   object-fit: fill;
-// }
-
-#almanac, #discover {
-  display: inline-block;
-  justify-content: center;
-  font-family: 'Victor Mono', monospace;
+  color: $info;
 }
 
 #almanac { padding-left: 10px }
 #discover { padding-right: 5px }
 
-.directory div:nth-child(2) {
-  position: absolute;
-  left: 50vw;
-  transform: translateX(-50%); /* Center the item relative to its own width */
+#almanac, #discover {
+  display: inline-block;
+  justify-content: center;
+  font-family: $buttons-font;
 }
