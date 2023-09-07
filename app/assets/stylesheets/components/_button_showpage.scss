@@ -8,8 +8,8 @@
   padding: 5px;
   text-align: center;
   align-content: center;
-  background-color: $hellgruen;
-  color: $hellgruen;
+  background-color: $body-bg;
+  color: $primary;
   font-weight: bold;
   border-radius: 50px;
   width: 200px;
@@ -17,5 +17,5 @@
 
 #from-show-to-index a {
   text-decoration: none;
-  color: white;
+  color: $primary-background;
 }
