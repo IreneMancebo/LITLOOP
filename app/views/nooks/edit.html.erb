@@ -1,3 +1,4 @@
+
 <center><h1 class="mt-5">Edit Nook</h1></center>
 
 <%= simple_form_for [@nook] do |f| %>
@@ -26,4 +27,6 @@
   <h6><%= f.input :photos, as: :file, input_html: { multiple: true } %></h6>
   <%= f.submit "Edit Nook", class: "btn btn-primary rounded-pill" %>
 <% end %>
+
 <center><%= link_to "Cancel", nooks_path, class: "btn btn-primary rounded-pill mt-5" %></center>
+
