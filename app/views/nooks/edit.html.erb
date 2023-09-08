@@ -1,4 +1,5 @@
-<center><h1>Edit Nook</h1></center>
+
+<center><h1 class="mt-5">Edit Nook</h1></center>
 
 <%= simple_form_for [@nook] do |f| %>
   <%= f.input :name %>
@@ -7,23 +8,25 @@
   <%= f.input :longitude, as: :hidden, input_html: {data: {map_target: "longitudeInput"}} %>
   <div class="filter-div" data-controller="checkbox">
   <div class="panel">
-  <p><%= f.input :coffee, as: :boolean, label: "<i class='fa-solid fa-mug-hot'></i> - Coffee can be purchased nearby".html_safe %></p>
-  <p><%= f.input :wifi, as: :boolean, label: "<i class='fa-solid fa-wifi'></i> - WLAN available for use".html_safe %></p>
-  <p><%= f.input :water, as: :boolean, label: "<i class='fa-solid fa-faucet-drip'></i> - Drinking water available".html_safe %></p>
-  <p><%= f.input :quiet, as: :boolean, label: "<i class='fa-solid fa-volume-xmark'></i> - Area usually quiet".html_safe %></p>
-  <p><%= f.input :trees, as: :boolean, label: "<i class='fa-solid fa-tree'></i> - Plants and trees nearby".html_safe %></p>
-  <p><%= f.input :power, as: :boolean, label: "<i class='fa-solid fa-plug'></i> - Electricity sockets can be used".html_safe %></p>
-  <p><%= f.input :seating, as: :boolean, label: "<i class='fa-solid fa-chair'></i> - Seating of some sort".html_safe %></p>
-  <p><%= f.input :shelter, as: :boolean, label: "<i class='fa-solid fa-person-shelter'></i> - Shelter available".html_safe %></p>
-  <p><%= f.input :animals, as: :boolean, label: "<i class='fa-solid fa-paw'></i> - Animals in the area".html_safe %></p>
-  <p><%= f.input :cost, as: :boolean, label: "<i class='fa-solid fa-euro-sign'></i> - Money expected to be spent to use facilities here".html_safe %></p>
-  <p><%= f.input :bathroom, as: :boolean, label: "<i class='fa-solid fa-toilet'></i> - Bathrooms available".html_safe %></p>
-  <p><%= f.input :view, as: :boolean, label: "<i class='fa-solid fa-mountain-sun'></i> - Pleasant views".html_safe %></p>
+    <p><%= f.input :coffee, as: :boolean, label: "<i class='fa-solid fa-mug-hot'></i> - Coffee can be purchased nearby".html_safe %></p>
+    <p><%= f.input :wifi, as: :boolean, label: "<i class='fa-solid fa-wifi'></i> - WLAN available for use".html_safe %></p>
+    <p><%= f.input :water, as: :boolean, label: "<i class='fa-solid fa-faucet-drip'></i> - Drinking water available".html_safe %></p>
+    <p><%= f.input :quiet, as: :boolean, label: "<i class='fa-solid fa-volume-xmark'></i> - Area usually quiet".html_safe %></p>
+    <p><%= f.input :trees, as: :boolean, label: "<i class='fa-solid fa-tree'></i> - Plants and trees nearby".html_safe %></p>
+    <p><%= f.input :power, as: :boolean, label: "<i class='fa-solid fa-plug'></i> - Electricity sockets can be used".html_safe %></p>
+    <p><%= f.input :seating, as: :boolean, label: "<i class='fa-solid fa-chair'></i> - Seating of some sort".html_safe %></p>
+    <p><%= f.input :shelter, as: :boolean, label: "<i class='fa-solid fa-person-shelter'></i> - Shelter available".html_safe %></p>
+    <p><%= f.input :animals, as: :boolean, label: "<i class='fa-solid fa-paw'></i> - Animals in the area".html_safe %></p>
+    <p><%= f.input :cost, as: :boolean, label: "<i class='fa-solid fa-euro-sign'></i> - Money expected to be spent to use facilities here".html_safe %></p>
+    <p><%= f.input :bathroom, as: :boolean, label: "<i class='fa-solid fa-toilet'></i> - Bathrooms available".html_safe %></p>
+    <p><%= f.input :view, as: :boolean, label: "<i class='fa-solid fa-mountain-sun'></i> - Pleasant views".html_safe %></p>
   </div>
-  <div data-checkbox-target="accordion" class="accordion">Select additional features of the Nook: </div>
+  <div data-checkbox-target="accordion" class="accordion">Nook Features: </div>
   </div>
   <%# Would be nice to require for an emoji %>
   <h6><%= f.input :photos, as: :file, input_html: { multiple: true } %></h6>
-  <%= f.submit "Edit Nook", class: "btn btn-primary" %>
+  <%= f.submit "Edit Nook", class: "btn btn-primary rounded-pill" %>
 <% end %>
-<%= link_to "Cancel", nooks_path, class: "btn btn-primary rounded-pill" %>
+
+<center><%= link_to "Cancel", nooks_path, class: "btn btn-primary rounded-pill mt-5" %></center>
+
