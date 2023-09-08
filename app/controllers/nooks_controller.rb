@@ -67,7 +67,7 @@ class NooksController < ApplicationController
   def update
     @nook = Nook.find(params[:id].to_i)
     @nook.update(nook_params)
-    redirect_to lending_path(@nook)
+    redirect_to nook_path(@nook)
   end
 
   def destroy

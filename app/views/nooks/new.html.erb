@@ -1,45 +1,49 @@
-<div class="form_container">
-  <h1>Add a BookNook!</h1>
+<div class="form_container my-4 mx-4">
+  <center><h1>Add a BookNook!</h1></center>
 
   <div class ="share_form"
       data-controller="map"
       data-map-api-key-value="<%= ENV["MAPBOX_API_KEY"] %>">
     <%= simple_form_for (@nook) do |f| %>
-      <h6><%= f.input :name %></h6>
-      <h6><%= f.input :description %></h6>
+      <h6><%= f.input :name, label: false, placeholder: 'Nook Title:', input_html: { class: 'my-4 rounded-pill'} %></h6>
+      <h6><%= f.input :description, label: false, placeholder: 'About the nook...', input_html: { class: 'my-4 rounded-pill'} %></h6>
       <%= f.input :latitude, as: :hidden, input_html: {data: {map_target: "latitudeInput"}} %>
       <%= f.input :longitude, as: :hidden, input_html: {data: {map_target: "longitudeInput"}} %>
+
       <div class="filter-div" data-controller="checkbox">
         <div class="panel">
-          <h6><%= f.input :coffee, as: :boolean, label: "<i class='fa-solid fa-mug-hot'></i> - Coffee can be purchased nearby".html_safe %></h6>
-          <h6><%= f.input :wifi, as: :boolean, label: "<i class='fa-solid fa-wifi'></i> - WLAN available for use".html_safe %></h6>
-          <h6><%= f.input :water, as: :boolean, label: "<i class='fa-solid fa-faucet-drip'></i> - Drinking water available".html_safe %></h6>
+          <h6><%= f.input :coffee, as: :boolean, label: "<i class='fa-solid fa-mug-hot'></i> - Coffee nearby".html_safe %></h6>
+          <h6><%= f.input :wifi, as: :boolean, label: "<i class='fa-solid fa-wifi'></i> - WLAN available".html_safe %></h6>
+          <h6><%= f.input :power, as: :boolean, label: "<i class='fa-solid fa-plug'></i> - Electrical sockets".html_safe %></h6>
           <h6><%= f.input :quiet, as: :boolean, label: "<i class='fa-solid fa-volume-xmark'></i> - Area usually quiet".html_safe %></h6>
           <h6><%= f.input :trees, as: :boolean, label: "<i class='fa-solid fa-tree'></i> - Plants and trees nearby".html_safe %></h6>
-          <h6><%= f.input :power, as: :boolean, label: "<i class='fa-solid fa-plug'></i> - Electricity sockets can be used".html_safe %></h6>
-          <h6><%= f.input :seating, as: :boolean, label: "<i class='fa-solid fa-chair'></i> - Seating of some sort".html_safe %></h6>
-          <h6><%= f.input :shelter, as: :boolean, label: "<i class='fa-solid fa-person-shelter'></i> - Shelter available".html_safe %></h6>
-          <h6><%= f.input :animals, as: :boolean, label: "<i class='fa-solid fa-paw'></i> - Animals in the area".html_safe %></h6>
-          <h6><%= f.input :cost, as: :boolean, label: "<i class='fa-solid fa-euro-sign'></i> - Money expected to be spent to use facilities here".html_safe %></h6>
-          <h6><%= f.input :bathroom, as: :boolean, label: "<i class='fa-solid fa-toilet'></i> - Bathrooms available".html_safe %></h6>
           <h6><%= f.input :view, as: :boolean, label: "<i class='fa-solid fa-mountain-sun'></i> - Pleasant views".html_safe %></h6>
+          <h6><%= f.input :animals, as: :boolean, label: "<i class='fa-solid fa-paw'></i> - Animals in the area".html_safe %></h6>
+          <h6><%= f.input :water, as: :boolean, label: "<i class='fa-solid fa-faucet-drip'></i> - Drinking water available".html_safe %></h6>
+          <h6><%= f.input :seating, as: :boolean, label: "<i class='fa-solid fa-chair'></i> - Seating of some sort".html_safe %></h6>
+          <h6><%= f.input :cost, as: :boolean, label: "<i class='fa-solid fa-euro-sign'></i> - Bring spending money".html_safe %></h6>
+          <h6><%= f.input :shelter, as: :boolean, label: "<i class='fa-solid fa-person-shelter'></i> - Shelter available".html_safe %></h6>
+          <h6><%= f.input :bathroom, as: :boolean, label: "<i class='fa-solid fa-toilet'></i> - Bathrooms available".html_safe %></h6>
+        </div>
+        <div data-checkbox-target="accordion" class="accordion p-2">Add Some Nook Features</div>
       </div>
-      <div data-checkbox-target="accordion" class="accordion">Select additional features of the Nook: </div>
-      </div>
-      <h6><%= f.input :address,
-        class: "d-none",
-        input_html: {data: {map_target: "address coordinates"}, class: "d-none"},
-        wrapper_html: {data: {map_target: "addressWrapper" }}
-      %></h6>
-      <small>Type an address above or select your location from the map below</small>
+
+
+      <h6>
+        <%= f.input :address, label: false, class: "d-none",
+            input_html: {data: {map_target: "address coordinates"}, class: "d-none"},
+            wrapper_html: {data: {map_target: "addressWrapper" }} %>
+      </h6>
+      <small>Type an address or select your location from the map below</small>
+
       <div id="map-nook-new" data-map-target="mapContainer"></div>
+
       <%# Would be nice to require for an emoji %>
       <h6><%= f.input :photos, as: :file, input_html: { multiple: true } %></h6>
       <div class="share-submit">
         <%= f.submit "share", class: "btn share-button", html: { color: "white" } %>
       </div>
     <% end %>
-
 
     <div id="cancel-button">
       <h6><%= link_to "cancel", nooks_path %></h6>

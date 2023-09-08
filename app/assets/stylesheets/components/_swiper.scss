@@ -8,11 +8,9 @@
   margin-right: auto;
 
   overflow: none;
-  border: 1px solid white;
   border-radius: 20px;
 
   list-style: none;
-  padding: 10px;
 
   /* Fix of Webkit flickering */
   z-index: 1;
@@ -21,8 +19,7 @@
 .swiper-img {
   border-radius: 20px;
   display: block;
-  width: 95%;
-
+  width: 100%;
 }
 
 .swiper-wrapper {

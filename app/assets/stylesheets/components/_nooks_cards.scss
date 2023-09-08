@@ -1,16 +1,10 @@
-.nooks-container {
-  background-color: $primary-background;
-}
-
 .nook-card {
-    background-color: rgba(255, 255, 255, 0.9); /* Transparent with a light white color */
-    border: 1px solid #ccc;
-    border-radius: 20px; /* Rounded borders resembling bubbles */
+    background-color: rgba(255, 255, 255, 0.5); /* Transparent with a light white color */    border-radius: 50px; /* Rounded borders resembling bubbles */
     padding: 15px;
-    margin: 10px;
+    margin: 15px;
     text-align: center;
     font-size: 16px;
-    color: black; /* Font color is black */
+    color: $danger;
   }
 
   /* Media query for iPhone 12 or similar screen size */
@@ -32,11 +26,11 @@
   }
 
   .nook-card h3 {
-    color: #333; /* Black color for the nook name */
+    color: $danger; /* Black color for the nook name */
   }
 
   .nook-card .user-profile a {
-    color: pink; /* Pink color for the username link */
+    color: $success; /* Pink color for the username link */
     text-decoration: none;
   }
 
@@ -51,13 +45,20 @@
     margin-top: 10px;
   }
 
-  .nook-card .stats-wrapper {
-    display: flex;
-    align-items: center;
-  }
+  // .nook-card .stats-wrapper {
+  //   display: flex;
+  //   align-items: center;
+  // }
 
   .nook-card .footnotes-icon {
     width: 20px;
     height: 20px;
     margin-right: 5px;
   }
+
+
+  //pillcontainerforthecards
+#pills-home {
+  background: transparent;
+  border: none;
+}

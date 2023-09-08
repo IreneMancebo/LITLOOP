@@ -1,14 +1,3 @@
-// .filter-container {
-//   display: grid;
-//   column-gap: 2px;
-//   // row-gap: 2px;
-//   position: absolute;
-//   // top: 10px;
-//   width: 100vw;
-//   color: black;
-//   background-color: white;
-// }
-
 .filter-div {
   display: flex;
   flex-wrap: wrap;
@@ -16,13 +5,13 @@
   align-items: center;
   padding: 1px;
   margin: 3px;
-
 }
+
 .col-form-label {
   display: none;
 }
 
-// .category-wrapper-2, .category-wrapper-3
+// .category-wrapper-1, .category-wrapper-3
 .category-wrapper-2 {
   display: inline-block;
   position: sticky;
@@ -75,20 +64,24 @@
 
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {
-  background-color: #eee;
-  color: #444;
   cursor: pointer;
-  padding: 3px;
-  // width: 100%;
-  text-align: left;
-  border: none;
-  outline: none;
-  transition: 1s;
+  transition: 2s;
+
+  padding: 2px;
+  margin-left: 17vw;
+
+  background-color: transparent;
+  color: $primary;
+  border: 1px solid $primary;
+  border-radius: 50px;
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active, .accordion:hover {
-  background-color: #ccc;
+  background-color: $primary;
+  color: $danger;
+  border: 1px solid $primary;
+  border-radius: 50px;
 }
 
 /* Style the accordion panel. Note: hidden by default */
@@ -120,4 +113,8 @@
   position: absolute;
   top: 0;
   cursor: pointer;
+}
+
+.panel {
+  margin-left: 5px;
 }

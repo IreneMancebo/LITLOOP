@@ -21,15 +21,16 @@
     <meta name="twitter:creator" content="<%= DEFAULT_META["twitter_account"] %>">
     <meta name="twitter:image:src" content="<%= meta_image %>">
 
+    <%= favicon_link_tag(source = "favicon.png") %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css" type="text/css">
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-    <%= favicon_link_tag(source = "favicon.png") %>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link rel="manifest" href="<%= asset_path 'manifest.json' %>">
     <%= render 'shared/ios_pwa_links' %>
   </head>
@@ -46,6 +47,7 @@
       </div>
     </div>
 
+    <script src="path-to-bootstrap-js/bootstrap.min.js"></script>
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   </body>
