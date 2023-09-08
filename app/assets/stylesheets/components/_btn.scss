@@ -16,14 +16,23 @@
 
 .btn-signup {
   display: flex;
+  align-text: center;
+
+  width: 160px;
   font-family: $logo-font;
   color: $black;
   background-color: $body-bg;
   border-radius: $border-radius;
   width: 273px;
   height: 46px;
+
+  border-radius: 5px;
   padding: 8px 13px;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
+
+  margin-top: 40px;
+  margin-left: 80px;
+
+  background-color: $body-bg;
+  font-family: $logo-font;
+  color: $black;
 }
