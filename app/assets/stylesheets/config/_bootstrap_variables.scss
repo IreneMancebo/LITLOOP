@@ -16,7 +16,7 @@ $buttons-font: 'Dosis', sans-serif;
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@200;700&display=swap');
 // font-family: 'Montserrat Alternates', sans-serif;
-$header-font: 'Montserrat Alternates', sans-serif;;
+$header-font: 'Montserrat Alternates', sans-serif;
 $text-font: 'Montserrat Alternates', sans-serif;
 
 // GLOBAL VARIABLES//
@@ -33,10 +33,11 @@ $danger:    $primary-background;
 $warning:   $neon-pastel-green;
 
 // BORDER RADII (BUTTONS AND INPUTS) //
-$border-radius:    2px;
+$border-radius:    5px;
 $border-radius-lg: 2px;
 $border-radius-sm: 2px;
 
 .h1 {
+  font-family: $header-font;
   color: $header-color;
 }
