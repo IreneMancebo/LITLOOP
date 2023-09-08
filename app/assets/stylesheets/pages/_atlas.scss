@@ -75,29 +75,23 @@
 
 // ADD A NOOK
 #add_nook {
-  height: 50px;
-  width: 50px;
-  top: 5vh;
-  background: rgba( 0, 0, 0, 0.6 );
-  backdrop-filter: blur( 1px );
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  width: 30px;
+  height: 30px;
+
+  margin-top: 21px;
+  margin-left: -4px;
   border-radius: 50px;
-  color: white;
-  font-size: 30px;
-  text-align:center;
-  z-index: 1;
-  display: inherit;
-
-  a {
-    text-decoration: none;
-    color: white;
-  }
+  font-size: larger;
 }
 
-.my-float{
-  margin-top: 10px;
+
+.fa-plus {
+  position: absolute;
+  margin-left: -8px;
+  margin-top: -1px;
+  color: $danger;
 }
+
 
 .atlas-add {
   display: inline-block;
