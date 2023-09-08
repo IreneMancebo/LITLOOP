@@ -22,13 +22,15 @@
   display: none;
 }
 
-.category-wrapper, .category-wrapper-2, .category-wrapper-3 {
-  display: flex;
-  justify-content: start;
-  align-content: flex-end;
-  padding: 5px 5px 5px 5px;
-  margin-left: 50px;
+// .category-wrapper-2, .category-wrapper-3
+.category-wrapper-2 {
+  display: inline-block;
+  position: sticky;
+  margin-top: 2px;
+  margin-left: 12px;
   // flex-wrap: wrap;
+  // justify-content: start;
+  // align-content: flex-end;
   // background-color: rgba(255, 255, 255, 0.1);
   // backdrop-filter: blur(2px);
 }
@@ -49,7 +51,7 @@
 
 .category-selector + label {
   background-color: $danger;
-  color: pink;
+  color: $primary;
 
   width: 40px;
   height: 40px;
@@ -67,8 +69,8 @@
 }
 
 .category-selector:checked + label {
-  color: aliceblue !important;
-  background-color: pink;
+  background-color: $info;
+  color: $danger !important;
 }
 
 /* Style the buttons that are used to open and close the accordion panel */
@@ -81,7 +83,7 @@
   text-align: left;
   border: none;
   outline: none;
-  transition: 0.4s;
+  transition: 1s;
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
@@ -103,21 +105,19 @@
   background-color: $primary;
   color: $danger;
 
-  width: 36px;
-  font-size: 18px;
+  width: 45px;
+  height: 45px;
+  font-size: 25px;
   text-align: center;
+  align-items: center;
 
-  border: 2px solid;
-  border-radius: 50%;
+  // border: 2px solid;
+  border-radius: 5px;
 
-  margin-top: -88px;
-  margin-right: auto;
+  margin-top: 12px;
+  margin-left: 10px;
 
-  position: inherit;
+  position: absolute;
+  top: 0;
   cursor: pointer;
-}
-
-#more-filters:checked {
-  transform: rotate(180deg);
-  filter: invert(1);
 }

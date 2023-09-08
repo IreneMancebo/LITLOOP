@@ -11,18 +11,14 @@
 }
 
 #search-bar {
-  width: 70%;
+  width: 59%;
   position: relative;
-  margin-left: 11%;
-  margin-top: 3px;
-  border: 1px solid $primary;
-  background-color: $danger;
-}
-
-.fa-plus {
-  margin-top: -2px;
+  margin-left: 20%;
+  margin-top: 3%;
+  border: 1px solid $info;
+  background-color: $info;
 }
 
 #search-bar:focus {
-  color: $primary;
+  color: $danger;
 }

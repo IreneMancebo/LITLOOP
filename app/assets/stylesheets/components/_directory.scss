@@ -1,6 +1,6 @@
 .directory {
   background: $primary-background;
-  border-top: 1px solid $success;
+  // border-top: 1px solid $success;
   padding: 10px 20px 10px 20px;
   width: 100vw;
   height: 60px;
@@ -16,7 +16,7 @@
 }
 
 .fa-globe {
-  color: $primary;
+  color: $info;
 }
 
 .directory div:nth-child(2) {
@@ -30,14 +30,15 @@
   display: inline-block;
   text-decoration: none;
   font-size: 25px;
-  color: $info;
+  color: $primary;
 }
 
 #almanac { padding-left: 10px }
-#discover { padding-right: 5px }
+#discover { padding-right: 10px }
 
 #almanac, #discover {
   display: inline-block;
   justify-content: center;
   font-family: $buttons-font;
+  font-weight: bolder;
 }
