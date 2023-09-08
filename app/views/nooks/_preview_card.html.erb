@@ -7,11 +7,11 @@
 
   <div class="preview-nook-info">
     <div class="preview-nook-name col-sm-8"><span><%= nook.name %></span></div>
-    <div data-controller="icon-heart" class="preview-nook-stats col-sm-4">
+    <div data-controller="icon-heart" class="preview-nook-stats">
       <%= link_to nook_favorites_path(nook), class: "text-deco-none", data: { turbo_method: :post } do %>
         <div data-action="click->icon-heart#favored_nook" class="stats-wrapper"><i class="fa-solid fa-heart" data-icon-heart-target="heart"></i><span class="stats-count">189</span></div>
       <% end %>
-        <div class="stats-wrapper"><img class="footnotes-icon" src="http://www.freeiconspng.com/uploads/comment-png-3.png"><span class="stats-count">13</span></div>
+        <div class="stats-wrapper"><i class="fa-solid fa-comment-dots"></i><span class="stats-count">13</span></div>
     </div>
   </div>
 <% end %>

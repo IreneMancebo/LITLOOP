@@ -1,0 +1,12 @@
+#search-bar {
+  width: 59%;
+  position: relative;
+  margin-left: 20%;
+  margin-top: 3%;
+  border: 1px solid $info;
+  background-color: $info;
+}
+
+#search-bar:focus {
+  color: $danger;
+}
