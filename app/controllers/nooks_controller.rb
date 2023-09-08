@@ -14,6 +14,9 @@ class NooksController < ApplicationController
 
       @nooks = Nook.global_search(params.dig(:search, :query))
       @nooks = @nooks.where(search_hash)
+      if @nooks.empty?
+        @nooks = Nook.global_search(params.dig(:search, :query))
+      end
       @markers = @nooks.map do |nook|
         {
           lat: nook.latitude,
