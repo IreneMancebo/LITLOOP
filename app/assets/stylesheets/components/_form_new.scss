@@ -1,10 +1,7 @@
-.mapboxgl-ctrl {
+.mapboxgl-ctrl-group {
   background-color: $primary;
-  color: $danger;
-}
-
-.mapboxgl-ctrl-top-right {
-  margin-top: 11px;
+  width: 45px;
+  height: 45px;
 }
 
 .mapboxgl-ctrl-geocoder {
@@ -18,7 +15,7 @@
 }
 
 .mapboxgl-ctrl-geocoder--icon {
-  fill: $body-color;
+  fill: $danger;
 }
 
 .mapboxgl-ctrl-geocoder--input:focus {
