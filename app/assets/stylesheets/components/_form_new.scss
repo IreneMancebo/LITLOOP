@@ -1,9 +1,12 @@
 .mapboxgl-ctrl-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: $primary;
-  width: 45px;
-  height: 45px;
-  margin-top: 10%;
-  margin-right: 10px;
+  width: 39px;
+  height: 39px;
+  margin: 26px 8px 0 0 !important;
+  border-radius: 50px !important;
 }
 
 .mapboxgl-ctrl-geocoder {

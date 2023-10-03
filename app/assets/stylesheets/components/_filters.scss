@@ -1,7 +1,7 @@
 .filter-div {
   display: flex;
   flex-wrap: wrap;
-  width: 100vw;
+  width: 12vw;
   align-items: center;
   padding: 1px;
   margin: 3px;
@@ -65,14 +65,14 @@
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {
   cursor: pointer;
-  transition: 2s;
+  // transition: 2s;
 
   padding: 2px;
   margin-left: 17vw;
 
   background-color: transparent;
   color: $primary;
-  border: 1px solid $primary;
+  border: 1px solid darkgrey;
   border-radius: 50px;
 }
 
@@ -88,10 +88,10 @@
 .panel {
   color: white;
   background-color: transparent;
-  backdrop-filter: blur(2px);
-  max-height: 0;
+    max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
+  margin-left: -14px;
 }
 
 #more-filters {
@@ -99,7 +99,7 @@
   color: $danger;
 
   width: 45px;
-  height: 45px;
+  height: 44px;
   font-size: 25px;
   text-align: center;
   align-items: center;
@@ -107,14 +107,10 @@
   // border: 2px solid;
   border-radius: 5px;
 
-  margin-top: 12px;
-  margin-left: 10px;
+  margin-top: 13px;
+  margin-left: -2px;
 
   position: absolute;
   top: 0;
   cursor: pointer;
-}
-
-.panel {
-  margin-left: 5px;
 }
