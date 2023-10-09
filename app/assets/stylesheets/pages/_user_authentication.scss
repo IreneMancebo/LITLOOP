@@ -55,10 +55,22 @@
   outline: none; /* Remove the default outline */
 }
 
+.signup-input-remember {
+  font-family: $text-font;
+  color: #fff; /* Text color for form inputs */
+  border-radius: 10px; /* Add border radius */
+  background: rgba(255, 255, 255, 0.2); /* Adjust transparency for form inputs */
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none; /* Remove the default border */
+  outline: none; /* Remove the default outline */
+}
+
 .login-inputs {
   font-family: $header-font;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   width: 100%;
 }
